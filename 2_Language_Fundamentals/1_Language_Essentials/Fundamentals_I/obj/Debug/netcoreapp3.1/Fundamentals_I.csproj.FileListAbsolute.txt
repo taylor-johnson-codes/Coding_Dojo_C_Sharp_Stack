@@ -1,0 +1,13 @@
+C:\Users\taylo\OneDrive\Desktop\Coding_Dojo\c_sharp_stack\2_Language_Fundamentals\1_Language_Essentials\Fundamentals_I\bin\Debug\netcoreapp3.1\Fundamentals_I.exe
+C:\Users\taylo\OneDrive\Desktop\Coding_Dojo\c_sharp_stack\2_Language_Fundamentals\1_Language_Essentials\Fundamentals_I\bin\Debug\netcoreapp3.1\Fundamentals_I.deps.json
+C:\Users\taylo\OneDrive\Desktop\Coding_Dojo\c_sharp_stack\2_Language_Fundamentals\1_Language_Essentials\Fundamentals_I\bin\Debug\netcoreapp3.1\Fundamentals_I.runtimeconfig.json
+C:\Users\taylo\OneDrive\Desktop\Coding_Dojo\c_sharp_stack\2_Language_Fundamentals\1_Language_Essentials\Fundamentals_I\bin\Debug\netcoreapp3.1\Fundamentals_I.runtimeconfig.dev.json
+C:\Users\taylo\OneDrive\Desktop\Coding_Dojo\c_sharp_stack\2_Language_Fundamentals\1_Language_Essentials\Fundamentals_I\bin\Debug\netcoreapp3.1\Fundamentals_I.dll
+C:\Users\taylo\OneDrive\Desktop\Coding_Dojo\c_sharp_stack\2_Language_Fundamentals\1_Language_Essentials\Fundamentals_I\bin\Debug\netcoreapp3.1\Fundamentals_I.pdb
+C:\Users\taylo\OneDrive\Desktop\Coding_Dojo\c_sharp_stack\2_Language_Fundamentals\1_Language_Essentials\Fundamentals_I\obj\Debug\netcoreapp3.1\Fundamentals_I.csprojAssemblyReference.cache
+C:\Users\taylo\OneDrive\Desktop\Coding_Dojo\c_sharp_stack\2_Language_Fundamentals\1_Language_Essentials\Fundamentals_I\obj\Debug\netcoreapp3.1\Fundamentals_I.AssemblyInfoInputs.cache
+C:\Users\taylo\OneDrive\Desktop\Coding_Dojo\c_sharp_stack\2_Language_Fundamentals\1_Language_Essentials\Fundamentals_I\obj\Debug\netcoreapp3.1\Fundamentals_I.AssemblyInfo.cs
+C:\Users\taylo\OneDrive\Desktop\Coding_Dojo\c_sharp_stack\2_Language_Fundamentals\1_Language_Essentials\Fundamentals_I\obj\Debug\netcoreapp3.1\Fundamentals_I.csproj.CoreCompileInputs.cache
+C:\Users\taylo\OneDrive\Desktop\Coding_Dojo\c_sharp_stack\2_Language_Fundamentals\1_Language_Essentials\Fundamentals_I\obj\Debug\netcoreapp3.1\Fundamentals_I.dll
+C:\Users\taylo\OneDrive\Desktop\Coding_Dojo\c_sharp_stack\2_Language_Fundamentals\1_Language_Essentials\Fundamentals_I\obj\Debug\netcoreapp3.1\Fundamentals_I.pdb
+C:\Users\taylo\OneDrive\Desktop\Coding_Dojo\c_sharp_stack\2_Language_Fundamentals\1_Language_Essentials\Fundamentals_I\obj\Debug\netcoreapp3.1\Fundamentals_I.genruntimeconfig.cache
