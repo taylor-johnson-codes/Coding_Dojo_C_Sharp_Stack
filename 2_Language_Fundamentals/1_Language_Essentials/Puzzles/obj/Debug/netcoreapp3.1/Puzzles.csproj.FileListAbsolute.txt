@@ -1,0 +1,13 @@
+C:\Users\taylo\OneDrive\Desktop\Coding_Dojo\c_sharp_stack\2_Language_Fundamentals\1_Language_Essentials\Puzzles\bin\Debug\netcoreapp3.1\Puzzles.exe
+C:\Users\taylo\OneDrive\Desktop\Coding_Dojo\c_sharp_stack\2_Language_Fundamentals\1_Language_Essentials\Puzzles\bin\Debug\netcoreapp3.1\Puzzles.deps.json
+C:\Users\taylo\OneDrive\Desktop\Coding_Dojo\c_sharp_stack\2_Language_Fundamentals\1_Language_Essentials\Puzzles\bin\Debug\netcoreapp3.1\Puzzles.runtimeconfig.json
+C:\Users\taylo\OneDrive\Desktop\Coding_Dojo\c_sharp_stack\2_Language_Fundamentals\1_Language_Essentials\Puzzles\bin\Debug\netcoreapp3.1\Puzzles.runtimeconfig.dev.json
+C:\Users\taylo\OneDrive\Desktop\Coding_Dojo\c_sharp_stack\2_Language_Fundamentals\1_Language_Essentials\Puzzles\bin\Debug\netcoreapp3.1\Puzzles.dll
+C:\Users\taylo\OneDrive\Desktop\Coding_Dojo\c_sharp_stack\2_Language_Fundamentals\1_Language_Essentials\Puzzles\bin\Debug\netcoreapp3.1\Puzzles.pdb
+C:\Users\taylo\OneDrive\Desktop\Coding_Dojo\c_sharp_stack\2_Language_Fundamentals\1_Language_Essentials\Puzzles\obj\Debug\netcoreapp3.1\Puzzles.csprojAssemblyReference.cache
+C:\Users\taylo\OneDrive\Desktop\Coding_Dojo\c_sharp_stack\2_Language_Fundamentals\1_Language_Essentials\Puzzles\obj\Debug\netcoreapp3.1\Puzzles.AssemblyInfoInputs.cache
+C:\Users\taylo\OneDrive\Desktop\Coding_Dojo\c_sharp_stack\2_Language_Fundamentals\1_Language_Essentials\Puzzles\obj\Debug\netcoreapp3.1\Puzzles.AssemblyInfo.cs
+C:\Users\taylo\OneDrive\Desktop\Coding_Dojo\c_sharp_stack\2_Language_Fundamentals\1_Language_Essentials\Puzzles\obj\Debug\netcoreapp3.1\Puzzles.csproj.CoreCompileInputs.cache
+C:\Users\taylo\OneDrive\Desktop\Coding_Dojo\c_sharp_stack\2_Language_Fundamentals\1_Language_Essentials\Puzzles\obj\Debug\netcoreapp3.1\Puzzles.dll
+C:\Users\taylo\OneDrive\Desktop\Coding_Dojo\c_sharp_stack\2_Language_Fundamentals\1_Language_Essentials\Puzzles\obj\Debug\netcoreapp3.1\Puzzles.pdb
+C:\Users\taylo\OneDrive\Desktop\Coding_Dojo\c_sharp_stack\2_Language_Fundamentals\1_Language_Essentials\Puzzles\obj\Debug\netcoreapp3.1\Puzzles.genruntimeconfig.cache
