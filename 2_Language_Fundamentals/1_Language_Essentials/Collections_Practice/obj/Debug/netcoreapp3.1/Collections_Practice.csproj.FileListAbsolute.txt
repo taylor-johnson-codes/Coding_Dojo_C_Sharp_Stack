@@ -1,0 +1,13 @@
+C:\Users\taylo\OneDrive\Desktop\Coding_Dojo\c_sharp_stack\2_Language_Fundamentals\1_Language_Essentials\Collections_Practice\bin\Debug\netcoreapp3.1\Collections_Practice.exe
+C:\Users\taylo\OneDrive\Desktop\Coding_Dojo\c_sharp_stack\2_Language_Fundamentals\1_Language_Essentials\Collections_Practice\bin\Debug\netcoreapp3.1\Collections_Practice.deps.json
+C:\Users\taylo\OneDrive\Desktop\Coding_Dojo\c_sharp_stack\2_Language_Fundamentals\1_Language_Essentials\Collections_Practice\bin\Debug\netcoreapp3.1\Collections_Practice.runtimeconfig.json
+C:\Users\taylo\OneDrive\Desktop\Coding_Dojo\c_sharp_stack\2_Language_Fundamentals\1_Language_Essentials\Collections_Practice\bin\Debug\netcoreapp3.1\Collections_Practice.runtimeconfig.dev.json
+C:\Users\taylo\OneDrive\Desktop\Coding_Dojo\c_sharp_stack\2_Language_Fundamentals\1_Language_Essentials\Collections_Practice\bin\Debug\netcoreapp3.1\Collections_Practice.dll
+C:\Users\taylo\OneDrive\Desktop\Coding_Dojo\c_sharp_stack\2_Language_Fundamentals\1_Language_Essentials\Collections_Practice\bin\Debug\netcoreapp3.1\Collections_Practice.pdb
+C:\Users\taylo\OneDrive\Desktop\Coding_Dojo\c_sharp_stack\2_Language_Fundamentals\1_Language_Essentials\Collections_Practice\obj\Debug\netcoreapp3.1\Collections_Practice.csprojAssemblyReference.cache
+C:\Users\taylo\OneDrive\Desktop\Coding_Dojo\c_sharp_stack\2_Language_Fundamentals\1_Language_Essentials\Collections_Practice\obj\Debug\netcoreapp3.1\Collections_Practice.AssemblyInfoInputs.cache
+C:\Users\taylo\OneDrive\Desktop\Coding_Dojo\c_sharp_stack\2_Language_Fundamentals\1_Language_Essentials\Collections_Practice\obj\Debug\netcoreapp3.1\Collections_Practice.AssemblyInfo.cs
+C:\Users\taylo\OneDrive\Desktop\Coding_Dojo\c_sharp_stack\2_Language_Fundamentals\1_Language_Essentials\Collections_Practice\obj\Debug\netcoreapp3.1\Collections_Practice.csproj.CoreCompileInputs.cache
+C:\Users\taylo\OneDrive\Desktop\Coding_Dojo\c_sharp_stack\2_Language_Fundamentals\1_Language_Essentials\Collections_Practice\obj\Debug\netcoreapp3.1\Collections_Practice.dll
+C:\Users\taylo\OneDrive\Desktop\Coding_Dojo\c_sharp_stack\2_Language_Fundamentals\1_Language_Essentials\Collections_Practice\obj\Debug\netcoreapp3.1\Collections_Practice.pdb
+C:\Users\taylo\OneDrive\Desktop\Coding_Dojo\c_sharp_stack\2_Language_Fundamentals\1_Language_Essentials\Collections_Practice\obj\Debug\netcoreapp3.1\Collections_Practice.genruntimeconfig.cache
