@@ -61,11 +61,59 @@ namespace Collections_Practice
                 {namesArray[3], flavors[index3]},
             };
 
+            // alternate version:
+            Dictionary<string,string> likedDict = new Dictionary<string,string>();
+            Random rand = new Random();
+            foreach (string name in namesArray)
+            {
+                likedDict.Add(name, flavors[rand.Next(0,flavors.Count)]);
+            }
+
+
             // Loop through the dictionary and print out each user's name and their associated ice cream flavor
             foreach (KeyValuePair<string,string> item in flavorDict)
             {
                 Console.WriteLine(item.Key + " - " + item.Value);
             }
+
+            Console.WriteLine();
+            Console.WriteLine("alternate version:");
+            foreach (KeyValuePair<string,string> entry in likedDict) 
+            {
+                Console.WriteLine(entry.Key + " - " + entry.Value);
+            }
+
+
+            Console.WriteLine("-----------------------------------------");
+            Console.WriteLine("BOXING/UNBOXING");
+
+            // Create an empty List of type object
+            List<object> myObjectList = new List<object>();
+
+            // Add the following values to the list: 7, 28, -1, true, "chair"
+            myObjectList.Add(7);
+            myObjectList.Add(28);
+            myObjectList.Add(-1);
+            myObjectList.Add(true);
+            myObjectList.Add("chair");
+
+            // Loop through the list and print all values (Hint: Type Inference might help here!)
+            foreach (var item in myObjectList)
+            {
+                Console.WriteLine(item);
+            }
+
+            // Add all values that are Int type together and output the sum
+            int sum = 0;
+            foreach (var item in myObjectList)
+            {
+                if (item is int)
+                {
+                    int x = (int)item;
+                    sum = sum + x;
+                }
+            }
+            Console.WriteLine($"The sum is {sum}.");
         }
     }
 }
