@@ -7,7 +7,18 @@ namespace Puzzles
     {
         static void Main(string[] args)
         {
-            RandomArray();
+            int[] returnedArray = RandomArray();
+            Console.WriteLine("The random array is: ");
+            foreach (int item in returnedArray)
+            {
+                Console.Write(item + " ");
+            }
+
+            Console.WriteLine();
+            Console.WriteLine("--------------------------------------------------");
+
+            string outcome = TossCoin();
+            Console.WriteLine("The coin toss resulted in: " + outcome);
         }
         
         /*
@@ -18,7 +29,12 @@ namespace Puzzles
         */
         public static int[] RandomArray()
         {
-            int[] randomArr = new int[] {5,6,7,8,9,10,11,12,13,14};
+            Random random = new Random();
+            int[] randomArr = new int[10];
+            for (int i = 0; i < 10; i++)
+            {
+                randomArr[i] = random.Next(5,25);
+            }
             int max = randomArr[0];
             int min = randomArr[0];
             int sum = 0;
@@ -44,10 +60,32 @@ namespace Puzzles
         - Randomize a coin toss with a result signaling either side of the coin 
         - Have the function print either "Heads" or "Tails"
         - Finally, return the result
-        
+        */
+        public static string TossCoin()
+        {
+            Console.WriteLine("Tossing a Coin!");
+            Random random = new Random();
+            int toss = random.Next(1,3);
+            string result = "";
+            if (toss == 1)
+            {
+                result = "Heads";
+            }
+            if (toss == 2)
+            {
+                result = "Tails";
+            }
+            return result;
+        }
+
+        /*
         Create another function called TossMultipleCoins(int num) that returns a Double
         - Have the function call the tossCoin function multiple times based on num value
         - Have the function return a Double that reflects the ratio of head toss to total toss
         */
+        public static double TossMultipleCoins(int num)
+        {
+            
+        }
     }
 }
