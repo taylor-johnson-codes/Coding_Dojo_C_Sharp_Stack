@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 
 namespace Basic_13_Algos
 {
@@ -57,28 +56,33 @@ namespace Basic_13_Algos
             Console.WriteLine();
             Console.WriteLine("-------------------------------------");
 
-
-
-            Console.WriteLine();
-            Console.WriteLine("-------------------------------------");
-
-
+            SquareArrayValues(myNumbers);
 
             Console.WriteLine();
             Console.WriteLine("-------------------------------------");
 
-
-
-            Console.WriteLine();
-            Console.WriteLine("-------------------------------------");
-
-
+            EliminateNegatives(negNumbers);
 
             Console.WriteLine();
             Console.WriteLine("-------------------------------------");
 
+            int[] newNumbers = new int[] {-1,0,3,15,100};
+            MinMaxAverage(newNumbers);
 
+            Console.WriteLine();
+            Console.WriteLine("-------------------------------------");
 
+            ShiftValues(newNumbers);
+
+            Console.WriteLine();
+            Console.WriteLine("-------------------------------------");
+
+            int[] moreNewNumbers = new int[] {-105,-3,0,15,100};
+            object[] returnedArray = NumToString(moreNewNumbers);
+            foreach (object item in returnedArray)
+            {
+                Console.Write(item + " ");
+            }
         }
 
         public static void PrintNumbers()
@@ -155,6 +159,7 @@ namespace Basic_13_Algos
                 }
             return oddArray;
         }
+
         public static int GreaterThanY(int[] numbers, int y)
         {
             int count = 0;
@@ -168,78 +173,72 @@ namespace Basic_13_Algos
             return count;
         }
 
+        public static void SquareArrayValues(int[] numbers)
+        {
+            for (int i = 0; i < numbers.Length; i++)
+            {
+                numbers[i] = numbers[i] * numbers[i];
+            }
+            Console.WriteLine(string.Join(", ", numbers));
+        }
+
+        public static void EliminateNegatives(int[] numbers)
+        {
+            for (int i = 0; i < numbers.Length; i++)
+            {
+                if (numbers[i] < 0)
+                {
+                    numbers[i] = 0;
+                }
+            }
+            Console.WriteLine(string.Join(", ", numbers));
+        }
+
+        public static void MinMaxAverage(int[] numbers)
+        {
+            int max = numbers[0];
+            int min = numbers[0];
+            int sum = 0;
+            for (int i = 0; i < numbers.Length; i++)
+            {
+                if (numbers[i] > max)
+                {
+                    max = numbers[i];
+                }
+                if (numbers[i] < min)
+                {
+                    min = numbers[i];
+                }
+                sum += numbers[i];
+            }
+            Console.WriteLine($"Min: {min}, Max: {max}, Average: {sum/numbers.Length}");
+        }
+        
+        public static void ShiftValues(int[] numbers)
+        {
+            for (int i = 0; i < numbers.Length-1; i++)
+            {
+                numbers[i] = numbers[i+1];
+            }
+            numbers[numbers.Length-1] = 0;
+            Console.WriteLine(string.Join(", ", numbers));
+        }
+
+        public static object[] NumToString(int[] numbers)
+        {
+            object[] objectArray = new object[numbers.Length];
+            for (int i = 0; i < numbers.Length; i++)
+            {
+                if (numbers[i] < 0)
+                {
+                    objectArray[i] = "Dojo";
+                }
+                else
+                {
+                    objectArray[i] = numbers[i];
+                }
+            }
+            return objectArray;
+        }
     }
 }
-// // #8 Square the Values
-// // Square each value in a given array, returning that same array with changed values. 
-
-// function squareArrayVals(arr){
-//     for (var i = 0; i < arr.length; i++) {
-//         arr[i] = arr[i] * arr[i]
-//     }
-//     return arr
-// }
-// console.log(squareArrayVals([1,2,3,4,5]))
-
-
-
-// // #10 Zero Out Negative Numbers
-// // Return the given array, after setting any negative values to zero. 
-
-// function zeroOut(arr){
-//     for (var i = 0; i < arr.length; i++) {
-//         if(arr[i] < 0){
-//             arr[i] = 0
-//         }
-//     }
-//     return arr
-// }
-// console.log(zeroOut([-2,-1,0,1,2]))
-
-
-// // #11 Max, Min, Average
-// // Given an array, print the max, min and average values for that array.
-
-// function MaxMinAvg(arr){
-//     var max = arr[0]
-//     var min = arr[0]
-//     var sum = 0
-//     for (var i = 0; i < arr.length; i++) {
-//         if(arr[i] > max){
-//             max = arr[i]
-//         }
-//         if(arr[i] < min){
-//             min = arr[i]
-//         }
-//         sum += arr[i]
-//     }
-//     console.log(max, min, sum/arr.length)
-// }
-// MaxMinAvg([1,2,3,4,5])
-
-
-// // #12 Shift Array Values
-// // Given an array, move all values forward (to the left) by one index, dropping the first value and leaving a 0 (zero) value at the end of the array.
-
-// function shiftArrLeft(arr){
-//     for (var i = 0; i < arr.length; i++) {
-//         arr[i] = arr[i+1]
-//     }
-//     arr[arr.length-1] = 0
-//     console.log(arr)
-// }
-// shiftArrLeft([1,2,3,4,5])
-
-
-// // #13 Swap String For Array Negative Values
-// // Given an array of numbers, replace any negative values with the string 'Dojo'.
-
-// function swapString(arr){
-//     for (var i = 0; i < arr.length; i++) {
-//         if(arr[i] < 0){
-//             arr[i] = "Dojo"
-//         }
-//     }
-//     console.log(arr)
-// }
-// swapString([-2,-1,0,1,2])
