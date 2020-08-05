@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace OOP_Platform_Lecture
 {
@@ -6,112 +7,55 @@ namespace OOP_Platform_Lecture
     {
         static void Main(string[] args)
         {
-        /*
-        Vehicle myVehicle = new Vehicle();
-        // Notice the type for the new object reference is the same as the class name
-        Console.WriteLine($"My vehicle is holding {myVehicle.NumPassengers} people.");
-        */
+            Vehicle myVehicle1 = new Vehicle(7);
+            Console.WriteLine($"My vehicle is holding {myVehicle1.NumPassengers} people.");
 
-        Vehicle myVehicle = new Vehicle(7);
-        Console.WriteLine($"My vehicle is holding {myVehicle.NumPassengers} people.");
+            myVehicle1.MakeNoise("HOOONK!");
 
-        myVehicle.MakeNoise("HOOONK!");
+            myVehicle1.MakeNoise();
 
-        myVehicle.MakeNoise();
+            myVehicle1.ColorProp = "blue";
 
-        myVehicle.ColorProp = "Blue";
+            Console.WriteLine(myVehicle1.ColorProp);
 
-        Console.WriteLine(myVehicle.ColorProp);
+            Vehicle myVehicle2 = new Vehicle(5, "red");
+            Console.WriteLine($"My vehicle is {myVehicle2.Color} and can hold {myVehicle2.MaxNumPassengers} people.");
 
-        Vehicle myVehicle2 = new Vehicle(5, "red");
-        Console.WriteLine($"My vehicle is {myVehicle2.Color} and can hold {myVehicle2.MaxNumPassengers} people.");
+            myVehicle1.GetInfo();
+            myVehicle2.GetInfo();
 
-        }
-    }
+            Car newCar1 = new Car(2, "red", "Tesla", "Roadster");
+            Car newCar2 = new Car(7, "black", "Toyota", "4Runner");
 
-    /* ACCESS MODIFIERS:
-    public: No access restriction
-    private: Access restricted to own class (default for class members)
-    protected: Access restricted to own class, and any child class
-    internal: Access restricted to Assembly (essentially, your project's compiled .dll)
-    */
-    
-    public class Vehicle
-    {
-        // FIELD EXAMPLES:
-        public int NumPassengers;  // this unassigned integer will default to 0
-        public int MaxNumPassengers;  // includes automatic invisible getter/setter at end: {get;set;}
-        public double MaxSpeed;
-        public string Color;
+            newCar1.GetInfo();
+            newCar2.GetInfo();
 
-        // private string color;  // can't be accessed in the Main method/Program class; only in the Vehicle class
-        // public string Color { get {return color;} }  // allows the Main method/Program class to only see the color
+            newCar1.Drive(50);
+            newCar1.Drive(200);
 
+            // Polymorphism example: Car can be a car and car can also be a vehicle
+            List<Vehicle> allVehicles = new List<Vehicle>() {myVehicle1, myVehicle2, newCar1, newCar2};
+            // allVehicles.Add(myVehicle1);
+            // allVehicles.Add(myVehicle2);
+            // allVehicles.Add(newCar1);
+            // allVehicles.Add(newCar2);
 
-        // CONSTRUCTOR:
-        // Notice the Constructor function doesn't need a return type or the static keyword
-        public Vehicle(int val)
-        {
-            NumPassengers = val;
-        }
-
-        // There can more than one constructor:
-        public Vehicle(int maxPass, string color)
-        {
-            MaxNumPassengers = maxPass;
-            Color = color;
-        }
-
-        // METHOD EXAMPLES:
-        public void MakeNoise(string noise)
-        {
-            Console.WriteLine(noise);
-        }
-        
-        public void MakeNoise()
-        {
-            Console.WriteLine("BEEP!");
-        }
-
-        // PROPERTIES EXAMPLE:
-        public string ColorProp
-        {
-            get
+            foreach (var v in allVehicles)
             {
-                // Simply referencing the property will invoke the "getter", such as:
-                // Console.WriteLine(vehicleObject.ColorProp);
-                // and will return the following:
-                return $"The vehicle is {Color}.";
+                v.GetInfo();  // automatically shows Vehicle's version and Car's version of GetInfo()
             }
-            set
-            {
-                // Assigning a value to a property, such as:
-                // vehicleObject.ColorProp = "Blue";
-                // will invoke the "setter", and the "value" keyword will become the assigned value
-                Color = value;
-            }
-        }
-    }
-    /*
-    ENCAPSULATION EXAMPLE:
 
-    class Vehicle
-    {
-        private int maxNumPassengers;
-        private string color;
-        public int MaxNumPassengers
-        {
-            get { return maxNumPassengers; }
-        }
-        public string Color
-        {
-            get { return color; }
-        }
-        public Vehicle(int maxPass, string col)
-        {
-            maxNumPassengers = maxPass;
-            color = col;
+            Vehicle someVehicle = new Vehicle(4);
+            
+            // Constructing a Car "as a" Vehicle
+            Vehicle carAsVehicle = new Car(5, "silver", "Subaru", "Outback");
+            
+            // Constructing a Person, adding any Vehicle to their list of OwnedVehicles
+            Person somePerson = new Person();
+            somePerson.AddToVehicles(someVehicle);
+            somePerson.AddToVehicles(carAsVehicle);
+            
+            somePerson.DisplayVehicles();
         }
     }
-    */
 }
