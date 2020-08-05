@@ -1,0 +1,13 @@
+C:\Users\taylo\OneDrive\Desktop\Coding_Dojo\c_sharp_stack\2_Language_Fundamentals\2_OOP\Deck_of_Cards\bin\Debug\netcoreapp3.1\Deck_of_Cards.exe
+C:\Users\taylo\OneDrive\Desktop\Coding_Dojo\c_sharp_stack\2_Language_Fundamentals\2_OOP\Deck_of_Cards\bin\Debug\netcoreapp3.1\Deck_of_Cards.deps.json
+C:\Users\taylo\OneDrive\Desktop\Coding_Dojo\c_sharp_stack\2_Language_Fundamentals\2_OOP\Deck_of_Cards\bin\Debug\netcoreapp3.1\Deck_of_Cards.runtimeconfig.json
+C:\Users\taylo\OneDrive\Desktop\Coding_Dojo\c_sharp_stack\2_Language_Fundamentals\2_OOP\Deck_of_Cards\bin\Debug\netcoreapp3.1\Deck_of_Cards.runtimeconfig.dev.json
+C:\Users\taylo\OneDrive\Desktop\Coding_Dojo\c_sharp_stack\2_Language_Fundamentals\2_OOP\Deck_of_Cards\bin\Debug\netcoreapp3.1\Deck_of_Cards.dll
+C:\Users\taylo\OneDrive\Desktop\Coding_Dojo\c_sharp_stack\2_Language_Fundamentals\2_OOP\Deck_of_Cards\bin\Debug\netcoreapp3.1\Deck_of_Cards.pdb
+C:\Users\taylo\OneDrive\Desktop\Coding_Dojo\c_sharp_stack\2_Language_Fundamentals\2_OOP\Deck_of_Cards\obj\Debug\netcoreapp3.1\Deck_of_Cards.csprojAssemblyReference.cache
+C:\Users\taylo\OneDrive\Desktop\Coding_Dojo\c_sharp_stack\2_Language_Fundamentals\2_OOP\Deck_of_Cards\obj\Debug\netcoreapp3.1\Deck_of_Cards.AssemblyInfoInputs.cache
+C:\Users\taylo\OneDrive\Desktop\Coding_Dojo\c_sharp_stack\2_Language_Fundamentals\2_OOP\Deck_of_Cards\obj\Debug\netcoreapp3.1\Deck_of_Cards.AssemblyInfo.cs
+C:\Users\taylo\OneDrive\Desktop\Coding_Dojo\c_sharp_stack\2_Language_Fundamentals\2_OOP\Deck_of_Cards\obj\Debug\netcoreapp3.1\Deck_of_Cards.csproj.CoreCompileInputs.cache
+C:\Users\taylo\OneDrive\Desktop\Coding_Dojo\c_sharp_stack\2_Language_Fundamentals\2_OOP\Deck_of_Cards\obj\Debug\netcoreapp3.1\Deck_of_Cards.dll
+C:\Users\taylo\OneDrive\Desktop\Coding_Dojo\c_sharp_stack\2_Language_Fundamentals\2_OOP\Deck_of_Cards\obj\Debug\netcoreapp3.1\Deck_of_Cards.pdb
+C:\Users\taylo\OneDrive\Desktop\Coding_Dojo\c_sharp_stack\2_Language_Fundamentals\2_OOP\Deck_of_Cards\obj\Debug\netcoreapp3.1\Deck_of_Cards.genruntimeconfig.cache
