@@ -1,0 +1,13 @@
+C:\Users\taylo\OneDrive\Desktop\Coding_Dojo\c_sharp_stack\2_Language_Fundamentals\2_OOP\OOP_Platform_Lecture\bin\Debug\netcoreapp3.1\OOP_Platform_Lecture.exe
+C:\Users\taylo\OneDrive\Desktop\Coding_Dojo\c_sharp_stack\2_Language_Fundamentals\2_OOP\OOP_Platform_Lecture\bin\Debug\netcoreapp3.1\OOP_Platform_Lecture.deps.json
+C:\Users\taylo\OneDrive\Desktop\Coding_Dojo\c_sharp_stack\2_Language_Fundamentals\2_OOP\OOP_Platform_Lecture\bin\Debug\netcoreapp3.1\OOP_Platform_Lecture.runtimeconfig.json
+C:\Users\taylo\OneDrive\Desktop\Coding_Dojo\c_sharp_stack\2_Language_Fundamentals\2_OOP\OOP_Platform_Lecture\bin\Debug\netcoreapp3.1\OOP_Platform_Lecture.runtimeconfig.dev.json
+C:\Users\taylo\OneDrive\Desktop\Coding_Dojo\c_sharp_stack\2_Language_Fundamentals\2_OOP\OOP_Platform_Lecture\bin\Debug\netcoreapp3.1\OOP_Platform_Lecture.dll
+C:\Users\taylo\OneDrive\Desktop\Coding_Dojo\c_sharp_stack\2_Language_Fundamentals\2_OOP\OOP_Platform_Lecture\bin\Debug\netcoreapp3.1\OOP_Platform_Lecture.pdb
+C:\Users\taylo\OneDrive\Desktop\Coding_Dojo\c_sharp_stack\2_Language_Fundamentals\2_OOP\OOP_Platform_Lecture\obj\Debug\netcoreapp3.1\OOP_Platform_Lecture.csprojAssemblyReference.cache
+C:\Users\taylo\OneDrive\Desktop\Coding_Dojo\c_sharp_stack\2_Language_Fundamentals\2_OOP\OOP_Platform_Lecture\obj\Debug\netcoreapp3.1\OOP_Platform_Lecture.AssemblyInfoInputs.cache
+C:\Users\taylo\OneDrive\Desktop\Coding_Dojo\c_sharp_stack\2_Language_Fundamentals\2_OOP\OOP_Platform_Lecture\obj\Debug\netcoreapp3.1\OOP_Platform_Lecture.AssemblyInfo.cs
+C:\Users\taylo\OneDrive\Desktop\Coding_Dojo\c_sharp_stack\2_Language_Fundamentals\2_OOP\OOP_Platform_Lecture\obj\Debug\netcoreapp3.1\OOP_Platform_Lecture.csproj.CoreCompileInputs.cache
+C:\Users\taylo\OneDrive\Desktop\Coding_Dojo\c_sharp_stack\2_Language_Fundamentals\2_OOP\OOP_Platform_Lecture\obj\Debug\netcoreapp3.1\OOP_Platform_Lecture.dll
+C:\Users\taylo\OneDrive\Desktop\Coding_Dojo\c_sharp_stack\2_Language_Fundamentals\2_OOP\OOP_Platform_Lecture\obj\Debug\netcoreapp3.1\OOP_Platform_Lecture.pdb
+C:\Users\taylo\OneDrive\Desktop\Coding_Dojo\c_sharp_stack\2_Language_Fundamentals\2_OOP\OOP_Platform_Lecture\obj\Debug\netcoreapp3.1\OOP_Platform_Lecture.genruntimeconfig.cache
