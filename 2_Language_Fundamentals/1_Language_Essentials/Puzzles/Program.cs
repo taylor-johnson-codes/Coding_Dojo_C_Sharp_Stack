@@ -19,6 +19,22 @@ namespace Puzzles
 
             string outcome = TossCoin();
             Console.WriteLine("The coin toss resulted in: " + outcome);
+
+            Console.WriteLine();
+            Console.WriteLine("--------------------------------------------------");
+            
+            double returnedRatio = TossMultipleCoins(5);
+            Console.WriteLine("Heads to toss ratio: " + returnedRatio);
+            
+            Console.WriteLine();
+            Console.WriteLine("--------------------------------------------------");
+            
+            List<string> returnedList = Names();
+            Console.WriteLine("Names greater than 5: ");
+            foreach (string item in returnedList)
+            {
+                Console.Write(item + " ");
+            }
         }
         
         /*
@@ -85,7 +101,58 @@ namespace Puzzles
         */
         public static double TossMultipleCoins(int num)
         {
+            double headsCount = 0;
+            for (int i = 1; i <= num; i++)
+            {
+                string result = TossCoin();
+                if (result == "Heads")
+                {
+                    headsCount++;
+                }
+            }
+            double ratio = headsCount/num;
+            return ratio;
+        }
+
+        /*
+        Build a function Names that returns a list of strings.  In this function:
+        - Create a list with the values: Todd, Tiffany, Charlie, Geneva, Sydney
+        - Shuffle the list and print the values in the new order
+        - Return a list that only includes names longer than 5 characters
+        */
+        public static List<string> Names()
+        {
+            List<string> nameList = new List<string>() {"Todd", "Tiffany", "Charlie", "Geneva", "Sydney"};
+            Console.WriteLine("Original list:");
+            foreach (string item in nameList)
+            {
+                Console.Write(item + " ");
+            }
             
+            Random random = new Random();
+            for (int i = 0; i < nameList.Count; i++)
+            {
+                int indexNum = random.Next(0, nameList.Count);
+                string temp = nameList[indexNum];
+                nameList[indexNum] = nameList[i];
+            }
+            Console.WriteLine();
+            Console.WriteLine("Shuffled list:");
+            foreach (string item in nameList)
+            {
+                Console.Write(item + " ");
+            }
+            Console.WriteLine();
+            
+            List<string> longerThan5List = new List<string>();
+            foreach (string name in nameList)
+            {
+                if (name.Length > 5)
+                {
+                    longerThan5List.Add(name);
+                }
+            }
+            return longerThan5List;
         }
     }
 }
