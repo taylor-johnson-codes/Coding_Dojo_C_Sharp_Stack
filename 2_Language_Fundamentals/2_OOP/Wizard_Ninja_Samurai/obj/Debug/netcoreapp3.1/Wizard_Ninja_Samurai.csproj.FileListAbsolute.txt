@@ -1,0 +1,13 @@
+C:\Users\taylo\OneDrive\Desktop\Coding_Dojo\c_sharp_stack\2_Language_Fundamentals\2_OOP\Wizard_Ninja_Samurai\bin\Debug\netcoreapp3.1\Wizard_Ninja_Samurai.exe
+C:\Users\taylo\OneDrive\Desktop\Coding_Dojo\c_sharp_stack\2_Language_Fundamentals\2_OOP\Wizard_Ninja_Samurai\bin\Debug\netcoreapp3.1\Wizard_Ninja_Samurai.deps.json
+C:\Users\taylo\OneDrive\Desktop\Coding_Dojo\c_sharp_stack\2_Language_Fundamentals\2_OOP\Wizard_Ninja_Samurai\bin\Debug\netcoreapp3.1\Wizard_Ninja_Samurai.runtimeconfig.json
+C:\Users\taylo\OneDrive\Desktop\Coding_Dojo\c_sharp_stack\2_Language_Fundamentals\2_OOP\Wizard_Ninja_Samurai\bin\Debug\netcoreapp3.1\Wizard_Ninja_Samurai.runtimeconfig.dev.json
+C:\Users\taylo\OneDrive\Desktop\Coding_Dojo\c_sharp_stack\2_Language_Fundamentals\2_OOP\Wizard_Ninja_Samurai\bin\Debug\netcoreapp3.1\Wizard_Ninja_Samurai.dll
+C:\Users\taylo\OneDrive\Desktop\Coding_Dojo\c_sharp_stack\2_Language_Fundamentals\2_OOP\Wizard_Ninja_Samurai\bin\Debug\netcoreapp3.1\Wizard_Ninja_Samurai.pdb
+C:\Users\taylo\OneDrive\Desktop\Coding_Dojo\c_sharp_stack\2_Language_Fundamentals\2_OOP\Wizard_Ninja_Samurai\obj\Debug\netcoreapp3.1\Wizard_Ninja_Samurai.csprojAssemblyReference.cache
+C:\Users\taylo\OneDrive\Desktop\Coding_Dojo\c_sharp_stack\2_Language_Fundamentals\2_OOP\Wizard_Ninja_Samurai\obj\Debug\netcoreapp3.1\Wizard_Ninja_Samurai.AssemblyInfoInputs.cache
+C:\Users\taylo\OneDrive\Desktop\Coding_Dojo\c_sharp_stack\2_Language_Fundamentals\2_OOP\Wizard_Ninja_Samurai\obj\Debug\netcoreapp3.1\Wizard_Ninja_Samurai.AssemblyInfo.cs
+C:\Users\taylo\OneDrive\Desktop\Coding_Dojo\c_sharp_stack\2_Language_Fundamentals\2_OOP\Wizard_Ninja_Samurai\obj\Debug\netcoreapp3.1\Wizard_Ninja_Samurai.csproj.CoreCompileInputs.cache
+C:\Users\taylo\OneDrive\Desktop\Coding_Dojo\c_sharp_stack\2_Language_Fundamentals\2_OOP\Wizard_Ninja_Samurai\obj\Debug\netcoreapp3.1\Wizard_Ninja_Samurai.dll
+C:\Users\taylo\OneDrive\Desktop\Coding_Dojo\c_sharp_stack\2_Language_Fundamentals\2_OOP\Wizard_Ninja_Samurai\obj\Debug\netcoreapp3.1\Wizard_Ninja_Samurai.pdb
+C:\Users\taylo\OneDrive\Desktop\Coding_Dojo\c_sharp_stack\2_Language_Fundamentals\2_OOP\Wizard_Ninja_Samurai\obj\Debug\netcoreapp3.1\Wizard_Ninja_Samurai.genruntimeconfig.cache
