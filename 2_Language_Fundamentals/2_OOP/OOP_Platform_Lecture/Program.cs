@@ -56,6 +56,36 @@ namespace OOP_Platform_Lecture
             somePerson.AddToVehicles(carAsVehicle);
             
             somePerson.DisplayVehicles();
+
+            /*
+            IRideable[] variousRideables = new IRideable[]
+            {
+                new Car("Yellow", "Dodge", "Dart"),
+                new Car("Green", "Ford", "Fiesta"),
+                new Horse("Silver Queen", 100),
+                new Horse("Samammish", 75),
+            };
+            // let them all ride!
+            foreach(var rideable in variousRideables)
+            {
+                // each "rideable" object will be able to invoke the common "Ride()" method
+                // however the implementation of "Ride()" will be unique to how each class has chosen to build it
+                rideable.Ride(50);
+            }
+            */
+
+            Horse wilbur = new Horse("Wilbur", 120);
+            Car subaru = new Car(5, "yellow", "Subaru", "Forester");
+            
+            // sally starts out with a horse
+            Person2 sally = new Person2("Sally", wilbur);
+            // sally can ride her horse
+            sally.GoSomewhere(34);
+            
+            // we can also change her Transport to a Car
+            sally.Transport = subaru;
+            sally.GoSomewhere(100);
+            sally.GetPersonInfo();
         }
     }
 }

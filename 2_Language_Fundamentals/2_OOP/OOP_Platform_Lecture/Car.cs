@@ -2,10 +2,24 @@ using System;
 
 namespace OOP_Platform_Lecture
 {
-    public class Car : Vehicle  // indicates Car inherits from Vehicle; Car is a child of Vehicle parent/base class
+    public class Car : Vehicle, IRideable
+    // Car inherits from Vehicle; Car is a child of Vehicle parent/base class (can only inherit one parent)
+    // Also, implements IRideable (can implement multiple interfaces)
     {
-        public string Make;
-        public string Model;
+        public string Make;   // for Car class
+        public string Model;  // for Car class
+        // for IRideable:
+        public double DistanceTraveled
+        {
+            get {return Odometer;}
+            set {Odometer = value;}
+        }
+
+        public void Ride(double distance)  // for IRideable
+        {
+            Console.WriteLine("I am driving!");
+            DistanceTraveled += distance;
+        }
 
         // One of the two Vehicle constructors need to be satisfied now:
         // invoked one of the parent class constructors and added the Car fields to the Car part of the constructor
