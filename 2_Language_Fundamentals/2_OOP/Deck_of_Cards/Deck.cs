@@ -9,7 +9,7 @@ namespace Deck_of_Cards
 
         public Deck()
         {
-            // a list of 52 unique cards as its "cards" property
+            // a list of 52 unique cards as its "Cards" property
 
             string[] cardStringVal = {"Ace","2","3","4","5","6","7","8","9","10","Jack","Queen","King"};
 
@@ -29,16 +29,16 @@ namespace Deck_of_Cards
         public Card Deal()
         {
             // Give the Deck a deal method that selects the "top-most" card, removes it from the list of cards, and returns the Card
-
             Card card = Cards[Cards.Count-1];
             Cards.Remove(Cards[Cards.Count-1]);
             return card;
+
+            // need to add if Deck > 0, else Deck is empty
         }
 
         public void Reset()
         {
             // Give the Deck a reset method that resets the cards property to contain the original 52 cards
-
             Cards = new Deck().Cards;
         }
 
@@ -53,9 +53,29 @@ namespace Deck_of_Cards
                 Card temp = Cards[i];
                 Cards[i] = Cards[randomIndex];
                 Cards[randomIndex] = temp;
-            }
 
-            // if this doesn't work, just return a new deck of cards
+                /* ALTERNATE:
+                Card currentCard = Card[i];
+                Card randomCard = Cards[randomIndex];
+                Cards[i] = randomCard;
+                Cards[randomIndex] = currentcard;
+                */
+
+                /* ALTERNATE:
+                public void Shuffle<Temp>(List<Temp> cards) 
+                {
+                    private Random rng = new Random();
+                    int n = cards.Count;
+                    while (n > 1) {
+                        n--;
+                        int k = rng.Next(n + 1);
+                        Temp card = cards[k];
+                        cards[k] = cards[n];
+                        cards[n] = card;
+                    }
+                }
+                */
+            }
         }
     }
 }

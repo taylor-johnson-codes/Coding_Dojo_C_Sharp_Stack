@@ -7,6 +7,8 @@
             Player me = new Player("Taylor");
             Deck newDeck = new Deck();
 
+            newDeck.Shuffle();
+
             me.Draw(newDeck);
             me.Draw(newDeck);
             me.Draw(newDeck);
@@ -16,8 +18,6 @@
             me.Discard(1);
 
             me.Draw(newDeck);
-
-            newDeck.Shuffle();
 
             newDeck.Reset();
         }
