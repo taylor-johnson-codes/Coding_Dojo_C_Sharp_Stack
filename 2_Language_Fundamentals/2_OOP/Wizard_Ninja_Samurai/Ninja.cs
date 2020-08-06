@@ -23,5 +23,12 @@ namespace Wizard_Ninja_Samurai
             Console.WriteLine($"{Name} attacked {target.Name} for {dmg} damage!");
             return target.Health;
         }
+
+        public void Steal(Human target)
+        {
+            target.Health -= 5;
+            Health += 5;
+            Console.WriteLine($"{Name} stole 5 from {target.Name} to improve {Name}'s health by 5!");
+        }
     }
 }

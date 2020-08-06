@@ -44,5 +44,10 @@ namespace Wizard_Ninja_Samurai
             Console.WriteLine($"{Name} attacked {target.Name} for {dmg} damage!");
             return target.Health;
         }
+
+        public void displayInfo()
+        {
+            Console.WriteLine($"Name: {Name}, Strength: {Strength}, Intelligence: {Intelligence}, Dexterity: {Dexterity}, Health: {Health}");
+        }
     }
 }

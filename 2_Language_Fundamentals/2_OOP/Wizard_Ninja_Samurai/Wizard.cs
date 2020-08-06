@@ -20,5 +20,12 @@ namespace Wizard_Ninja_Samurai
             Console.WriteLine($"{Name} earned {dmg} health!");
             return target.Health;
         }
+
+        public void Heal(Human target)
+        {
+            int healedAmount = Intelligence * 10;
+            target.Health += healedAmount;
+            Console.WriteLine($"{Name} healed {target.Name}'s health by {healedAmount}!");
+        }
     }
 }
