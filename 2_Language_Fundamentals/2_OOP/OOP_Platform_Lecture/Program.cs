@@ -86,6 +86,30 @@ namespace OOP_Platform_Lecture
             sally.Transport = subaru;
             sally.GoSomewhere(100);
             sally.GetPersonInfo();
+
+            /////////// IENUMERABLE EXAMPLE:
+
+            string[] wordArray = new string[]
+            {
+                "Goat", "Bear", "Skunk", "Deer"
+            };
+
+            List<string> wordList = new List<string>()
+            {
+                "Plate", "Cup", "Fork", "Meat Cleaver", "Spatula"
+            };
+
+            LoopingSomeWords(wordArray);
+            LoopingSomeWords(wordList);
+        }
+
+        // outside of Main method:
+        static void LoopingSomeWords(IEnumerable<string> someWords)
+        {
+            foreach(var word in someWords)
+            {
+                Console.Write(word + " ");
+            }
         }
     }
 }
