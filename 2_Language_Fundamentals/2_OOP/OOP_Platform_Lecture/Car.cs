@@ -44,5 +44,13 @@ namespace OOP_Platform_Lecture
             Console.WriteLine($"I drove {distance} miles!");
             Console.WriteLine($"Odometer reading: {this.Odometer}");
         }
+
+        /*
+        // implementing abstract method from Vehicle class:
+        public override void MakeNoise()
+        {
+            Console.WriteLine("Beep! Beep!");
+        }
+        */
     }
 }

@@ -3,6 +3,8 @@ using System;
 namespace OOP_Platform_Lecture
 {
     public class Vehicle
+    // adding "abstract" (before public) will throw an error in the Main method because vehicles can't be instantiated/created if class is abstract
+
     {
         
     /* ACCESS MODIFIERS:
@@ -51,7 +53,7 @@ namespace OOP_Platform_Lecture
     {
         Console.WriteLine("BEEP!");
     }
-
+    
     public virtual void GetInfo()
     // marked as virtual so child class can override it
         {
@@ -62,6 +64,9 @@ namespace OOP_Platform_Lecture
             Console.WriteLine($"Odometer: {Odometer}");
             Console.WriteLine("------------------------");
         }
+
+    // abstract method example:
+    // public abstract void MakeNoise();   // required to be implemented in child relationships
 
 
     // PROPERTIES EXAMPLE:
