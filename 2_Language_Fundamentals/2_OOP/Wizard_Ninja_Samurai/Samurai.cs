@@ -4,7 +4,7 @@ namespace Wizard_Ninja_Samurai
     {
         public Samurai(string name) : base(name)
         {
-            health = 200;
+            Health = 200;
         }
     }
 }
