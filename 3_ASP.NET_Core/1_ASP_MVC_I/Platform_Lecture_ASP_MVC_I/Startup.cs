@@ -27,17 +27,26 @@ namespace Platform_Lecture_ASP_MVC_I
                 app.UseDeveloperExceptionPage();
             }
 
-            // app.UseRouting();
-
             app.UseMvc();  // added this line; supposed to replace the app.run lines of code
 
-            app.UseEndpoints(endpoints =>
-            {
-                endpoints.MapGet("/", async context =>
-                {
-                    await context.Response.WriteAsync("Hello World!");
-                });
-            });
+            // app.UseRouting();
+
+            // app.UseEndpoints(endpoints =>
+            // {
+            //     endpoints.MapGet("/", async context =>
+            //     {
+            //         await context.Response.WriteAsync("Hello World!");
+            //     });
+            // });
+        }
+
+        // constructor I added:
+        public Startup(IWebHostEnvironment env) {            
+            // run this in the debugger, and inspect the "env" object! You can use this object to tell you 
+            // the root path of your application, for the purposes of reading from local files, and for            
+            // checking environment variables - such as if you are running in Development or Production 
+            Console.WriteLine(env.ContentRootPath);
+            Console.WriteLine(env.IsDevelopment());
         }
     }
 }
