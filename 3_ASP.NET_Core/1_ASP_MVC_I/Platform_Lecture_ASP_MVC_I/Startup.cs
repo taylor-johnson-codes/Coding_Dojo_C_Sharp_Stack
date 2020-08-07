@@ -27,9 +27,12 @@ namespace Platform_Lecture_ASP_MVC_I
                 app.UseDeveloperExceptionPage();
             }
 
-            app.UseMvc();  // added this line; supposed to replace the app.run lines of code
+            app.UseRouting();
 
-            // app.UseRouting();
+            app.UseStaticFiles();  // added this
+
+            app.UseMvc();  
+            // added this line; supposed to replace the app.run lines of code, I think that's what is commented out below
 
             // app.UseEndpoints(endpoints =>
             // {

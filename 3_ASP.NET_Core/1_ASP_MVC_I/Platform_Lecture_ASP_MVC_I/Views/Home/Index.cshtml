@@ -3,9 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Demo</title>
 </head>
 <body>
     Testing 1 2 3 
+
+    <h1 class="red">
+        @ViewBag.Intro
+    </h1>
+
+    @* @{
+        List<string> travelDestinations = new List<string>()
+            {
+                "Seattle", "New York", "Nashville", "Honolulu"
+            };
+
+        <ul>
+            @foreach (string destination in travelDestinations)
+            {
+                <li>
+                    <a href="/travel/@destination">@destination</a>
+                </li>
+            }
+        </ul>
+    } *@
 </body>
 </html>
