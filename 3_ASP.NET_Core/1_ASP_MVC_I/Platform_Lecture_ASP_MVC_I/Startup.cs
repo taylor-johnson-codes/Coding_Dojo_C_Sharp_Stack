@@ -27,9 +27,9 @@ namespace Platform_Lecture_ASP_MVC_I
                 app.UseDeveloperExceptionPage();
             }
 
-            app.UseRouting();
-
             app.UseMvc();  // added this line; supposed to replace the app.run lines of code
+
+            // app.UseRouting();
 
             // app.UseEndpoints(endpoints =>
             // {
@@ -40,6 +40,7 @@ namespace Platform_Lecture_ASP_MVC_I
             // });
         }
 
+        /*
         // constructor I added:
         public Startup(IWebHostEnvironment env) {            
             // run this in the debugger, and inspect the "env" object! You can use this object to tell you 
@@ -48,5 +49,6 @@ namespace Platform_Lecture_ASP_MVC_I
             Console.WriteLine(env.ContentRootPath);
             Console.WriteLine(env.IsDevelopment());
         }
+        */
     }
 }
