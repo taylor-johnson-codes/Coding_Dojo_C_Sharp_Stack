@@ -16,6 +16,7 @@ namespace Platform_Lecture_ASP_MVC_I
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddMvc(options => options.EnableEndpointRouting = false);  // added this line
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -26,7 +27,9 @@ namespace Platform_Lecture_ASP_MVC_I
                 app.UseDeveloperExceptionPage();
             }
 
-            app.UseRouting();
+            // app.UseRouting();
+
+            app.UseMvc();  // added this line; supposed to replace the app.run lines of code
 
             app.UseEndpoints(endpoints =>
             {
