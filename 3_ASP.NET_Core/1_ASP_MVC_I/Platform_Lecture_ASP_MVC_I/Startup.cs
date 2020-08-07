@@ -27,9 +27,9 @@ namespace Platform_Lecture_ASP_MVC_I
                 app.UseDeveloperExceptionPage();
             }
 
-            app.UseMvc();  // added this line; supposed to replace the app.run lines of code
+            app.UseRouting();
 
-            // app.UseRouting();
+            app.UseMvc();  // added this line; supposed to replace the app.run lines of code
 
             // app.UseEndpoints(endpoints =>
             // {
