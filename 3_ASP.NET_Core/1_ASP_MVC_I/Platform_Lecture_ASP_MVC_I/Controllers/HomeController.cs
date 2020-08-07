@@ -1,10 +1,11 @@
 using System;
 using Microsoft.AspNetCore.Mvc;  // provides Controller class that we inherit below
 
-namespace Platform_Lecture_ASP_MVC_I.Controllers  // added .Controllers to namespace
+namespace Platform_Lecture_ASP_MVC_I.Controllers  // added .Controllers to namespace; S at end
 {
-    public class HomeController : Controller  
-    // the name given before Controller (Home) is the name of the Views folder for this Controller
+    public class HomeController : Controller  // no S at end
+    // the name given before my Controller (Home) is the name of the Views folder for this Controller
+    // methods in Controllers are called Actions
     {
         // Request:
         [HttpGet]  // get requests are implicitly there in the background if it's not explicit like this
@@ -16,23 +17,19 @@ namespace Platform_Lecture_ASP_MVC_I.Controllers  // added .Controllers to names
             return "Hello from HomeController!";
         }
 
-        // Request:
         [HttpGet("hello")]  // shorthand for what was done above
-
-        // Response:
         public string Hello()
         {
             return "Hi!";
         }
 
-        // Request:
+        /*
         [HttpGet("users/(username}")]  // route parameter can be string or int
-
-        // Response:
         public string HelloUser(string username)  // using route parameter
         {
             return $"Hello {username}!"; 
         }
+        */
 
         /*
         // Request:
@@ -50,27 +47,6 @@ namespace Platform_Lecture_ASP_MVC_I.Controllers  // added .Controllers to names
         public ViewResult ReturnViewExample()
         {
             return View("Index");
-        }
-
-        // methods in Controllers are called Actions
-
-        [HttpGet("travel/{destination}")]
-        public RedirectToActionResult Travel(string destination)
-        {
-            Console.WriteLine(destination);
-            return RedirectToAction("Index");
-        }
-
-        [HttpGet("index2")]
-
-        // Response:
-        public ViewResult Index2()
-        {
-            ViewBag.Intro = "My name is Taylor.";
-            ViewBag.Year = 2020;
-            // ViewBag.Website = 
-            return View("Index");
-
         }
     }
 }

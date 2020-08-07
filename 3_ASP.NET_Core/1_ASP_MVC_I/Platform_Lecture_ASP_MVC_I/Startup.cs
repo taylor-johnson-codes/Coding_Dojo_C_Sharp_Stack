@@ -27,20 +27,22 @@ namespace Platform_Lecture_ASP_MVC_I
                 app.UseDeveloperExceptionPage();
             }
 
-            app.UseRouting();
-
-            app.UseStaticFiles();  // added this
+            app.UseStaticFiles();  // added this for style.css
 
             app.UseMvc();  
             // added this line; supposed to replace the app.run lines of code, I think that's what is commented out below
 
-            // app.UseEndpoints(endpoints =>
-            // {
-            //     endpoints.MapGet("/", async context =>
-            //     {
-            //         await context.Response.WriteAsync("Hello World!");
-            //     });
-            // });
+            /*
+            app.UseRouting();
+
+            app.UseEndpoints(endpoints =>
+            {
+                endpoints.MapGet("/", async context =>
+                {
+                    await context.Response.WriteAsync("Hello World!");
+                });
+            });
+            */
         }
 
         /*
