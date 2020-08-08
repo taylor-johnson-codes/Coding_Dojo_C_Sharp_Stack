@@ -10,7 +10,7 @@
 
     <h1 class="red">Testing 1 2 3</h1>
 
-    @* @{
+    @{
         List<string> travelDestinations = new List<string>()
             {
                 "Seattle", "New York", "Nashville", "Honolulu"
@@ -20,10 +20,11 @@
             @foreach (string destination in travelDestinations)
             {
                 <li>
-                    <a href="/travel/@destination">@destination</a>
+                    @* <a href="/travel/@destination">@destination</a> *@
+                    @destination
                 </li>
             }
         </ul>
-    } *@
+    }
 </body>
 </html>

@@ -44,9 +44,11 @@ namespace Platform_Lecture_ASP_MVC_I.Controllers  // added .Controllers to names
         */
 
         [HttpGet("return_view_example")]
-        public ViewResult ReturnViewExample()
+        public ViewResult ReturnViewExample()  // notice return type
         {
             return View("Index");
+            // if View() is left blank, it will automatically try to find a View with the method name ReturnViewExample
+            // in both the Home and Shared folders inside the Views folder
         }
     }
 }
