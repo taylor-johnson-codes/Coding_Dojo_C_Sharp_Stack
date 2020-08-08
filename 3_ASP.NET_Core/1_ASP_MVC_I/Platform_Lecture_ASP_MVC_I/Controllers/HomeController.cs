@@ -98,7 +98,9 @@ namespace Platform_Lecture_ASP_MVC_I.Controllers  // added .Controllers to names
         {
             // Here we assign the value "Hello World!" to the property .Example
             // Property names are arbitrary and can be whatever you like
-            ViewBag.Example = "Hello World!";
+            ViewBag.Example1 = "Hello World!";
+            ViewBag.Example2 = 2020;
+            ViewBag.Example3 = true;
             return View("Index");
         }
 
