@@ -1,0 +1,37 @@
+.container{
+    border: 2px solid black;
+    padding: 10px;
+    width: 1000px;
+    height: 800px;
+    background-color: pink;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.navbar{
+    width: 750px;
+    height: 50px;
+    padding-top: 10px;
+    display: flex;
+    align-content: space-around;
+    margin-left: 300px;
+}
+
+.navlist li{
+    display: inline;
+}
+
+.navlist a{
+    text-decoration: none;
+    font-size: larger;
+    float: left;
+    text-align: center;
+    padding-right: 20px;
+}
+
+a:hover{
+color: red;
+}
+
+.about_me, .projects{
+    margin-left: 350px;
+}
