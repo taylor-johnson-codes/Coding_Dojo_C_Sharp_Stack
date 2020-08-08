@@ -112,5 +112,12 @@ namespace Platform_Lecture_ASP_MVC_I.Controllers  // added .Controllers to names
         */
 
 
+        // POST example:
+        [HttpPost("method")]
+        public IActionResult PostMethod(string my_text, int my_num)
+        {
+            // Do something with form input
+        }
+
     }
 }
