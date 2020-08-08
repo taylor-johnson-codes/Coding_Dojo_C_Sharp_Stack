@@ -20519,6 +20519,12 @@
     "CSharpLanguageVersion": 800
   },
   "RootNamespace": "Portfolio_II",
-  "Documents": [],
+  "Documents": [
+    {
+      "FilePath": "c:\\Users\\taylo\\OneDrive\\Desktop\\Coding_Dojo\\c_sharp_stack\\3_ASP.NET_Core\\1_ASP_MVC_I\\Portfolio_II\\Views\\Home\\Index.cshtml",
+      "TargetPath": "Views\\Home\\Index.cshtml",
+      "FileKind": "mvc"
+    }
+  ],
   "SerializationFormat": "0.2"
 }
