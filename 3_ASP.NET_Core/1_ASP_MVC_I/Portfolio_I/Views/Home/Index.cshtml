@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Razor Fun</title>
+</head>
+<body>
+
+    <h1>I Love Animals!</h1>
+    @{
+        List<string> animals = new List<string>
+            {
+                "dog",
+                "cat",
+                "pig",
+                "lion",
+            };
+        
+        foreach (string animal in animals)
+        {
+            if(animal[0] is 'c')
+            {
+                <p class="red">@animal</p>
+            } 
+            else 
+            {
+                <p>@animal</p>
+            }
+        }
+    }
+</body>
+</html>

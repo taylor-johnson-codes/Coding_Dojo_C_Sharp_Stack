@@ -21,5 +21,11 @@ namespace Portfolio_I.Controllers
         {
             return "This is my contact info!";
         }
+
+        [HttpGet("razor_fun")]
+        public ViewResult RazorFun()
+        {
+            return View("Index");
+        }
     }
 }
