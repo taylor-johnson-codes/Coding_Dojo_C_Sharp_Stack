@@ -20519,6 +20519,12 @@
     "CSharpLanguageVersion": 800
   },
   "RootNamespace": "Time_Display",
-  "Documents": [],
+  "Documents": [
+    {
+      "FilePath": "c:\\Users\\taylo\\OneDrive\\Desktop\\Coding_Dojo\\c_sharp_stack\\3_ASP.NET_Core\\1_ASP_MVC_I\\Time_Display\\Views\\Home\\Index.cshtml",
+      "TargetPath": "Views\\Home\\Index.cshtml",
+      "FileKind": "mvc"
+    }
+  ],
   "SerializationFormat": "0.2"
 }
