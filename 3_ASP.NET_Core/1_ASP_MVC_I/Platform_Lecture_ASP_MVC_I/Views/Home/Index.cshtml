@@ -10,6 +10,7 @@
 
     <h1 class="red">Testing 1 2 3</h1>
 
+
     @{
         List<string> travelDestinations = new List<string>()
             {
@@ -26,5 +27,13 @@
             }
         </ul>
     }
+
+    <h1>@ViewBag.Example</h1>
+
+    @{
+        string LocalString = ViewBag.Example + " Good to see you!";
+    }
+    <h1>@LocalString</h1>
+
 </body>
 </html>
