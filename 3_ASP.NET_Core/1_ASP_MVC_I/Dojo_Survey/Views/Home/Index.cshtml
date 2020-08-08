@@ -8,6 +8,7 @@
 </head>
 <body>
     <div class="container">
+        <h1>Dojo Survey</h1>
         <form action="/result" method="post">
             <table>
                 <tr>
@@ -18,18 +19,19 @@
                     <td>Dojo Location:</td>
                     <td>
                         <select name="location" id="">
-                            <option value="Seattle"></option>
-                            <option value="Miami"></option>
-                            <option value="Honolulu"></option>
+                            <option value="Seattle">Seattle</option>
+                            <option value="Miami">Miami</option>
+                            <option value="Honolulu">Honolulu</option>
                         </select>
                     </td>
                 </tr>
                 <tr>
-                    <td>Favorite Language:
+                    <td>Favorite Language:</td>
+                    <td>
                         <select name="language" id="">
-                            <option value="C#"></option>
-                            <option value="Python"></option>
-                            <option value="JavaScript"></option>
+                            <option value="C#">C#</option>
+                            <option value="Python">Python</option>
+                            <option value="JavaScript">JavaScript</option>
                         </select>
                     </td>
                 </tr>
@@ -37,7 +39,8 @@
                     <td>Comment (optional):</td>
                 </tr>
             </table>
-            <textarea name="comment" id="" cols="30" rows="10"></textarea>
+            <textarea name="comment" id="" cols="50" rows="5"></textarea>
+            <br>
             <button type="submit">Submit</button>        
         </form>
     </div>
