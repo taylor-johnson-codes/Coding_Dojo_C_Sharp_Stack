@@ -16,5 +16,11 @@ namespace Platform_Lecture_ASP_MVC_II.Controllers
             // If we also need to include the name of our View, we pass our instance as a second argument
             // return View("OtherView", someUser);
         }
+
+        [HttpPost("process")]
+        public IActionResult Process(User user1)
+        {
+            return View("NewUser", user1);
+        }
     }
 }

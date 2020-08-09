@@ -17,6 +17,11 @@
     <div class="container">
         <h1>Super sweet page for @Model.FirstName @Model.LastName</h1>
         @* Model is uppercase here and lowercase up top *@
+
+        <form action="/process" method="post">
+            <input type="text" name="FirstName" placeholder="first name" id="">
+            <input type="text" name="LastName" placeholder="last name" id="">
+        </form>
     </div>
 </body>
 </html>
