@@ -18,6 +18,8 @@
         <h1>Super sweet page for @Model.FirstName @Model.LastName</h1>
         @* Model is uppercase here and lowercase up top *@
 
+        @* name field has to match database/model so this info gets auto-stored in our database *@
+        @* it knows which database to map to because of our @model at the top of the page *@
         <form action="/process" method="post">
             <input type="text" name="FirstName" placeholder="first name" id="">
             <input type="text" name="LastName" placeholder="last name" id="">

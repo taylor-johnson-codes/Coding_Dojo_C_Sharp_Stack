@@ -22,5 +22,6 @@ namespace Platform_Lecture_ASP_MVC_II.Controllers
         {
             return View("NewUser", user1);
         }
+        // if I need to send more than user1, use ViewBag because only one model can be sent
     }
 }
