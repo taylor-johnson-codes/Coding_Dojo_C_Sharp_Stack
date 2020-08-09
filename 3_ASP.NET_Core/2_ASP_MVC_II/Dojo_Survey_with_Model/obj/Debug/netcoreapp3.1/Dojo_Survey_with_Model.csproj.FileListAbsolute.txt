@@ -29,3 +29,4 @@ C:\Users\taylo\OneDrive\Desktop\Coding_Dojo\c_sharp_stack\3_ASP.NET_Core\2_ASP_M
 C:\Users\taylo\OneDrive\Desktop\Coding_Dojo\c_sharp_stack\3_ASP.NET_Core\2_ASP_MVC_II\Dojo_Survey_with_Model\obj\Debug\netcoreapp3.1\Dojo_Survey_with_Model.pdb
 C:\Users\taylo\OneDrive\Desktop\Coding_Dojo\c_sharp_stack\3_ASP.NET_Core\2_ASP_MVC_II\Dojo_Survey_with_Model\obj\Debug\netcoreapp3.1\Dojo_Survey_with_Model.genruntimeconfig.cache
 C:\Users\taylo\OneDrive\Desktop\Coding_Dojo\c_sharp_stack\3_ASP.NET_Core\2_ASP_MVC_II\Dojo_Survey_with_Model\obj\Debug\netcoreapp3.1\Dojo_Survey_with_Model.csproj.CopyComplete
+C:\Users\taylo\OneDrive\Desktop\Coding_Dojo\c_sharp_stack\3_ASP.NET_Core\2_ASP_MVC_II\Dojo_Survey_with_Model\obj\Debug\netcoreapp3.1\Razor\Views\Home\Result.cshtml.g.cs

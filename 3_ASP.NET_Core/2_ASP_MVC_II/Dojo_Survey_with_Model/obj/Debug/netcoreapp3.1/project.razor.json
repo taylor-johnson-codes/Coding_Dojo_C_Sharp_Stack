@@ -20521,6 +20521,11 @@
   "RootNamespace": "Dojo_Survey_with_Model",
   "Documents": [
     {
+      "FilePath": "c:\\Users\\taylo\\OneDrive\\Desktop\\Coding_Dojo\\c_sharp_stack\\3_ASP.NET_Core\\2_ASP_MVC_II\\Dojo_Survey_with_Model\\Views\\Home\\Result.cshtml",
+      "TargetPath": "Views\\Home\\Result.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\taylo\\OneDrive\\Desktop\\Coding_Dojo\\c_sharp_stack\\3_ASP.NET_Core\\2_ASP_MVC_II\\Dojo_Survey_with_Model\\Views\\Home\\Index.cshtml",
       "TargetPath": "Views\\Home\\Index.cshtml",
       "FileKind": "mvc"

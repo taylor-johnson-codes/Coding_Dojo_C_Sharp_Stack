@@ -1,0 +1,36 @@
+@model Dojo_Survey_with_Model.Models.Survey
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Dojo Survey with Models</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Submitted Info</h1>
+        <table>
+            <tr>
+                <td>Name:</td>
+                <td>@Model.name</td>
+            </tr>
+            <tr>
+                <td>Dojo Location:</td>
+                <td>@Model.location</td>
+            </tr>
+            <tr>
+                <td>Favorite Language:</td>
+                <td>@Model.language</td>
+            </tr>
+            <tr>
+                <td>Comment:</td>
+                <td>@Model.comment</td>
+            </tr>
+        </table>
+        <br>
+        <a href="/">Go Back</a>
+    </div>
+</body>
+</html>
