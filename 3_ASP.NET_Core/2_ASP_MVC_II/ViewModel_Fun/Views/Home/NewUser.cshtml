@@ -1,4 +1,5 @@
-@model string[]
+@* @model ViewModel_Fun.Models.User *@
+@model User
 
 <!DOCTYPE html>
 <html lang="en">
@@ -10,10 +11,10 @@
 </head>
 <body>
     <div class="container">
-        <h1>Here is a Message!</h1>
-        @foreach(var message in Model)
+        <h1>Here is a User!</h1>
+        @foreach(var user in Model)
         {
-            <p>@message</p>
+            <p>@Model.FirstName @Model.LastName</p>
         }
     </div>
 </body>

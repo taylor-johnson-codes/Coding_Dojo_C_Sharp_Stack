@@ -1,4 +1,4 @@
-@model string[]
+@model int[]
 
 <!DOCTYPE html>
 <html lang="en">
@@ -10,10 +10,10 @@
 </head>
 <body>
     <div class="container">
-        <h1>Here is a Message!</h1>
-        @foreach(var message in Model)
+        <h1>Here are some numbers!</h1>
+        @foreach(var num in Model)
         {
-            <p>@message</p>
+            <p>@num</p>
         }
     </div>
 </body>
