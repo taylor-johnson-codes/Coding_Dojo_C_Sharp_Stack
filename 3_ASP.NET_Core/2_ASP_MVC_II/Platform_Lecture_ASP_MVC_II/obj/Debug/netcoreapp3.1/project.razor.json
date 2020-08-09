@@ -20521,6 +20521,11 @@
   "RootNamespace": "Platform_Lecture_ASP_MVC_II",
   "Documents": [
     {
+      "FilePath": "c:\\Users\\taylo\\OneDrive\\Desktop\\Coding_Dojo\\c_sharp_stack\\3_ASP.NET_Core\\2_ASP_MVC_II\\Platform_Lecture_ASP_MVC_II\\Views\\User\\_ViewImports.cshtml",
+      "TargetPath": "Views\\User\\_ViewImports.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\taylo\\OneDrive\\Desktop\\Coding_Dojo\\c_sharp_stack\\3_ASP.NET_Core\\2_ASP_MVC_II\\Platform_Lecture_ASP_MVC_II\\Views\\User\\NewUser.cshtml",
       "TargetPath": "Views\\User\\NewUser.cshtml",
       "FileKind": "mvc"

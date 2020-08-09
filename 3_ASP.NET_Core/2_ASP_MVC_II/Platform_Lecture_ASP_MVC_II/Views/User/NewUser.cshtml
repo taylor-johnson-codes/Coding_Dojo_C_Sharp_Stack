@@ -1,4 +1,9 @@
-@model
+@* If not using _ViewImports.cshtml, need this: *@
+@* @model Platform_Lecture_ASP_MVC_II.Models.User *@
+
+@* Using _ViewImports.cshtml: *@
+@* telling the cshtml page it's going to receive User data *@
+@model User
 
 <!DOCTYPE html>
 <html lang="en">
@@ -10,7 +15,7 @@
 </head>
 <body>
     <div class="container">
-        
+        <h1>Greetings @Model.FirstName @Model.LastName!</h1>
     </div>
 </body>
 </html>
