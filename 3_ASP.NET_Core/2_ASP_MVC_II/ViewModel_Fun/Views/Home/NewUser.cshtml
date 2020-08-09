@@ -1,5 +1,9 @@
+@* SHORTHAND: *@
 @model ViewModel_Fun.Models.User
-@* @model User *@
+
+@* LONGHAND:
+@using ViewModel_Fun.Models
+@model User  *@
 
 <!DOCTYPE html>
 <html lang="en">
@@ -12,10 +16,7 @@
 <body>
     <div class="container">
         <h1>Here is a User!</h1>
-        @foreach(var user in Model)
-        {
             <p>@Model.FirstName @Model.LastName</p>
-        }
     </div>
 </body>
 </html>

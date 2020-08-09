@@ -9,8 +9,10 @@ namespace ViewModel_Fun.Controllers
         [HttpGet("")]
         public IActionResult Index()
         {
-            string[] message = new string[] {"Here is my message:", "blah", "blah", "blah"};
-            return View(message);
+            string message = "Here is my message: blah blah blah.";
+            return View("Index", message);
+            // Have to explicitly say "Index" here because message and Index are both strings, so without "Index"
+            // it's looking for a view called message
         }
 
         [HttpGet("numbers")]
@@ -31,7 +33,7 @@ namespace ViewModel_Fun.Controllers
             return View(user_list);
         }
 
-        [HttpGet("new_user")]
+        [HttpGet("user")]
         public IActionResult NewUser()
         {
             User user1 = new User();

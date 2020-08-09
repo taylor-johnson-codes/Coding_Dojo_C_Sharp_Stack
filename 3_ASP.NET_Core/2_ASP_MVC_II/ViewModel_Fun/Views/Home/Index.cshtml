@@ -1,4 +1,4 @@
-@model string[]
+@model string
 
 <!DOCTYPE html>
 <html lang="en">
@@ -11,10 +11,7 @@
 <body>
     <div class="container">
         <h1>Here is a Message!</h1>
-        @foreach(var message in Model)
-        {
-            <p>@message</p>
-        }
+        <p>@Model</p>
     </div>
 </body>
 </html>
