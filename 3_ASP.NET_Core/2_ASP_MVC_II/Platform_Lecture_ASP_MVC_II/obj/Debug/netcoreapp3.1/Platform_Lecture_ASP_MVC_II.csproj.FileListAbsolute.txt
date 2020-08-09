@@ -19,7 +19,6 @@ C:\Users\taylo\OneDrive\Desktop\Coding_Dojo\c_sharp_stack\3_ASP.NET_Core\2_ASP_M
 C:\Users\taylo\OneDrive\Desktop\Coding_Dojo\c_sharp_stack\3_ASP.NET_Core\2_ASP_MVC_II\Platform_Lecture_ASP_MVC_II\obj\Debug\netcoreapp3.1\Platform_Lecture_ASP_MVC_II.TagHelpers.input.cache
 C:\Users\taylo\OneDrive\Desktop\Coding_Dojo\c_sharp_stack\3_ASP.NET_Core\2_ASP_MVC_II\Platform_Lecture_ASP_MVC_II\obj\Debug\netcoreapp3.1\Platform_Lecture_ASP_MVC_II.TagHelpers.output.cache
 C:\Users\taylo\OneDrive\Desktop\Coding_Dojo\c_sharp_stack\3_ASP.NET_Core\2_ASP_MVC_II\Platform_Lecture_ASP_MVC_II\obj\Debug\netcoreapp3.1\Platform_Lecture_ASP_MVC_II.RazorCoreGenerate.cache
-C:\Users\taylo\OneDrive\Desktop\Coding_Dojo\c_sharp_stack\3_ASP.NET_Core\2_ASP_MVC_II\Platform_Lecture_ASP_MVC_II\obj\Debug\netcoreapp3.1\Razor\Views\Home\Index.cshtml.g.cs
 C:\Users\taylo\OneDrive\Desktop\Coding_Dojo\c_sharp_stack\3_ASP.NET_Core\2_ASP_MVC_II\Platform_Lecture_ASP_MVC_II\obj\Debug\netcoreapp3.1\Platform_Lecture_ASP_MVC_II.RazorTargetAssemblyInfo.cache
 C:\Users\taylo\OneDrive\Desktop\Coding_Dojo\c_sharp_stack\3_ASP.NET_Core\2_ASP_MVC_II\Platform_Lecture_ASP_MVC_II\obj\Debug\netcoreapp3.1\Platform_Lecture_ASP_MVC_II.RazorTargetAssemblyInfo.cs
 C:\Users\taylo\OneDrive\Desktop\Coding_Dojo\c_sharp_stack\3_ASP.NET_Core\2_ASP_MVC_II\Platform_Lecture_ASP_MVC_II\obj\Debug\netcoreapp3.1\Platform_Lecture_ASP_MVC_II.Views.pdb
@@ -29,3 +28,4 @@ C:\Users\taylo\OneDrive\Desktop\Coding_Dojo\c_sharp_stack\3_ASP.NET_Core\2_ASP_M
 C:\Users\taylo\OneDrive\Desktop\Coding_Dojo\c_sharp_stack\3_ASP.NET_Core\2_ASP_MVC_II\Platform_Lecture_ASP_MVC_II\obj\Debug\netcoreapp3.1\Platform_Lecture_ASP_MVC_II.pdb
 C:\Users\taylo\OneDrive\Desktop\Coding_Dojo\c_sharp_stack\3_ASP.NET_Core\2_ASP_MVC_II\Platform_Lecture_ASP_MVC_II\obj\Debug\netcoreapp3.1\Platform_Lecture_ASP_MVC_II.genruntimeconfig.cache
 C:\Users\taylo\OneDrive\Desktop\Coding_Dojo\c_sharp_stack\3_ASP.NET_Core\2_ASP_MVC_II\Platform_Lecture_ASP_MVC_II\obj\Debug\netcoreapp3.1\Platform_Lecture_ASP_MVC_II.csproj.CopyComplete
+C:\Users\taylo\OneDrive\Desktop\Coding_Dojo\c_sharp_stack\3_ASP.NET_Core\2_ASP_MVC_II\Platform_Lecture_ASP_MVC_II\obj\Debug\netcoreapp3.1\Razor\Views\User\Index.cshtml.g.cs

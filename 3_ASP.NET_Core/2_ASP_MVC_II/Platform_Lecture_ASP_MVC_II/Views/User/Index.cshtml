@@ -1,3 +1,10 @@
+@* SHORTHAND: *@
+@model Platform_Lecture_ASP_MVC_II.Models.User
+
+@* LONGHAND:
+@using Platform_Lecture_ASP_MVC_II.Models
+@model User *@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,7 +15,7 @@
 </head>
 <body>
     <div class="container">
-
+        <h1>Super sweet page for @Model.FirstName @Model.LastName</h1>
     </div>
 </body>
 </html>
