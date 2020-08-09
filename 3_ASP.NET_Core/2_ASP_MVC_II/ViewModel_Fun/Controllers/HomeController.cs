@@ -7,7 +7,10 @@ namespace ViewModel_Fun.Controllers
         [HttpGet("")]
         public IActionResult Index()
         {
-            return View();
+            string[] message = new string[] {"Here is my message:", "blah", "blah", "blah"};
+            return View(message);
         }
+
+
     }
 }
