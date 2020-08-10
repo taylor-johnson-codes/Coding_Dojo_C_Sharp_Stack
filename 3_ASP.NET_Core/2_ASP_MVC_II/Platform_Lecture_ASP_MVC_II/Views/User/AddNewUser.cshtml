@@ -1,0 +1,29 @@
+@* can do this because I'm using _ViewImports file *@
+@model User
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Platform Lecture</title>
+</head>
+<body>
+    <div class="container">
+        <h3>Commonly used validation types in Models:</h3>
+        <img src="~/images/common_validations.jpg" width=75% alt="image">
+        <p></p>
+
+        @* Now using Razor's Tag Helpers to map our form directly to our model *@
+        @* span tags show errors messages *@
+        <form action="/add" method="post">
+            <input asp-for="FirstName" placeholder="First Name">
+            <span asp-validation-for="FirstName"></span>  
+            <input asp-for="LastName" placeholder="Last Name">
+            <span asp-validation-for="LastName"></span>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>

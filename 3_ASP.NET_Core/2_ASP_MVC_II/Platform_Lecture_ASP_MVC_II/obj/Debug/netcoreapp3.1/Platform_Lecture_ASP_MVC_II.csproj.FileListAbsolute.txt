@@ -30,4 +30,6 @@ C:\Users\taylo\OneDrive\Desktop\Coding_Dojo\c_sharp_stack\3_ASP.NET_Core\2_ASP_M
 C:\Users\taylo\OneDrive\Desktop\Coding_Dojo\c_sharp_stack\3_ASP.NET_Core\2_ASP_MVC_II\Platform_Lecture_ASP_MVC_II\obj\Debug\netcoreapp3.1\Platform_Lecture_ASP_MVC_II.csproj.CopyComplete
 C:\Users\taylo\OneDrive\Desktop\Coding_Dojo\c_sharp_stack\3_ASP.NET_Core\2_ASP_MVC_II\Platform_Lecture_ASP_MVC_II\obj\Debug\netcoreapp3.1\Razor\Views\User\Index.cshtml.g.cs
 C:\Users\taylo\OneDrive\Desktop\Coding_Dojo\c_sharp_stack\3_ASP.NET_Core\2_ASP_MVC_II\Platform_Lecture_ASP_MVC_II\obj\Debug\netcoreapp3.1\Razor\Views\User\NewUser.cshtml.g.cs
-C:\Users\taylo\OneDrive\Desktop\Coding_Dojo\c_sharp_stack\3_ASP.NET_Core\2_ASP_MVC_II\Platform_Lecture_ASP_MVC_II\obj\Debug\netcoreapp3.1\Razor\Views\User\_ViewImports.cshtml.g.cs
+C:\Users\taylo\OneDrive\Desktop\Coding_Dojo\c_sharp_stack\3_ASP.NET_Core\2_ASP_MVC_II\Platform_Lecture_ASP_MVC_II\obj\Debug\netcoreapp3.1\Razor\Views\User\AddNewUser.cshtml.g.cs
+C:\Users\taylo\OneDrive\Desktop\Coding_Dojo\c_sharp_stack\3_ASP.NET_Core\2_ASP_MVC_II\Platform_Lecture_ASP_MVC_II\obj\Debug\netcoreapp3.1\Razor\Views\User\Success.cshtml.g.cs
+C:\Users\taylo\OneDrive\Desktop\Coding_Dojo\c_sharp_stack\3_ASP.NET_Core\2_ASP_MVC_II\Platform_Lecture_ASP_MVC_II\obj\Debug\netcoreapp3.1\Razor\Views\_ViewImports.cshtml.g.cs

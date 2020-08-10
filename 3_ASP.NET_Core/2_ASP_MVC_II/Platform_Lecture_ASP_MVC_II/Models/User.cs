@@ -1,9 +1,25 @@
+using System.ComponentModel.DataAnnotations;  // for Model validation; also added TagHelper to _ViewImports.cshtml
+
 namespace Platform_Lecture_ASP_MVC_II.Models  // notice .Models was added on here
 {
     public class User
     {
+        [Required]
+        [MinLength(1)]
         public string FirstName { get; set; }
+
+        [Required]
+        [MaxLength(30)]
         public string LastName { get; set; }
+
+        // OTHER EXAMPLES:
+        // [Required]
+        // [EmailAddress]
+        // public string Email { get; set; }
+
+        // [Required]
+        // [DataType(DataType.Password)]
+        // public string Password { get; set; }
     }
 }
 

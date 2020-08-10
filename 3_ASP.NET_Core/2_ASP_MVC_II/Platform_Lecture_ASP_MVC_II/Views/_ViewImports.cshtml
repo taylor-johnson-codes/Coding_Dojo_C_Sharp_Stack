@@ -1,0 +1,20 @@
+@* Stuff to import to all of our Views *@
+
+@using Platform_Lecture_ASP_MVC_II
+@using Platform_Lecture_ASP_MVC_II.Models
+
+@* for Model validation: *@
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+@* to add this to any project from the terminal:
+run this command from your project root dotnet new viewimports -o Views/  *@
+
+@* Additionally, you may use this file to provide namespace references to your Views, so that instead of needing 
+to reference the full namespace path (for example, @model CoolProj.Models.User), you can provide the @using namespace 
+statement here, so that you can refer directly to a class in other files as needed. 
+
+example:
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@using MyCoolProj.Models
+// With this line, you may refer to just the User type when defining the model in your view
+// ex: @model User _vs_ @MyCoolProj.Models.User *@

@@ -20521,8 +20521,13 @@
   "RootNamespace": "Platform_Lecture_ASP_MVC_II",
   "Documents": [
     {
-      "FilePath": "c:\\Users\\taylo\\OneDrive\\Desktop\\Coding_Dojo\\c_sharp_stack\\3_ASP.NET_Core\\2_ASP_MVC_II\\Platform_Lecture_ASP_MVC_II\\Views\\User\\_ViewImports.cshtml",
-      "TargetPath": "Views\\User\\_ViewImports.cshtml",
+      "FilePath": "c:\\Users\\taylo\\OneDrive\\Desktop\\Coding_Dojo\\c_sharp_stack\\3_ASP.NET_Core\\2_ASP_MVC_II\\Platform_Lecture_ASP_MVC_II\\Views\\_ViewImports.cshtml",
+      "TargetPath": "Views\\_ViewImports.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\taylo\\OneDrive\\Desktop\\Coding_Dojo\\c_sharp_stack\\3_ASP.NET_Core\\2_ASP_MVC_II\\Platform_Lecture_ASP_MVC_II\\Views\\User\\Success.cshtml",
+      "TargetPath": "Views\\User\\Success.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -20533,6 +20538,11 @@
     {
       "FilePath": "c:\\Users\\taylo\\OneDrive\\Desktop\\Coding_Dojo\\c_sharp_stack\\3_ASP.NET_Core\\2_ASP_MVC_II\\Platform_Lecture_ASP_MVC_II\\Views\\User\\Index.cshtml",
       "TargetPath": "Views\\User\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\taylo\\OneDrive\\Desktop\\Coding_Dojo\\c_sharp_stack\\3_ASP.NET_Core\\2_ASP_MVC_II\\Platform_Lecture_ASP_MVC_II\\Views\\User\\AddNewUser.cshtml",
+      "TargetPath": "Views\\User\\AddNewUser.cshtml",
       "FileKind": "mvc"
     }
   ],
