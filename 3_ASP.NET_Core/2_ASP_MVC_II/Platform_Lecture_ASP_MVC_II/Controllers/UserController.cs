@@ -1,3 +1,4 @@
+using System;
 using Microsoft.AspNetCore.Mvc;
 using Platform_Lecture_ASP_MVC_II.Models;
 
@@ -55,6 +56,15 @@ namespace Platform_Lecture_ASP_MVC_II.Controllers
         public IActionResult Success(User user2)
         {
             return View("Success", user2);
+        }
+
+
+        [HttpGet("test_nav_partial")]
+        public IActionResult TestNavPartial()
+        {
+            ViewBag.CurrentTime = DateTime.Now;
+            ViewBag.Message = "The Time is:";
+            return View();
         }
     }
 }

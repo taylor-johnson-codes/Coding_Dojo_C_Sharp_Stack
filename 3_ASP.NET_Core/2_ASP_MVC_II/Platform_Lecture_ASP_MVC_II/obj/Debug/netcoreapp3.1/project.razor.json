@@ -20526,6 +20526,16 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\taylo\\OneDrive\\Desktop\\Coding_Dojo\\c_sharp_stack\\3_ASP.NET_Core\\2_ASP_MVC_II\\Platform_Lecture_ASP_MVC_II\\Views\\Shared\\NavPartial.cshtml",
+      "TargetPath": "Views\\Shared\\NavPartial.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\taylo\\OneDrive\\Desktop\\Coding_Dojo\\c_sharp_stack\\3_ASP.NET_Core\\2_ASP_MVC_II\\Platform_Lecture_ASP_MVC_II\\Views\\User\\TestNavPartial.cshtml",
+      "TargetPath": "Views\\User\\TestNavPartial.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\taylo\\OneDrive\\Desktop\\Coding_Dojo\\c_sharp_stack\\3_ASP.NET_Core\\2_ASP_MVC_II\\Platform_Lecture_ASP_MVC_II\\Views\\User\\Success.cshtml",
       "TargetPath": "Views\\User\\Success.cshtml",
       "FileKind": "mvc"

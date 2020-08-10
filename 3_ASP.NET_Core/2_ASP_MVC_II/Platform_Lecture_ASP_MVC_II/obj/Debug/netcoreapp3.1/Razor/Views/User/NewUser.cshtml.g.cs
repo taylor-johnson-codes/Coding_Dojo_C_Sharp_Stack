@@ -27,7 +27,7 @@ using Platform_Lecture_ASP_MVC_II.Models;
 #line hidden
 #nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"32bdc63c994a3fc3445ac460d6f1b9a152d3f1df", @"/Views/User/NewUser.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"56de9629e40531691d29bc2aa6cfd63a135f790a", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"755ba73f72add6aba7b18a543cc5f4fc87b15c7b", @"/Views/_ViewImports.cshtml")]
     public class Views_User_NewUser : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<User>
     {
         #line hidden

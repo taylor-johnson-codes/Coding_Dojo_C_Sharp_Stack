@@ -1,0 +1,13 @@
+@* Loading a Partial:
+To load a partial, simply just use the partial tag helper.  This will look like any old HTML element, 
+but it is unique to ASP Razor, and requires that you have tag helpers available to your Views (see above!).  
+This element takes a name attribute that will refer to the name (sans .cshtml file extension) of the Partial 
+you wish to load. *@
+
+<partial name="NavPartial"/>
+<h1>Welcome to this site!</h1>
+<p>The rest of your View content here...</p>
+<br>
+
+@* shows the current time coming from NavPartial: *@
+<partial name="NavPartial" view-data="ViewData"/> /

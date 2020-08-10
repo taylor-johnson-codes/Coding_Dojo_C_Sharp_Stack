@@ -27,7 +27,7 @@ using Platform_Lecture_ASP_MVC_II.Models;
 #line hidden
 #nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"a0b52171c55319eab0909a16c5d5bd512f97363d", @"/Views/User/Index.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"56de9629e40531691d29bc2aa6cfd63a135f790a", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"755ba73f72add6aba7b18a543cc5f4fc87b15c7b", @"/Views/_ViewImports.cshtml")]
     public class Views_User_Index : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<Platform_Lecture_ASP_MVC_II.Models.User>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("action", new global::Microsoft.AspNetCore.Html.HtmlString("/process"), global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
