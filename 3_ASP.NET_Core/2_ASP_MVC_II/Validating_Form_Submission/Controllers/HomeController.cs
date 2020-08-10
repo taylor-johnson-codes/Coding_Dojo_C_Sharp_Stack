@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
+using Validating_Form_Submission.Models;
 
 namespace Validating_Form_Submission.Controllers
 {
@@ -7,7 +8,26 @@ namespace Validating_Form_Submission.Controllers
         [HttpGet("")]
         public IActionResult Index()
         {
-            return View();
+            return View("Index");
+        }
+
+        [HttpPost("process")]
+        public IActionResult Process(User new_user)
+        {
+            if(ModelState.IsValid)
+            {
+                return RedirectToAction("Success");
+            }
+            else
+            {
+                return View("Index");
+            }
+        }
+
+        [HttpGet("success")]
+        public IActionResult Success()
+        {
+            return View("Success");
         }
     }
 }

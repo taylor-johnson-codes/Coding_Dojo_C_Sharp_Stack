@@ -9,16 +9,18 @@ namespace Validating_Form_Submission.Models
         public string FirstName { get; set; }
 
         [Required]
-        [MaxLength(30)]
+        [MinLength(1)]
         public string LastName { get; set; }
 
-        // OTHER EXAMPLES:
-        // [Required]
-        // [EmailAddress]
-        // public string Email { get; set; }
+        [Required]
+        public int Age { get; set; }
 
-        // [Required]
-        // [DataType(DataType.Password)]
-        // public string Password { get; set; }
+        [Required]
+        [EmailAddress]
+        public string Email { get; set; }
+
+        [Required]
+        [DataType(DataType.Password)]
+        public string Password { get; set; }
     }
 }

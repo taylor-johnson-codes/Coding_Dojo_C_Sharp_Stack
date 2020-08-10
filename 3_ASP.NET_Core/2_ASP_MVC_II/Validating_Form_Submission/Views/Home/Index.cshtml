@@ -1,14 +1,47 @@
+@model User
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <title>Validating Form Submission</title>
 </head>
 <body>
     <div class="container">
-
+        <h1>Enter your information</h1>
+        <form action="/process" method="post">
+            <table>
+                <tr>
+                    <td>First Name:</td>
+                    <td><input asp-for="FirstName"></td>  
+                    <td><span asp-validation-for="FirstName"></span></td>
+                </tr>
+                <tr>
+                    <td>Last Name:</td>
+                    <td><input asp-for="LastName"></td>
+                    <td><span asp-validation-for="LastName"></span></td>
+                </tr>
+                <tr>
+                    <td>Age:</td>
+                    <td><input asp-for="Age"></td>
+                    <td><span asp-validation-for="Age"></span></td>
+                </tr>
+                <tr>
+                    <td>Email:</td>
+                    <td><input asp-for="Email"></td>
+                    <td><span asp-validation-for="Email"></span></td>
+                </tr>
+                <tr>
+                    <td>Password:</td>
+                    <td><input asp-for="Password"></td>
+                    <td><span asp-validation-for="Password"></span></td>
+                </tr>
+            </table>
+            <br>
+            <button type="submit">Submit</button>        
+        </form>
     </div>
 </body>
 </html>
