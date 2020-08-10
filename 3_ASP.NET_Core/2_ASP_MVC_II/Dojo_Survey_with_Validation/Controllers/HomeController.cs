@@ -12,9 +12,22 @@ namespace Dojo_Survey_with_Validation.Controllers
         }
 
         [HttpPost("process")]
-        public IActionResult Process(Survey survey1)
+        public IActionResult Process(Survey new_survey)
         {
-            return View("Result", survey1);
+            if(ModelState.IsValid)
+            {
+                return RedirectToAction("Result", new_survey);
+            }
+            else
+            {
+                return View("Index");
+            }
+        }
+
+        [HttpGet("result")]
+        public IActionResult Result(Survey new_survey)
+        {
+            return View("Result", new_survey);
         }
     }
 }

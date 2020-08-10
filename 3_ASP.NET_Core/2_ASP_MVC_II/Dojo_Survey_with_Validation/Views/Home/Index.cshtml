@@ -1,3 +1,5 @@
+@model Survey
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,6 +16,7 @@
                 <tr>
                     <td>Your Name:</td>
                     <td><input type="text" name="name" id=""></td>
+                    <td><span asp-validation-for="name"></span></td>
                 </tr>
                 <tr>
                     <td>Dojo Location:</td>
@@ -24,6 +27,7 @@
                             <option value="Honolulu">Honolulu</option>
                         </select>
                     </td>
+                    <td><span asp-validation-for="location"></span></td>
                 </tr>
                 <tr>
                     <td>Favorite Language:</td>
@@ -34,12 +38,14 @@
                             <option value="JavaScript">JavaScript</option>
                         </select>
                     </td>
+                    <td><span asp-validation-for="language"></span></td>
                 </tr>
                 <tr>
                     <td>Comment (optional):</td>
                 </tr>
             </table>
-            <textarea name="comment" id="" cols="50" rows="5"></textarea>
+            <p><textarea name="comment" id="" cols="50" rows="5"></textarea></p>
+            <p><span asp-validation-for="comment"></span></p>
             <br>
             <button type="submit">Submit</button>        
         </form>
