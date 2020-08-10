@@ -6,6 +6,7 @@ namespace Platform_Lecture_ASP_MVC_II.Models  // notice .Models was added on her
     {
         [Required]
         [MinLength(1)]
+        [NoZNames]  // class for this is below
         public string FirstName { get; set; }
 
         [Required]
@@ -20,6 +21,16 @@ namespace Platform_Lecture_ASP_MVC_II.Models  // notice .Models was added on her
         // [Required]
         // [DataType(DataType.Password)]
         // public string Password { get; set; }
+    }
+
+    public class NoZNamesAttribute : ValidationAttribute
+    {
+        protected override ValidationResult IsValid(object value, ValidationContext validationContext)
+        {
+            if (((string)value).ToLower()[0] == 'z')
+                return new ValidationResult("No names that start with Z allowed!");
+            return ValidationResult.Success;
+        }
     }
 }
 
