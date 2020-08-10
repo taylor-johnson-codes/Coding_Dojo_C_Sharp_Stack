@@ -20521,6 +20521,11 @@
   "RootNamespace": "Validating_Form_Submission",
   "Documents": [
     {
+      "FilePath": "c:\\Users\\taylo\\OneDrive\\Desktop\\Coding_Dojo\\c_sharp_stack\\3_ASP.NET_Core\\2_ASP_MVC_II\\Validating_Form_Submission\\Views\\_ViewImports.cshtml",
+      "TargetPath": "Views\\_ViewImports.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\taylo\\OneDrive\\Desktop\\Coding_Dojo\\c_sharp_stack\\3_ASP.NET_Core\\2_ASP_MVC_II\\Validating_Form_Submission\\Views\\Home\\Index.cshtml",
       "TargetPath": "Views\\Home\\Index.cshtml",
       "FileKind": "mvc"
