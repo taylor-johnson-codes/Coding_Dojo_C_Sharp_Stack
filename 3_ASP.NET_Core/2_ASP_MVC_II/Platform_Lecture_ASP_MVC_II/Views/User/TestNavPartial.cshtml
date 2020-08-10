@@ -9,5 +9,15 @@ you wish to load. *@
 <p>The rest of your View content here...</p>
 <br>
 
+
 @* shows the current time coming from NavPartial: *@
 <partial name="NavPartial" view-data="ViewData"/> /
+@* still works w/o the view-data part, not sure why *@
+<br>
+
+
+@* Passing a user's info to NavPartial to be displayed: *@
+@{
+    User userObject = new User() {FirstName="Taylor", LastName="Johnson"};
+}
+<partial name="NavPartial" model="userObject"/>

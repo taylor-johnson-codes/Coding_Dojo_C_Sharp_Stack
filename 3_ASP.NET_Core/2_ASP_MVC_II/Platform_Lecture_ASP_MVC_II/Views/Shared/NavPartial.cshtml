@@ -1,5 +1,8 @@
 @* Need to add Tag Helper line in _ViewImports file first *@
 
+@* @model User *@
+
+@* This was loaded onto TestNavPartial.cshtml: *@
 <nav>
     <ul>
         <li><a href="/">Home</a></li>
@@ -7,8 +10,13 @@
     </ul>
 </nav>
 
-@* This was loaded onto TestNavPartial.cshtml *@
 
 <h1>Keeping Time...</h1>
 <p>@ViewBag.Message @ViewBag.CurrentTime</p>
 @* ViewBag info comes from UserController *@
+
+
+@* Specific user is passed to TestNavPartial.cshtml *@
+<h3>First Name: @Model.FirstName</h3>
+<h3>Last Name: @Model.LastName</h3>
+@* NOT SURE WHY IT CRASHES AT LINE 2 *@
