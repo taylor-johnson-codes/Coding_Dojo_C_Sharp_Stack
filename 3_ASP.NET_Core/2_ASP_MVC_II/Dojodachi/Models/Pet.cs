@@ -1,5 +1,3 @@
-using System.ComponentModel.DataAnnotations;
-
 namespace Dojodachi.Models
 {
     public class Pet

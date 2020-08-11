@@ -19,30 +19,39 @@
             <p>@ViewBag.Message</p>
         </div>
         <div class="buttons">
-        @{
-            if(@Fullness >= 100 && @Happiness >= 100 && @Energy >= 100)
+            @if(ViewBag.Fullness >= 100 && ViewBag.Happiness >= 100 && ViewBag.Energy >= 100)
             {
-            <div>
-                <form asp-action="Clear" asp-controller="Home" method="POST">
-                    <input type="submit" value="Restart">
-                </form>
-            </div>
+                <div>
+                    <form action="/new_game" method="post">
+                        <button type="submit">Restart?</button>
+                    </form>
+                </div>
             }
-        }
-            <div>
-                <form action="/feed" method="post">
-                    <button type="submit">Feed</button>
-                </form>
-                <form action="/play" method="post">
-                    <button type="submit">Play</button>
-                </form>
-                <form action="/work" method="post">
-                    <button type="submit">Work</button>
-                </form>
-                <form action="/sleep" method="post">
-                    <button type="submit">Sleep</button>
-                </form>
-            </div>
+            else if(ViewBag.Fullness <= 0 || ViewBag.Happiness <= 0)
+            {
+                <div>
+                    <form action="/new_game" method="post">
+                        <button type="submit">Restart?</button>
+                    </form>
+                </div>
+            }
+            else
+            {
+                <div>
+                    <form action="/feed" method="post">
+                        <button type="submit">Feed</button>
+                    </form>
+                    <form action="/play" method="post">
+                        <button type="submit">Play</button>
+                    </form>
+                    <form action="/work" method="post">
+                        <button type="submit">Work</button>
+                    </form>
+                    <form action="/sleep" method="post">
+                        <button type="submit">Sleep</button>
+                    </form>
+                </div>
+            }
         </div>
     </div>
 </body>
