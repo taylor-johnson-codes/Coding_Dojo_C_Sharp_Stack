@@ -4,8 +4,9 @@ namespace Dojodachi.Models
 {
     public class Pet
     {
-        [Required]
-        [MinLength(1)]
-        public string Name { get; set; }
+        public int Happiness {get;set;} = 20;
+        public int Fullness {get;set;} = 20;
+        public int Energy {get;set;} = 50;
+        public int Meals {get;set;} = 3;
     }
 }

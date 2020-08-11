@@ -8,7 +8,42 @@
 </head>
 <body>
     <div class="container">
-
+        <div class="status_bar">
+            <p>Fullness: @ViewBag.Fullness</p>
+            <p>Happiness: @ViewBag.Happiness</p>
+            <p>Meals: @ViewBag.Meals</p>
+            <p>Energy: @ViewBag.Energy</p>
+        </div>
+        <div class="pic_box">
+            <img src="~/a_dog.png" alt="image">
+            <p>@ViewBag.Message</p>
+        </div>
+        <div class="buttons">
+        @{
+            if(@Fullness >= 100 && @Happiness >= 100 && @Energy >= 100)
+            {
+            <div>
+                <form asp-action="Clear" asp-controller="Home" method="POST">
+                    <input type="submit" value="Restart">
+                </form>
+            </div>
+            }
+        }
+            <div>
+                <form action="/feed" method="post">
+                    <button type="submit">Feed</button>
+                </form>
+                <form action="/play" method="post">
+                    <button type="submit">Play</button>
+                </form>
+                <form action="/work" method="post">
+                    <button type="submit">Work</button>
+                </form>
+                <form action="/sleep" method="post">
+                    <button type="submit">Sleep</button>
+                </form>
+            </div>
+        </div>
     </div>
 </body>
 </html>
