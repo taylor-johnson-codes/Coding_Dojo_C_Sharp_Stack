@@ -15,6 +15,8 @@ namespace Platform_Lecture_ASP_MVC_II
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc(options => options.EnableEndpointRouting = false);
+
+            services.AddSession();  // added for session
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
@@ -24,9 +26,11 @@ namespace Platform_Lecture_ASP_MVC_II
                 app.UseDeveloperExceptionPage();
             }
 
-            app.UseMvc();
-
             app.UseStaticFiles();
+
+            app.UseSession();  // added for session
+
+            app.UseMvc();  // make sure UseMvc comes last!
 
         }
     }
