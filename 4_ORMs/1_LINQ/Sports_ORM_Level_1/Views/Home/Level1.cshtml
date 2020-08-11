@@ -4,20 +4,124 @@
         <p>Using the SportsORM, complete all the following queries and show their results on Level1.cshtml.</p>
         <ol>
             <li>...all womens' leagues</li>
+            <ul>
+            @foreach (var item in ViewBag.WomensLeagues)
+            {
+                <li>@item.Name</li>
+            }
+            </ul>
+
             <li>...all leagues where sport is any type of hockey</li>
+            <ul>
+            @foreach (var item in ViewBag.Hockey)
+            {
+                <li>@item.Sport: @item.Name</li>
+            }
+            </ul>
+
             <li>...all leagues where sport is something OTHER THAN football</li>
+            <ul>
+            @foreach (var item in ViewBag.NotFootball)
+            {
+                <li>@item.Sport: @item.Name</li>
+            }
+            </ul>
+
             <li>...all leagues that call themselves "conferences"</li>
+            <ul>
+            @foreach (var item in ViewBag.Conferences)
+            {
+                <li>@item.Name</li>
+            }
+            </ul>
+
             <li>...all leagues in the Atlantic region</li>
+            <ul>
+            @foreach (var item in ViewBag.Atlantic)
+            {
+                <li>@item.Name</li>
+            }
+            </ul>
+
             <li>...all teams based in Dallas</li>
+            <ul>
+            @foreach (var item in ViewBag.Dallas)
+            {
+                <li>@item.Location: @item.TeamName</li>
+            }
+            </ul>
+            
             <li>...all teams named the Raptors</li>
+            <ul>
+            @foreach (var item in ViewBag.Raptors)
+            {
+                <li>@item.Location: @item.TeamName</li>
+            }
+            </ul>
+
             <li>...all teams whose location includes "City"</li>
+            <ul>
+            @foreach (var item in ViewBag.City)
+            {
+                <li>@item.Location: @item.TeamName</li>
+            }
+            </ul>
+
             <li>...all teams whose names begin with "T"</li>
+            <ul>
+            @foreach (var item in ViewBag.T)
+            {
+                <li>@item.Location: @item.TeamName</li>
+            }
+            </ul>
+
             <li>...all teams, ordered alphabetically by location</li>
+            <ul>
+            @foreach (var item in ViewBag.LocationOrder)
+            {
+                <li>@item.Location: @item.TeamName</li>
+            }
+            </ul>
+
             <li>...all teams, ordered by team name in reverse alphabetical order</li>
+            <ul>
+            @foreach (var item in ViewBag.RevTeamName)
+            {
+                <li>@item.TeamName</li>
+            }
+            </ul>
+
             <li>...every player with last name "Cooper"</li>
+            <ul>
+            @foreach (var item in ViewBag.Cooper)
+            {
+                <li>@item.FirstName @item.LastName</li>
+            }
+            </ul>
+
             <li>...every player with first name "Joshua"</li>
+            <ul>
+            @foreach (var item in ViewBag.Joshua)
+            {
+                <li>@item.FirstName @item.LastName</li>
+            }
+            </ul>
+
             <li>...every player with last name "Cooper" EXCEPT those with "Joshua" as the first name</li>
+            <ul>
+            @foreach (var item in ViewBag.CoopNotJosh)
+            {
+                <li>@item.FirstName @item.LastName</li>
+            }
+            </ul>
+
             <li>...all players with first name "Alexander" OR first name "Wyatt"</li>
+            <ul>
+            @foreach (var item in ViewBag.AlexOrWyatt)
+            {
+                <li>@item.FirstName @item.LastName</li>
+            }
+            </ul>
         </ol>
     </div>
 </div>
