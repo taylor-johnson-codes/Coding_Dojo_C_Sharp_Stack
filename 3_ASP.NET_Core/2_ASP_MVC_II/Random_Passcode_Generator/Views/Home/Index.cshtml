@@ -8,7 +8,11 @@
 </head>
 <body>
     <div class="container">
-
+        <h2>Random passcode (passcode #@ViewBag.Count)</h2>
+        <p>@ViewBag.Code</p>
+        <form action="generate" method="post">
+            <button type="submit">Generate</button>
+        </form>
     </div>
 </body>
 </html>
