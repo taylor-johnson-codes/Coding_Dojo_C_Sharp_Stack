@@ -10,5 +10,11 @@ namespace Learning_Bootstrap.Controllers
         {
             return View();
         }
+
+        [HttpGet("blocks")]
+        public IActionResult Blocks()
+        {
+            return View();
+        }
     }
 }

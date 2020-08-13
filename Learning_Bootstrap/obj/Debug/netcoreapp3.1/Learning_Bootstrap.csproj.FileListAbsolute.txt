@@ -30,3 +30,4 @@ C:\Users\taylo\OneDrive\Desktop\Coding_Dojo\c_sharp_stack\Learning_Bootstrap\obj
 C:\Users\taylo\OneDrive\Desktop\Coding_Dojo\c_sharp_stack\Learning_Bootstrap\obj\Debug\netcoreapp3.1\Learning_Bootstrap.pdb
 C:\Users\taylo\OneDrive\Desktop\Coding_Dojo\c_sharp_stack\Learning_Bootstrap\obj\Debug\netcoreapp3.1\Learning_Bootstrap.genruntimeconfig.cache
 C:\Users\taylo\OneDrive\Desktop\Coding_Dojo\c_sharp_stack\Learning_Bootstrap\obj\Debug\netcoreapp3.1\Learning_Bootstrap.csproj.CopyComplete
+C:\Users\taylo\OneDrive\Desktop\Coding_Dojo\c_sharp_stack\Learning_Bootstrap\obj\Debug\netcoreapp3.1\Razor\Views\Home\Blocks.cshtml.g.cs

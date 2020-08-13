@@ -17,7 +17,10 @@
         <p>Bootstrap utilizes flexbox to develop a grid system where a container is divided up into 12 even columns.  
             A .container class is a required parent in order to use columns.</p>
         <br>
-
+        <p>This p-tag is in .container</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, accusantium? Eos laudantium nulla sequi. Fugiat, autem numquam beatae vitae, itaque repudiandae debitis in voluptatem animi ex dolore mollitia, vel ad?</p>
+        <br>
+        <a href="/blocks">Link to Blocks assignment</a>
 
         @* This will produce 3 evenly spaced columns on the page, 4+4+4=12.
         <div class="container">
@@ -66,7 +69,68 @@
                 <div class="col-6 offset-3 bg-secondary text-light">Center column, half of the viewport width</div>
             </div>
         </div>
+        <br><br><br>
     </div>
+
+
+    <div class="container-fluid">
+        <p>This p-tag is in .container-fluid</p>
+        <p>Use .container-fluid for a full width container, spanning the entire width of the viewport.</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Delectus voluptatem amet nemo nam minus harum ea cupiditate, non inventore ipsam fugiat velit, necessitatibus debitis deserunt iste atque voluptatum earum odit? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium facere consectetur quas voluptate ducimus officia libero perspiciatis, blanditiis error tenetur aliquam optio reiciendis quidem omnis fugit cupiditate labore quasi nesciunt.</p>
+    </div>
+
+
+    <div class="container">
+        <h2>Back to .container</h2>
+
+        <h3>Text colors:</h3>
+        <p class="text-primary">.text-primary</p>
+        <p class="text-secondary">.text-secondary</p>
+        <p class="text-success">.text-success</p>
+        <p class="text-danger">.text-danger</p>
+        <p class="text-warning">.text-warning</p>
+        <p class="text-info">.text-info</p>
+        <p class="text-light bg-dark">.text-light</p>
+        <p class="text-dark">.text-dark</p>
+        <p class="text-body">.text-body</p>
+        <p class="text-muted">.text-muted</p>
+        <p class="text-white bg-dark">.text-white</p>
+        <p class="text-black-50">.text-black-50</p>
+        <p class="text-white-50 bg-dark">.text-white-50</p>
+        <br>
+
+        <h3>Background colors:</h3>
+        <div class="p-3 mb-2 bg-primary text-white">.bg-primary</div>
+        <div class="p-3 mb-2 bg-secondary text-white">.bg-secondary</div>
+        <div class="p-3 mb-2 bg-success text-white">.bg-success</div>
+        <div class="p-3 mb-2 bg-danger text-white">.bg-danger</div>
+        <div class="p-3 mb-2 bg-warning text-dark">.bg-warning</div>
+        <div class="p-3 mb-2 bg-info text-white">.bg-info</div>
+        <div class="p-3 mb-2 bg-light text-dark">.bg-light</div>
+        <div class="p-3 mb-2 bg-dark text-white">.bg-dark</div>
+        <div class="p-3 mb-2 bg-white text-dark">.bg-white</div>
+        <div class="p-3 mb-2 bg-transparent text-dark">.bg-transparent</div>
+        <br>
+
+        <h3>Width examples:</h3>
+        <div class="w-25 p-3" style="background-color: pink;">Width 25%</div>
+        <div class="w-50 p-3" style="background-color: pink;">Width 50%</div>
+        <div class="w-75 p-3" style="background-color: pink;">Width 75%</div>
+        <div class="w-100 p-3" style="background-color: pink;">Width 100%</div>
+        <div class="w-auto p-3" style="background-color: pink;">Width auto</div>
+        <br>
+
+        <h3>Height examples:</h3>
+        <div style="height: 100px; background-color: rgba(255,0,0,0.1);">
+            <div class="h-25 d-inline-block" style="width: 120px; background-color: rgba(0,0,255,.1)">Height 25%</div>
+            <div class="h-50 d-inline-block" style="width: 120px; background-color: rgba(0,0,255,.1)">Height 50%</div>
+            <div class="h-75 d-inline-block" style="width: 120px; background-color: rgba(0,0,255,.1)">Height 75%</div>
+            <div class="h-100 d-inline-block" style="width: 120px; background-color: rgba(0,0,255,.1)">Height 100%</div>
+            <div class="h-auto d-inline-block" style="width: 120px; background-color: rgba(0,0,255,.1)">Height auto</div>
+        </div>
+        <br>
+    </div>
+
 
 @* Optional Bootstrap scripts: *@
 @* jQuery (must be first): *@
@@ -76,6 +140,7 @@
 
 </body>
 </html>
+
 
 @* 
 Useful classes for layouts:

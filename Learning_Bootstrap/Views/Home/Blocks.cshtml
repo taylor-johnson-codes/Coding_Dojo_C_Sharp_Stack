@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    @* added 'shrink-to-fit=no' for Bootstrap: *@
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    @* Bootstrap link: *@
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <title>Learning Bootstrap</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col bg-dark">
+                <div class="col-3 offset-4 p-1 text-light bg-info" style="text-align: center;">Header</div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-3 bg-info text-light" style="height:300px; text-align: center;">Aside</div>
+            <div class="col-8 p-0 bg-warning text-light" style="text-align: center;">Main
+                <div class="row" style="height:400px;">
+                    <div class="col-5 mt-1 bg-light text-dark" style="text-align: center;">Article</div>
+                    <div class="col-5 mt-1 bg-light text-dark" style="text-align: center;">Article</div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col bg-success text-light" style="text-align: center;">Footer</div>
+        </div>
+    </div>
+
+
+
+
+@* Optional Bootstrap scripts: *@
+@* jQuery (must be first): *@
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+@* JavaScript Bundle (doesn't include jQuery): *@
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js" integrity="sha384-LtrjvnR4Twt/qOuYxE721u19sVFLVSA4hf/rRt6PrZTmiPltdZcI7q7PXQBYTKyf" crossorigin="anonymous"></script>
+
+</body>
+</html>
