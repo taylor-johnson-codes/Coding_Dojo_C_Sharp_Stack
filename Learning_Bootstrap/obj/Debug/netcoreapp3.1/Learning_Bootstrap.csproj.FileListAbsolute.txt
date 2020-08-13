@@ -20,7 +20,6 @@ C:\Users\taylo\OneDrive\Desktop\Coding_Dojo\c_sharp_stack\Learning_Bootstrap\obj
 C:\Users\taylo\OneDrive\Desktop\Coding_Dojo\c_sharp_stack\Learning_Bootstrap\obj\Debug\netcoreapp3.1\Learning_Bootstrap.TagHelpers.output.cache
 C:\Users\taylo\OneDrive\Desktop\Coding_Dojo\c_sharp_stack\Learning_Bootstrap\obj\Debug\netcoreapp3.1\Learning_Bootstrap.RazorCoreGenerate.cache
 C:\Users\taylo\OneDrive\Desktop\Coding_Dojo\c_sharp_stack\Learning_Bootstrap\obj\Debug\netcoreapp3.1\Razor\Views\Home\Index.cshtml.g.cs
-C:\Users\taylo\OneDrive\Desktop\Coding_Dojo\c_sharp_stack\Learning_Bootstrap\obj\Debug\netcoreapp3.1\Razor\Views\_ViewImports.cshtml.g.cs
 C:\Users\taylo\OneDrive\Desktop\Coding_Dojo\c_sharp_stack\Learning_Bootstrap\obj\Debug\netcoreapp3.1\Learning_Bootstrap.RazorTargetAssemblyInfo.cache
 C:\Users\taylo\OneDrive\Desktop\Coding_Dojo\c_sharp_stack\Learning_Bootstrap\obj\Debug\netcoreapp3.1\Learning_Bootstrap.RazorTargetAssemblyInfo.cs
 C:\Users\taylo\OneDrive\Desktop\Coding_Dojo\c_sharp_stack\Learning_Bootstrap\obj\Debug\netcoreapp3.1\Learning_Bootstrap.Views.pdb
