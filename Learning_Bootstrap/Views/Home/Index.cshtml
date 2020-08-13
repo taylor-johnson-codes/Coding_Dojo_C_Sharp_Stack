@@ -2,13 +2,91 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    @* added 'shrink-to-fit=no' for Bootstrap: *@
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    @* Bootstrap link: *@
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <title>Learning Bootstrap</title>
 </head>
 <body>
     <div class="container">
+        <h1>Hello World!</h1>
+        <br>
+        <p>Bootstrap requires the use of HTML5 doctype.</p>
+        <br>
+        <p>Bootstrap utilizes flexbox to develop a grid system where a container is divided up into 12 even columns.  
+            A .container class is a required parent in order to use columns.</p>
+        <br>
 
+
+        @* This will produce 3 evenly spaced columns on the page, 4+4+4=12.
+        <div class="container">
+            <div class="row">
+                <div class="col"></div>
+                <div class="col"></div>
+                <div class="col"></div>
+            </div>
+        </div> *@
+
+
+        <div class="container text-center">
+            <div class="row">
+                <div class="col bg-secondary text-light m-2">One</div>
+                <div class="col bg-secondary text-light m-2">Two</div>
+                <div class="col bg-secondary text-light m-2">Three</div>
+            </div>
+        </div>
+        <br>
+
+
+        @* Columns can also be nested inside of other columns.  In this example,
+        the nested column will be divided into 3 even columns of the parent column.  *@
+        
+        <div class="container text-center">
+            <div class="row">
+                <div class="col bg-secondary text-light m-2">One</div>
+                <div class="col bg-secondary text-light m-2">Two
+                    <div class="row">
+                        <div class="col bg-info text-light m-2">A</div>
+                        <div class="col bg-info text-light m-2">B</div>
+                        <div class="col bg-info text-light m-2">C</div>
+                    </div>
+                </div>
+                <div class="col bg-secondary text-light m-2">Three</div>
+            </div>
+        </div>
+        <br>
+
+
+        @* We can even set how wide we want the column to be, and offset the width of the column in the layout.  
+        The below example will center the column in the page and have a default width of 6 of the available column grids. *@
+
+        <div class="container border border-dark">
+            <div class="row">
+                <div class="col-6 offset-3 bg-secondary text-light">Center column, half of the viewport width</div>
+            </div>
+        </div>
     </div>
+
+@* Optional Bootstrap scripts: *@
+@* jQuery (must be first): *@
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+@* JavaScript Bundle (doesn't include jQuery): *@
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js" integrity="sha384-LtrjvnR4Twt/qOuYxE721u19sVFLVSA4hf/rRt6PrZTmiPltdZcI7q7PXQBYTKyf" crossorigin="anonymous"></script>
+
 </body>
 </html>
+
+@* 
+Useful classes for layouts:
+
+Containers - https://getbootstrap.com/docs/4.4/layout/overview/ - (just learn about "container" class and skip everything else)
+
+Grid system - https://getbootstrap.com/docs/4.4/layout/grid/ - (for positioning and sizing of columns):
+
+Color schema - https://getbootstrap.com/docs/4.4/utilities/colors/ - (helpful to see the columns being created)
+
+Spacing - https://getbootstrap.com/docs/4.4/utilities/spacing/ - (paddings and margins)
+
+Sizing - https://getbootstrap.com/docs/4.4/utilities/sizing/ - (height and width of elements)
+ *@
