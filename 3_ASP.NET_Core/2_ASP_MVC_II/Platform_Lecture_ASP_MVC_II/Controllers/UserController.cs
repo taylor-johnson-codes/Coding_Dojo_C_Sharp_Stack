@@ -37,7 +37,7 @@ namespace Platform_Lecture_ASP_MVC_II.Controllers
         /*
         Validations will automatically run/be triggered.
         ModelState is a dictionary that contains information about the most recent model we've run validations on, 
-        including any errors found. Its IsValid property will return a boolean--true if no errors were found, 
+        including any errors found. Its IsValid property will return a boolean -- true if no errors were found, 
         and false if there were any errors.
         */
         [HttpPost("add")]

@@ -1,9 +1,9 @@
 using System;
 using Microsoft.AspNetCore.Mvc;  // provides Controller class that we inherit below
 
-namespace Platform_Lecture_ASP_MVC_I.Controllers  // added .Controllers to namespace; S at end
+namespace Platform_Lecture_ASP_MVC_I.Controllers  // added .Controllers to namespace; S at end!
 {
-    public class HomeController : Controller  // no S at end
+    public class HomeController : Controller  // no S at end!
     // the name given before my Controller (Home) is the name of the Views folder for this Controller
     // methods in Controllers are called Actions
     {
@@ -117,6 +117,7 @@ namespace Platform_Lecture_ASP_MVC_I.Controllers  // added .Controllers to names
         public IActionResult PostMethod(string my_text, int my_num)
         {
             // Do something with form input
+            return View("Index");
         }
 
     }
