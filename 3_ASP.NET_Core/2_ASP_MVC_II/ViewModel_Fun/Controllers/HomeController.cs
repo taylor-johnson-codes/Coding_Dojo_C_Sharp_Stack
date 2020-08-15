@@ -39,7 +39,13 @@ namespace ViewModel_Fun.Controllers
             User user1 = new User();
             user1.FirstName = "Taylor";
             user1.LastName = "Johnson";
-            return View(user1);
+            // return View(user1);
+
+            User user2 = new User();
+            user2.FirstName = "Zac";
+            user2.LastName = "Hanson";
+            return View(user2);
+            // can only put user1 or user2 as arg, not both
         }
     }
 }
