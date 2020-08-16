@@ -50,14 +50,12 @@ namespace EF_Core_Instructor_Lecture
 
             app.UseSession();
 
-            // Don't need this if we're using [HttpGet] tags in Controller:
-
-            // app.UseMvc(routes =>
-            // {
-            //     routes.MapRoute(
-            //         name: "default",
-            //         template: "{controller=Home}/{action=Index}/{id?}");
-            // });
+            app.UseMvc(routes =>
+            {
+                routes.MapRoute(
+                    name: "default",
+                    template: "{controller=Home}/{action=Index}/{id?}");
+            });
         }
     }
 }

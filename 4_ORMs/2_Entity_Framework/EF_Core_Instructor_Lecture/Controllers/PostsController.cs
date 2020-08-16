@@ -45,5 +45,18 @@ namespace EF_Core_Instructor_Lecture.Controllers
 
             return RedirectToAction("All");
         }
+
+        [HttpGet("/posts/{postId}")]  // postId is string in URL
+        public IActionResult Details(int postId)  // now it's an int
+        {
+            Post selectedPost = db.Posts.FirstOrDefault(p => p.PostId == postId);
+
+            if (selectedPost == null)
+            {
+                return RedirectToAction("All");
+            }
+            return View("Details", selectedPost);
+            // sending over selectedPost as a model instead of thru ViewBag
+        }
     }
 }

@@ -1,0 +1,11 @@
+@model Post
+
+<div class="container">
+    <a asp-controller="Posts" asp-action="All">All Posts</a>
+    <div class="card shadow p-3 rounded">
+        <h4>@Model.Topic</h4>
+        <p>@Model.Body</p>
+        <img src="@Model.ImgURL" alt="post">
+        <small class="text-muted">Submitted: @Model.CreatedAt</small>
+    </div>
+</div>
