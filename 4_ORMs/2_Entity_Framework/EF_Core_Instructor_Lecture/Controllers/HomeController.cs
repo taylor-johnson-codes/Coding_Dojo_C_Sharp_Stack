@@ -19,12 +19,10 @@ namespace EF_Core_Instructor_Lecture.Controllers
             db = context;
         }
 
-
-
         [HttpGet("")]
         public IActionResult Index()
         {
-            return View();
+            return View("Index");
         }
 
         public IActionResult Privacy()

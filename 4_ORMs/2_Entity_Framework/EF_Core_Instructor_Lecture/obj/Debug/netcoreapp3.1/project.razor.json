@@ -14216,6 +14216,16 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\taylo\\OneDrive\\Desktop\\Coding_Dojo\\c_sharp_stack\\4_ORMs\\2_Entity_Framework\\EF_Core_Instructor_Lecture\\Views\\Posts\\New.cshtml",
+      "TargetPath": "Views\\Posts\\New.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\taylo\\OneDrive\\Desktop\\Coding_Dojo\\c_sharp_stack\\4_ORMs\\2_Entity_Framework\\EF_Core_Instructor_Lecture\\Views\\Posts\\All.cshtml",
+      "TargetPath": "Views\\Posts\\All.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\taylo\\OneDrive\\Desktop\\Coding_Dojo\\c_sharp_stack\\4_ORMs\\2_Entity_Framework\\EF_Core_Instructor_Lecture\\Views\\_ViewStart.cshtml",
       "TargetPath": "Views\\_ViewStart.cshtml",
       "FileKind": "mvc"

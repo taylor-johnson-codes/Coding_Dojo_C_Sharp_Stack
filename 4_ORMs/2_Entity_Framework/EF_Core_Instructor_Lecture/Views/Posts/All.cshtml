@@ -1,0 +1,16 @@
+@* Receiving this list from Post controller/All method *@
+
+@model List<Post>
+
+<div class="container">
+    <h2>All Posts</h2>
+    @foreach (Post post in Model)
+    {
+        <div class="card shadow p-3 rounded">
+            <h4>@post.Topic</h4>
+            <p>@post.Body</p>
+            <img src="@post.ImgURL" alt="post">
+            <small class="text-muted">Submitted: @post.CreatedAt</small>
+        </div>
+    }
+</div>
