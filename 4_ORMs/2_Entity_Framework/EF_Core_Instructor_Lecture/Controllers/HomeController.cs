@@ -11,13 +11,14 @@ namespace EF_Core_Instructor_Lecture.Controllers
 {
     public class HomeController : Controller
     {
-        // Niel said this can be deleted (does some debug logging):
-        // private readonly ILogger<HomeController> _logger;
+        // need this db code/constructor in every Controller
+        private MyContext db;
+        
+        public HomeController(MyContext context)
+        {
+            db = context;
+        }
 
-        // public HomeController(ILogger<HomeController> logger)
-        // {
-        //     _logger = logger;
-        // }
 
 
         [HttpGet("")]
