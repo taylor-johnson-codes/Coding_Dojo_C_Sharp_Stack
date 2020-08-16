@@ -10,7 +10,6 @@ namespace EF_Core_Instructor_Lecture.Models
 
         public DbSet<Post> Posts { get; set; }
 
-
         // NEED TO ADD OTHER CLASSES HERE BEFORE MIGRATING!
         // public DbSet<Widget> Widgets { get; set; }
         // public DbSet<Item> Items { get; set; }

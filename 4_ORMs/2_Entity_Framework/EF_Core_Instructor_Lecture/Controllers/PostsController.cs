@@ -1,5 +1,6 @@
-// this could all be in the HomeController if you want
-// Name it plural like the name of the DB table
+// This could all be in the HomeController if you want.
+
+// Name it plural like the name of the DB table.
 
 using System;
 using System.Collections.Generic;
