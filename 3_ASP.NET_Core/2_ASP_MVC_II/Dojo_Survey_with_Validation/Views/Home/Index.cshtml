@@ -15,37 +15,37 @@
             <table>
                 <tr>
                     <td>Your Name:</td>
-                    <td><input type="text" name="name" id=""></td>
-                    <td><span asp-validation-for="name"></span></td>
+                    <td><input asp-for="Name"></td>
+                    <td><span asp-validation-for="Name"></span></td>
                 </tr>
                 <tr>
                     <td>Dojo Location:</td>
                     <td>
-                        <select name="location" id="">
+                        <select name="Location">
                             <option value="Seattle">Seattle</option>
                             <option value="Miami">Miami</option>
                             <option value="Honolulu">Honolulu</option>
                         </select>
                     </td>
-                    <td><span asp-validation-for="location"></span></td>
+                    <td><span asp-validation-for="Location"></span></td>
                 </tr>
                 <tr>
                     <td>Favorite Language:</td>
                     <td>
-                        <select name="language" id="">
+                        <select name="Language">
                             <option value="C#">C#</option>
                             <option value="Python">Python</option>
                             <option value="JavaScript">JavaScript</option>
                         </select>
                     </td>
-                    <td><span asp-validation-for="language"></span></td>
+                    <td><span asp-validation-for="Language"></span></td>
                 </tr>
                 <tr>
                     <td>Comment (optional):</td>
                 </tr>
             </table>
-            <p><textarea name="comment" id="" cols="50" rows="5"></textarea></p>
-            <p><span asp-validation-for="comment"></span></p>
+            <p><textarea name="Comment" cols="50" rows="5"></textarea></p>
+            <p><span asp-validation-for="Comment"></span></p>
             <br>
             <button type="submit">Submit</button>        
         </form>

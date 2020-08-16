@@ -16,7 +16,7 @@ namespace Dojo_Survey_with_Validation.Controllers
         {
             if(ModelState.IsValid)
             {
-                return RedirectToAction("Result", new_survey);
+                return View("Result", new_survey);
             }
             else
             {
@@ -24,10 +24,10 @@ namespace Dojo_Survey_with_Validation.Controllers
             }
         }
 
-        [HttpGet("result")]
-        public IActionResult Result(Survey new_survey)
-        {
-            return View("Result", new_survey);
-        }
+        // [HttpGet("result")]
+        // public IActionResult Result(Survey new_survey)
+        // {
+        //     return View("Result", new_survey);
+        // }
     }
 }

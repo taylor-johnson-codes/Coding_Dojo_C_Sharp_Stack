@@ -4,17 +4,17 @@ namespace Dojo_Survey_with_Validation.Models
 {
     public class Survey
     {
-        [Required]
-        [MinLength(2)]
-        public string name {get; set;}
+        [Required(ErrorMessage = "A name is required.")]
+        [MinLength(2, ErrorMessage = "Name must be more than one character long.")]
+        public string Name {get; set;}
         
         [Required]
-        public string location {get; set;}
+        public string Location {get; set;}
 
         [Required]
-        public string language {get; set;}
+        public string Language {get; set;}
 
-        [MaxLength(20)]
-        public string comment {get; set;}
+        [MaxLength(20, ErrorMessage = "Comment must be under 21 characters long.")]
+        public string Comment {get; set;}
     }
 }
