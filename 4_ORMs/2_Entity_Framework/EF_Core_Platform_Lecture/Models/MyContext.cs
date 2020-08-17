@@ -8,8 +8,9 @@ namespace EF_Core_Platform_Lecture.Models
 
         public DbSet<Monster> Monsters { get; set; }
 
-        // public DbSet<Widget> Widgets { get; set; }
+        public DbSet<User> Users { get; set; }
 
-        // public DbSet<Item> Items { get; set; }
+        public DbSet<Message> Messages { get; set; }
+
     }
 }

@@ -61,13 +61,13 @@ namespace EF_Core_Platform_Lecture.Controllers
             public IActionResult UpdateUser(int userId)
             {
                 // We must first Query for a single User from our Context object to track changes.
-                User RetrievedUser = dbContext.Users.FirstOrDefault(user => user.UserId == userId);
+                User RetrievedUser = db.Users.FirstOrDefault(user => user.UserId == userId);
                 // Then we may modify properties of this tracked model object
                 RetrievedUser.Name = "New name";
                 RetrievedUser.UpdatedAt = DateTime.Now;
                 
                 // Finally, .SaveChanges() will update the DB with these new values
-                dbContext.SaveChanges();
+                db.SaveChanges();
                 
                 // Other code
             }
@@ -81,13 +81,13 @@ namespace EF_Core_Platform_Lecture.Controllers
             public IActionResult DeleteUser(int userId)
             {
                 // Like Update, we will need to query for a single user from our Context object
-                User RetrievedUser = dbContext.Users.SingleOrDefault(user => user.UserId == userId);
+                User RetrievedUser = db.Users.SingleOrDefault(user => user.UserId == userId);
                 
                 // Then pass the object we queried for to .Remove() on Users
-                dbContext.Users.Remove(RetrievedUser);
+                db.Users.Remove(RetrievedUser);
                 
                 // Finally, .SaveChanges() will remove the corresponding row representing this User from DB 
-                dbContext.SaveChanges();
+                db.SaveChanges();
                 // Other code
             }
             */
@@ -103,7 +103,7 @@ namespace EF_Core_Platform_Lecture.Controllers
                 if(ModelState.IsValid)
                 {
                     // If a User exists with provided email
-                    if(dbContext.Users.Any(u => u.Email == user.Email))
+                    if(db.Users.Any(u => u.Email == user.Email))
                     {
                         // Manually add a ModelState error to the Email field, with provided
                         // error message
@@ -154,7 +154,7 @@ namespace EF_Core_Platform_Lecture.Controllers
                     if(ModelState.IsValid)
                     {
                         // If inital ModelState is valid, query for a user with provided email
-                        var userInDb = dbContext.Users.FirstOrDefault(u => u.Email == userSubmission.Email);
+                        var userInDb = db.Users.FirstOrDefault(u => u.Email == userSubmission.Email);
                         // If no user exists with provided email
                         if(userInDb == null)
                         {
@@ -178,5 +178,54 @@ namespace EF_Core_Platform_Lecture.Controllers
                 }
             }
             */
+
+
+
+        // ONE TO MANY RELATIONSHIPS:
+
+        public IActionResult Index2()
+        {
+            List<Message> messagesWithUser = db.Messages
+                // populates each Message with its related User object (Creator)
+                .Include(message => message.Creator)
+                .ToList();
+            
+            return View("Index2", messagesWithUser);
+        }
+
+        [HttpGet("{userId}")]    
+        public IActionResult UserDetails(int userId)
+        {
+            // Number of messages created by this User:
+            int numMessages = db.Users
+                // Including Messages, so that we may query on this field
+                .Include(user => user.CreatedMessages)
+                // Get a User with userId
+                .FirstOrDefault(user => user.UserId == userId)
+                // Now, with a reference to a User object, and access to a User's Messages
+                // We can get the .Count property of the Messages List
+                .CreatedMessages.Count;
+             
+            // User with the longest Message, we can do this in two stages
+            // First, find the Length of the longest Message
+            int longestMessageLength = db.Messages.Max(message => message.Content.Length);
+            // Second, select one User who's CreatedMessages has Any that matches this character count
+            // Note here that CreatedMessages is a List, and thus can take a LINQ expression: such as .Any()
+            User userWithLongest = db.Users
+                .Include(user => user.CreatedMessages)
+                .FirstOrDefault(user => user.CreatedMessages
+                    .Any(message => message.Content.Length == longestMessageLength));
+             
+            // Messages NOT related to this User:
+            // Since this query only requires checking a Message's UserId
+            // and doesn't require us to check data contained in a Message's Creator
+            // We can do this without a .Include()
+            List<Message> unrelatedMessages = db.Messages
+                .Where(message => message.UserId != userId)
+                .ToList();
+             
+            return View();
+        }
+
     }
 }

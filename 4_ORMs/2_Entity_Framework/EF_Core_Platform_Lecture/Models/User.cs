@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -23,6 +24,9 @@ namespace EF_Core_Platform_Lecture.Models
         [DataType(DataType.Password)]
         [MinLength(8, ErrorMessage="must be at least 8 characters")]
         public string Password {get;set;}
+
+        // Navigation property for related Message objects:
+        public List<Message> CreatedMessages {get;set;}
 
         public DateTime CreatedAt {get;set;} = DateTime.Now;
         public DateTime UpdatedAt {get;set;} = DateTime.Now;
