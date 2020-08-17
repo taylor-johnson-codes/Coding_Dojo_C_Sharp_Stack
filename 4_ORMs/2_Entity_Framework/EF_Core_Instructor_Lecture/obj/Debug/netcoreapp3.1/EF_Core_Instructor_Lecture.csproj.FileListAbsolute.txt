@@ -62,3 +62,5 @@ C:\Users\taylo\OneDrive\Desktop\Coding_Dojo\c_sharp_stack\4_ORMs\2_Entity_Framew
 C:\Users\taylo\OneDrive\Desktop\Coding_Dojo\c_sharp_stack\4_ORMs\2_Entity_Framework\EF_Core_Instructor_Lecture\obj\Debug\netcoreapp3.1\Razor\Views\Posts\New.cshtml.g.cs
 C:\Users\taylo\OneDrive\Desktop\Coding_Dojo\c_sharp_stack\4_ORMs\2_Entity_Framework\EF_Core_Instructor_Lecture\obj\Debug\netcoreapp3.1\Razor\Views\Posts\Details.cshtml.g.cs
 C:\Users\taylo\OneDrive\Desktop\Coding_Dojo\c_sharp_stack\4_ORMs\2_Entity_Framework\EF_Core_Instructor_Lecture\obj\Debug\netcoreapp3.1\Razor\Views\Posts\Edit.cshtml.g.cs
+C:\Users\taylo\OneDrive\Desktop\Coding_Dojo\c_sharp_stack\4_ORMs\2_Entity_Framework\EF_Core_Instructor_Lecture\obj\Debug\netcoreapp3.1\Razor\Views\Home\_Login.cshtml.g.cs
+C:\Users\taylo\OneDrive\Desktop\Coding_Dojo\c_sharp_stack\4_ORMs\2_Entity_Framework\EF_Core_Instructor_Lecture\obj\Debug\netcoreapp3.1\Razor\Views\Home\_Register.cshtml.g.cs
