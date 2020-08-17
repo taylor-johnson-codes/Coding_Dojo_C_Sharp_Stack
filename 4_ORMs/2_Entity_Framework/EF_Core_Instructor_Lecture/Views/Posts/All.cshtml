@@ -1,0 +1,31 @@
+@* Receiving this list from Post controller/All method *@
+
+@model List<Post>
+
+<div class="container">
+    <h2>All Posts</h2>
+    @foreach (Post post in Model)
+    {
+        <div class="card shadow p-3 rounded mb-4 w-50">
+            <h4><a asp-controller="Posts" asp-action="Details" asp-route-PostID="@post.PostId">@post.Topic</a></h4>
+            <p>@post.Body</p>
+            <img src="@post.ImgURL" alt="post">
+            <small class="text-muted">Submitted: @post.CreatedAt</small>
+        </div>
+    }
+</div>
+
+@* 
+For more readable h4 tag, can do this:
+
+<h4>
+    <a 
+        asp-controller="Posts" 
+        asp-action="Details" 
+        asp-route-PostID="@post.PostId"
+    >
+        @post.Topic
+    </a>
+</h4>
+
+*@
