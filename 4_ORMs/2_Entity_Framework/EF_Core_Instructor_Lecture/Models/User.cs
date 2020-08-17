@@ -31,14 +31,19 @@ namespace EF_Core_Instructor_Lecture.Models
         public DateTime CreatedAt { get; set; } = DateTime.Now;
         public DateTime UpdatedAt { get; set; } = DateTime.Now;
 
-
         // adding a [NotMapped] attribute to a Confirm property will tell EF to not attempt to map it
-
         [NotMapped]
         [Required(ErrorMessage = "is required")]
         [Compare("Password", ErrorMessage="passwords don't match")]
         [DataType(DataType.Password)]
         [Display(Name = "Confirm Password")]  // for the HTML label tag 
         public string Confirm {get;set;}
+
+
+        // when a user is made/instantiated, we can call this method on it:
+        public string FullName()
+        {
+            return FirstName + " " + LastName;
+        }
     }
 }
