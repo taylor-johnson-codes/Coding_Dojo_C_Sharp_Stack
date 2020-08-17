@@ -58,3 +58,5 @@ C:\Users\taylo\OneDrive\Desktop\Coding_Dojo\c_sharp_stack\4_ORMs\2_Entity_Framew
 C:\Users\taylo\OneDrive\Desktop\Coding_Dojo\c_sharp_stack\4_ORMs\2_Entity_Framework\CRUDelicious\obj\Debug\netcoreapp3.1\CRUDelicious.pdb
 C:\Users\taylo\OneDrive\Desktop\Coding_Dojo\c_sharp_stack\4_ORMs\2_Entity_Framework\CRUDelicious\obj\Debug\netcoreapp3.1\CRUDelicious.genruntimeconfig.cache
 C:\Users\taylo\OneDrive\Desktop\Coding_Dojo\c_sharp_stack\4_ORMs\2_Entity_Framework\CRUDelicious\obj\Debug\netcoreapp3.1\Razor\Views\Home\New.cshtml.g.cs
+C:\Users\taylo\OneDrive\Desktop\Coding_Dojo\c_sharp_stack\4_ORMs\2_Entity_Framework\CRUDelicious\obj\Debug\netcoreapp3.1\Razor\Views\Home\Details.cshtml.g.cs
+C:\Users\taylo\OneDrive\Desktop\Coding_Dojo\c_sharp_stack\4_ORMs\2_Entity_Framework\CRUDelicious\obj\Debug\netcoreapp3.1\Razor\Views\Home\Edit.cshtml.g.cs
