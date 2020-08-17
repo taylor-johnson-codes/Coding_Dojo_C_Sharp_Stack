@@ -54,9 +54,60 @@ namespace EF_Core_Instructor_Lecture.Controllers
             
             // logging the user in:
             HttpContext.Session.SetInt32("UserId", newUser.UserId);
+            HttpContext.Session.SetString("UserName", newUser.FirstName);
             // redirecting to another controller:
             return RedirectToAction("All", "Posts");
         }
+
+        [HttpPost("login")]
+        public IActionResult Login(LoginUser loginUser)
+        {
+            string genericErrorMsg = "Invalid email or password!";  // don't want tell user/hacker exactly what was wrong
+
+            if(ModelState.IsValid == false)
+            {
+                return View("Index");
+            }
+
+            User dbUser = db.Users.FirstOrDefault(u => u.Email == loginUser.LoginEmail);
+
+            if(dbUser == null)
+            {
+                ModelState.AddModelError("LoginEmail", genericErrorMsg);
+                // ModelState.AddModelError("LoginEmail", "Email not registered!");
+                return View("Index");
+            }
+
+            PasswordHasher<LoginUser> hasher = new PasswordHasher<LoginUser>();
+            PasswordVerificationResult pwCompareResult = hasher.VerifyHashedPassword(loginUser, dbUser.Password, loginUser.LoginPassword);
+            
+            // 0 means password entered doesn't match password in DB; 1 means it matched
+            if(pwCompareResult == 0)
+            {
+                ModelState.AddModelError("LoginEmail", genericErrorMsg);
+                // ModelState.AddModelError("LoginEmail", "Wrong password!");
+                return View("Index");
+            }
+
+            HttpContext.Session.SetInt32("UserId", dbUser.UserId);
+            HttpContext.Session.SetString("UserName", dbUser.FirstName);
+            // redirecting to another controller:
+            return RedirectToAction("All", "Posts");
+        }
+
+        [HttpPost("logout")]
+        public IActionResult Logout()
+        {
+            HttpContext.Session.Clear();
+            return RedirectToAction("Index");
+        }
+
+        /*
+        Don't want logout to be an a-tag because Chrome preloads a-tag links to make tags faster when you click them.
+        Don't want that feature to log the user out automatically.
+        */
+
+
 
 
 

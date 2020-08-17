@@ -6,6 +6,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using EF_Core_Instructor_Lecture.Models;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace EF_Core_Instructor_Lecture.Controllers
@@ -22,6 +23,11 @@ namespace EF_Core_Instructor_Lecture.Controllers
         [HttpGet("/posts")]
         public IActionResult All()
         {
+            // if user not logged in, returns user to login/reg page:
+            if(HttpContext.Session.GetInt32("UserId") == null)
+            {
+                return RedirectToAction("Index", "Home");
+            }
             List<Post> allPosts = db.Posts.ToList();
             return View("All", allPosts);  
             // sending over allPosts as a model instead of thru ViewBag
