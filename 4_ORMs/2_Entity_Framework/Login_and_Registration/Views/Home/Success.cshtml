@@ -1,0 +1,7 @@
+<div class="container">
+    <h1 class="text-center text-success">SUCCESS!!!</h1>
+    <hr>
+    <form asp-area="" asp-controller="Home" asp-action="Logout" method="POST">
+        <button class="btn btn-link">Logout (@Context.Session.GetString("UserName"))</button>
+    </form>
+</div>

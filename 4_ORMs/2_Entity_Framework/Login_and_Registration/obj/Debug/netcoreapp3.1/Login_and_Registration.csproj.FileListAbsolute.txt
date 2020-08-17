@@ -57,3 +57,6 @@ C:\Users\taylo\OneDrive\Desktop\Coding_Dojo\c_sharp_stack\4_ORMs\2_Entity_Framew
 C:\Users\taylo\OneDrive\Desktop\Coding_Dojo\c_sharp_stack\4_ORMs\2_Entity_Framework\Login_and_Registration\obj\Debug\netcoreapp3.1\Login_and_Registration.dll
 C:\Users\taylo\OneDrive\Desktop\Coding_Dojo\c_sharp_stack\4_ORMs\2_Entity_Framework\Login_and_Registration\obj\Debug\netcoreapp3.1\Login_and_Registration.pdb
 C:\Users\taylo\OneDrive\Desktop\Coding_Dojo\c_sharp_stack\4_ORMs\2_Entity_Framework\Login_and_Registration\obj\Debug\netcoreapp3.1\Login_and_Registration.genruntimeconfig.cache
+C:\Users\taylo\OneDrive\Desktop\Coding_Dojo\c_sharp_stack\4_ORMs\2_Entity_Framework\Login_and_Registration\obj\Debug\netcoreapp3.1\Razor\Views\Home\Success.cshtml.g.cs
+C:\Users\taylo\OneDrive\Desktop\Coding_Dojo\c_sharp_stack\4_ORMs\2_Entity_Framework\Login_and_Registration\obj\Debug\netcoreapp3.1\Razor\Views\Home\_Login.cshtml.g.cs
+C:\Users\taylo\OneDrive\Desktop\Coding_Dojo\c_sharp_stack\4_ORMs\2_Entity_Framework\Login_and_Registration\obj\Debug\netcoreapp3.1\Razor\Views\Home\_Register.cshtml.g.cs
