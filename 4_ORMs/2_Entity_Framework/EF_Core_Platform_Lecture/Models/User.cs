@@ -24,8 +24,8 @@ namespace EF_Core_Platform_Lecture.Models
         [MinLength(8, ErrorMessage="must be at least 8 characters")]
         public string Password {get;set;}
 
-        public DateTime CreatedAt {get;set;}
-        public DateTime UpdatedAt {get;set;}
+        public DateTime CreatedAt {get;set;} = DateTime.Now;
+        public DateTime UpdatedAt {get;set;} = DateTime.Now;
 
         // adding a [NotMapped] attribute to a Confirm property will tell EF to not attempt to map it
 
