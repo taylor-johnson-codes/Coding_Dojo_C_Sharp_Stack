@@ -7,13 +7,26 @@ namespace EF_Core_Platform_Lecture.Models
     {
         [Key]
         public int MonsterId { get; set; }
-
-        [Required(ErrorMessage = "is required")]
-        [MinLength(2, ErrorMessage = "must be at least 2 characters")]
-        [Display(Name = "First Name")]
-        public string FirstName { get; set; }
-
+        public string Name { get; set; }
+        public int Height { get; set; }
+        public string Description { get; set; }
         public DateTime CreatedAt { get; set; } = DateTime.Now;
         public DateTime UpdatedAt { get; set; } = DateTime.Now;
     }
 }
+
+/*
+USER CLASS EXAMPLE:
+
+public class User
+    {
+        [Key]
+        public int UserId { get; set; }
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+        public string Email { get; set; }
+        public string Password { get; set; }
+        public DateTime CreatedAt {get;set;} = DateTime.Now;
+        public DateTime UpdatedAt {get;set;} = DateTime.Now;
+    }
+*/

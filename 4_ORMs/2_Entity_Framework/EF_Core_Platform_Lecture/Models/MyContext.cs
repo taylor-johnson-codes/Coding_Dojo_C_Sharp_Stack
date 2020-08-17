@@ -6,7 +6,7 @@ namespace EF_Core_Platform_Lecture.Models
     {
         public MyContext(DbContextOptions options) : base(options) { }
 
-        public DbSet<Monster> Users { get; set; }
+        public DbSet<Monster> Monsters { get; set; }
 
         // public DbSet<Widget> Widgets { get; set; }
 
