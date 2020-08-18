@@ -8,14 +8,21 @@ using Microsoft.Extensions.Logging;
 using EF_Core_Instructor_Lecture.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Http;
+using Microsoft.EntityFrameworkCore;
 
 namespace EF_Core_Instructor_Lecture.Controllers
 {
     public class HomeController : Controller
     {
+        // for less code in all the methods:
+        // gets user_id
+        private int? user_id { get {return HttpContext.Session.GetInt32("UserId");} }
+
+        // gets boolean if user is logged in or not
+        private bool isLoggedIn { get {return user_id != null;} }
+
         // need this db code/constructor in every Controller
         private MyContext db;
-        
         public HomeController(MyContext context)
         {
             db = context;
@@ -107,20 +114,22 @@ namespace EF_Core_Instructor_Lecture.Controllers
         Don't want that feature to log the user out automatically.
         */
 
+        [HttpGet("users/{userId}")]
+        public IActionResult AuthorPage(int userId)
+        {
+            // if user not logged in, returns user to login/reg page:
+            if(!isLoggedIn)  // LONGHAND, w/o code above db code: if(HttpContext.Session.GetInt32("UserId") == null)
+            {
+                return RedirectToAction("Index", "Home");
+            }
+            User user = db.Users.Include(u => u.Posts).FirstOrDefault(u => u.UserId == userId);
 
+            if(user == null)
+            {
+                return RedirectToAction("All", "Posts");
+            }
 
-
-
-
-        // public IActionResult Privacy()
-        // {
-        //     return View();
-        // }
-
-        // [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        // public IActionResult Error()
-        // {
-        //     return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
-        // }
+            return View("AuthorPage", user);
+        }
     }
 }
