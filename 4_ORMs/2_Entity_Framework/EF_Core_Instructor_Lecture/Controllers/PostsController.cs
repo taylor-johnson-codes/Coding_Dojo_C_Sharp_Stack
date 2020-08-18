@@ -8,13 +8,20 @@ using System.Linq;
 using EF_Core_Instructor_Lecture.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace EF_Core_Instructor_Lecture.Controllers
 {
     public class PostsController : Controller
     {
+        // for less code in all the methods:
+        // gets user_id
+        private int? user_id { get {return HttpContext.Session.GetInt32("UserId");} }
+
+        // gets boolean if user is logged in or not
+        private bool isLoggedIn { get {return user_id != null;} }
+
         private MyContext db;
-        
         public PostsController(MyContext context)
         {
             db = context;
@@ -24,11 +31,15 @@ namespace EF_Core_Instructor_Lecture.Controllers
         public IActionResult All()
         {
             // if user not logged in, returns user to login/reg page:
-            if(HttpContext.Session.GetInt32("UserId") == null)
+            if(!isLoggedIn)  // LONGHAND, w/o code above db code: if(HttpContext.Session.GetInt32("UserId") == null)
             {
                 return RedirectToAction("Index", "Home");
             }
-            List<Post> allPosts = db.Posts.ToList();
+            List<Post> allPosts = db.Posts
+                .Include(post => post.Author)  // does a SQL join; SELECT * FROM users JOIN posts ON users.UserId = posts.UserId
+                .OrderByDescending(p => p.CreatedAt)
+                .ToList();
+
             return View("All", allPosts);  
             // sending over allPosts as a model instead of thru ViewBag
         }
@@ -36,6 +47,11 @@ namespace EF_Core_Instructor_Lecture.Controllers
         [HttpGet("/posts/new")]
         public IActionResult New()
         {
+            // if user not logged in, returns user to login/reg page:
+            if(!isLoggedIn)  // LONGHAND, w/o code above db code: if(HttpContext.Session.GetInt32("UserId") == null)
+            {
+                return RedirectToAction("Index", "Home");
+            }
             return View("New");
         }
 
@@ -47,6 +63,9 @@ namespace EF_Core_Instructor_Lecture.Controllers
             {
                 return View("New");
             }
+
+            // Assign Author 
+            newPost.UserId = (int)user_id;
 
             db.Posts.Add(newPost);
             db.SaveChanges();

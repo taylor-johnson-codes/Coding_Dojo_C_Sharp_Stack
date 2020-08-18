@@ -10,7 +10,7 @@
             <h4><a asp-controller="Posts" asp-action="Details" asp-route-PostID="@post.PostId">@post.Topic</a></h4>
             <p>@post.Body</p>
             <img src="@post.ImgURL" alt="post">
-            <small class="text-muted">Submitted: @post.CreatedAt</small>
+            <small class="text-muted">Submitted by: @post.Author.FullName on @post.CreatedAt</small>
         </div>
     }
 </div>

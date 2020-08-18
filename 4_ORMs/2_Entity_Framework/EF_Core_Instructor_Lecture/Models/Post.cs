@@ -24,8 +24,18 @@ namespace EF_Core_Instructor_Lecture.Models
 
         public DateTime CreatedAt { get; set; } = DateTime.Now;
         public DateTime UpdatedAt { get; set; } = DateTime.Now;
+
+        // ONE TO MANY RELATIONSHIP
+        // Foreign Key(s):
+        public int UserId { get; set; }  // existing posts don't have UserId so can't migrate; drop/reset DB
+
+        // Navigation Properties:
+        // does the joining of the tables
+        // not added to DB by default, so don't need [NotMapped]
+        public User Author { get; set; }  // need .Include() in query to get this
     }
 }
+
 
 /*
 After completing the model:

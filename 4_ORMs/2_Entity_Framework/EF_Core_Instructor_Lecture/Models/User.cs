@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -39,7 +40,16 @@ namespace EF_Core_Instructor_Lecture.Models
         [Display(Name = "Confirm Password")]  // for the HTML label tag 
         public string Confirm {get;set;}
 
+        // ONE TO MANY RELATIONSHIP
+        // Foreign Key(s):
+        // Not needed here; foreign key is in Post model
 
+        // Navigation Properties (not added to DB):
+        // does the joining of the tables
+        // not added to DB by default, so don't need [NotMapped]
+        public List<Post> Posts { get; set; }  // will get all posts that match the UserId
+        
+        
         // when a user is made/instantiated, we can call this method on it:
         public string FullName()
         {
@@ -47,3 +57,9 @@ namespace EF_Core_Instructor_Lecture.Models
         }
     }
 }
+
+/*
+After completing the model:
+1) Add DbSet to MyContext
+2) Migrate
+*/
