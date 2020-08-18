@@ -5,12 +5,17 @@
         <div class="col">
             <h1 class="text-center">Chefs | <a asp-action="Dishes">Dishes</a></h1>
         </div>
-        <div class="col"><a asp-action="NewChef">Add a Chef</a></div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <a class="btn btn-success mb-3"asp-action="NewChef">Add a Chef</a>
+        </div>
     </div>
 
     <div class="row">
-        <h3>Check out our roster of Chefs!</h3>
-        <hr>
+        <div class="col">
+            <h3 class="text-center">Check out our roster of Chefs!</h3>
+        </div>
     </div>
 
     <div class="row">
@@ -21,20 +26,15 @@
                         <th>Name</th>
                         <th>Age</th>
                         <th># of Dishes</th>
-                        @* <th scope="col">Name</th>
-                        <th scope="col">Age</th>
-                        <th scope="col"># of Dishes</th> *@
                     </tr>
                 </thead>
                 <tbody>
                     @foreach(Chef chef in Model)
                     {
-                        @* int age = DateTime.Now.Year - chef.DOB.Year; *@
-                        @* move to BE? *@
-
+                        int age = DateTime.Now.Year - chef.DOB.Year;
                         <tr>
                             <td>@chef.FirstName @chef.LastName</td>
-                            <td>@ViewBag.Age</td>
+                            <td>@age</td>
                             <td>@chef.CreatedDishes.Count</td>
                         </tr>
                     }

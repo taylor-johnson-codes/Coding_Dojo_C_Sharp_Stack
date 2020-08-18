@@ -54,7 +54,6 @@ namespace Chefs_and_Dishes.Controllers
 
             db.Add(newChef);
             db.SaveChanges();
-            ViewBag.Age = age;
             return RedirectToAction("Index");
         }
 

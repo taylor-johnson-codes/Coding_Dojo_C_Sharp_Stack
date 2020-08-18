@@ -5,14 +5,17 @@
         <div class="col">
             <h1 class="text-center"><a asp-action="Index">Chefs</a> | Dishes</h1>
         </div>
+    </div>
+    <div class="row">
         <div class="col">
-            <a asp-action="NewDish">Add a Dish</a>
+            <a class="btn btn-success mb-3" asp-action="NewDish">Add a Dish</a>
         </div>
     </div>
 
     <div class="row">
-        <h3>Yum, take a look at our tasty dishes!</h3>
-        <hr>
+        <div class="col">
+            <h3 class="text-center">Yum, take a look at our tasty dishes!</h3>
+        </div>
     </div>
 
     <div class="row">
@@ -24,10 +27,6 @@
                         <th>Chef</th>
                         <th>Tastiness</th>
                         <th>Calories</th>
-                        @* <th scope="col">Name</th>
-                        <th scope="col">Chef</th>
-                        <th scope="col">Tastiness</th>
-                        <th scope="col">Calories</th> *@
                     </tr>
                 </thead>
                 <tbody>
