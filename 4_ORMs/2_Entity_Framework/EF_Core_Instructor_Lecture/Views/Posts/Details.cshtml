@@ -1,33 +1,42 @@
 @model Post
 
+@{
+    int? user_id = Context.Session.GetInt32("UserId");
+}
+
 <div class="container">
     <div class="card shadow p-3 rounded">
         <h4>@Model.Topic</h4>
         <p>@Model.Body</p>
+        <small class="text-muted">Submitted by: @Model.Author.FullName() on @Model.CreatedAt</small>
         <img src="@Model.ImgURL" alt="post">
         <small class="text-muted">Submitted: @Model.CreatedAt</small>
 
-        <div class="card-footer">
-            <form 
-                asp-controller="Posts" 
-                asp-action="Delete" 
-                asp-route-postId="@Model.PostId" 
-                method="POST"
-                class="d-inline-block mr-2"
-            >
-                <button class="btn btn-danger">Delete</button>
-            </form>
-            @* Could use an a-tag, but that's bad practice for deleting things *@
-            @* <a asp-controller="Posts" asp-action="Delete">Delete</a> *@
+        @* If the user in session is the author of the post, they can edit/delete the post: *@
+        @if(user_id == Model.UserId)
+        {
+            <div class="card-footer">
+                <form 
+                    asp-controller="Posts" 
+                    asp-action="Delete" 
+                    asp-route-postId="@Model.PostId" 
+                    method="POST"
+                    class="d-inline-block mr-2"
+                >
+                    <button class="btn btn-danger">Delete</button>
+                </form>
+                @* Could use an a-tag, but that's bad practice for deleting things *@
+                @* <a asp-controller="Posts" asp-action="Delete">Delete</a> *@
 
-            <a 
-                asp-controller="Posts" 
-                asp-action="Edit" 
-                asp-route-postId="@Model.PostId" 
-                class="btn btn-danger"
-            >
-                Edit
-            </a>
-        </div>
+                <a 
+                    asp-controller="Posts" 
+                    asp-action="Edit" 
+                    asp-route-postId="@Model.PostId" 
+                    class="btn btn-danger"
+                >
+                    Edit
+                </a>
+            </div>
+        }
     </div>
 </div>

@@ -76,7 +76,15 @@ namespace EF_Core_Instructor_Lecture.Controllers
         [HttpGet("/posts/{postId}")]  // postId is string in URL
         public IActionResult Details(int postId)  // now it's an int
         {
-            Post selectedPost = db.Posts.FirstOrDefault(p => p.PostId == postId);
+            // if user not logged in, returns user to login/reg page:
+            if(!isLoggedIn)  // LONGHAND, w/o code above db code: if(HttpContext.Session.GetInt32("UserId") == null)
+            {
+                return RedirectToAction("Index", "Home");
+            }
+
+            Post selectedPost = db.Posts
+            .Include(post => post.Author)  // does a SQL join; SELECT * FROM users JOIN posts ON users.UserId = posts.UserI
+            .FirstOrDefault(p => p.PostId == postId);
 
             if (selectedPost == null)
             {
@@ -93,7 +101,7 @@ namespace EF_Core_Instructor_Lecture.Controllers
         {
             Post selectedPost = db.Posts.FirstOrDefault(p => p.PostId == postId);
 
-            if (selectedPost != null)
+            if (selectedPost != null || selectedPost.UserId != user_id)
             {
                 db.Posts.Remove(selectedPost);
                 db.SaveChanges();
@@ -106,7 +114,7 @@ namespace EF_Core_Instructor_Lecture.Controllers
         {
             Post selectedPost = db.Posts.FirstOrDefault(p => p.PostId == postId);
 
-            if (selectedPost == null)
+            if (selectedPost == null || selectedPost.UserId != user_id)
             {
                 return RedirectToAction("All");
             }
