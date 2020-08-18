@@ -14186,6 +14186,11 @@
   "RootNamespace": "Bank_Accounts",
   "Documents": [
     {
+      "FilePath": "c:\\Users\\taylo\\OneDrive\\Desktop\\Coding_Dojo\\c_sharp_stack\\4_ORMs\\2_Entity_Framework\\Bank_Accounts\\Views\\Home\\_Register.cshtml",
+      "TargetPath": "Views\\Home\\_Register.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\taylo\\OneDrive\\Desktop\\Coding_Dojo\\c_sharp_stack\\4_ORMs\\2_Entity_Framework\\Bank_Accounts\\Views\\_ViewStart.cshtml",
       "TargetPath": "Views\\_ViewStart.cshtml",
       "FileKind": "mvc"
@@ -14206,6 +14211,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\taylo\\OneDrive\\Desktop\\Coding_Dojo\\c_sharp_stack\\4_ORMs\\2_Entity_Framework\\Bank_Accounts\\Views\\Home\\_Login.cshtml",
+      "TargetPath": "Views\\Home\\_Login.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\taylo\\OneDrive\\Desktop\\Coding_Dojo\\c_sharp_stack\\4_ORMs\\2_Entity_Framework\\Bank_Accounts\\Views\\Home\\Index.cshtml",
       "TargetPath": "Views\\Home\\Index.cshtml",
       "FileKind": "mvc"
@@ -14213,6 +14223,11 @@
     {
       "FilePath": "c:\\Users\\taylo\\OneDrive\\Desktop\\Coding_Dojo\\c_sharp_stack\\4_ORMs\\2_Entity_Framework\\Bank_Accounts\\Views\\_ViewImports.cshtml",
       "TargetPath": "Views\\_ViewImports.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\taylo\\OneDrive\\Desktop\\Coding_Dojo\\c_sharp_stack\\4_ORMs\\2_Entity_Framework\\Bank_Accounts\\Views\\Home\\Account_Page.cshtml",
+      "TargetPath": "Views\\Home\\Account_Page.cshtml",
       "FileKind": "mvc"
     }
   ],
