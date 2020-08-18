@@ -1,3 +1,47 @@
+@model List<Dish>
+
 <div class="container">
-    <h1 class="text-center display-4">Welcome to Dishes Page!</h1>
+    <div class="row">
+        <div class="col">
+            <h1 class="text-center"><a asp-action="Index">Chefs</a> | Dishes</h1>
+        </div>
+        <div class="col">
+            <a asp-action="NewDish">Add a Dish</a>
+        </div>
+    </div>
+
+    <div class="row">
+        <h3>Yum, take a look at our tasty dishes!</h3>
+        <hr>
+    </div>
+
+    <div class="row">
+        <div class="col">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Dish Name</th>
+                        <th>Chef</th>
+                        <th>Tastiness</th>
+                        <th>Calories</th>
+                        @* <th scope="col">Name</th>
+                        <th scope="col">Chef</th>
+                        <th scope="col">Tastiness</th>
+                        <th scope="col">Calories</th> *@
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach(Dish dish in Model)
+                    {
+                        <tr>
+                            <td>@dish.DishName</td>
+                            <td>@dish.Creator.FirstName @dish.Creator.LastName</td>
+                            <td>@dish.Tastiness</td>
+                            <td>@dish.Calories</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
 </div>

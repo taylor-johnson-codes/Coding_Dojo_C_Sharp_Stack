@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Chefs_and_Dishes.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace Chefs_and_Dishes.Controllers
 {
@@ -20,96 +21,69 @@ namespace Chefs_and_Dishes.Controllers
         [HttpGet("")]
         public IActionResult Index()
         {
-            List<Dish> allDishes = db.Dishes.OrderByDescending(d => d.CreatedAt).ToList();
-            return View("Index", allDishes);  
+            List<Chef> chefs = db.Chefs.Include(chef => chef.CreatedDishes).ToList();
+            return View("Index", chefs);
         }
 
         [HttpGet("new")]
-        public IActionResult New()
+        public IActionResult NewChef()
         {
-            return View();
+            return View("NewChef");
         }
 
-        [HttpPost("create")]
-        public IActionResult Create(Dish newDish)
+        [HttpPost("create_chef")]
+        public IActionResult CreateChef(Chef newChef)
         {
-            // validations check:
             if (ModelState.IsValid == false)
             {
-                return View("New");
+                return View("NewChef");
             }
 
-            db.Dishes.Add(newDish);
+            if (newChef.DOB > DateTime.Today)
+            {
+                ModelState.AddModelError("DOB", "can't be future date");
+                return View("NewChef");
+            }
+
+            int age = DateTime.Now.Year - newChef.DOB.Year;
+            if (age < 18)
+            {
+                ModelState.AddModelError("DOB", "must be 18 or older");
+                return View("NewChef");
+            }
+
+            db.Add(newChef);
             db.SaveChanges();
-
-            return RedirectToAction("Index");
-        }
-        
-        [HttpGet("{dishId}")]  // dishId is string in URL
-        public IActionResult Details(int dishId)  // now it's an int
-        {
-            Dish selectedDish = db.Dishes.FirstOrDefault(d => d.DishId == dishId);
-
-            if (selectedDish == null)
-            {
-                return RedirectToAction("Index");
-            }
-            return View("Details", selectedDish);
-        }
-
-        [HttpPost("{dishId}/delete")]
-        public IActionResult Delete(int dishId)
-        {
-            Dish selectedDish = db.Dishes.FirstOrDefault(p => p.DishId == dishId);
-
-            if (selectedDish != null)
-            {
-                db.Dishes.Remove(selectedDish);
-                db.SaveChanges();
-            }
+            ViewBag.Age = age;
             return RedirectToAction("Index");
         }
 
-        [HttpGet("{dishId}/edit")]
-        public IActionResult Edit(int dishId)
+        [HttpGet("dishes")]
+        public IActionResult Dishes()
         {
-            Dish selectedDish = db.Dishes.FirstOrDefault(p => p.DishId == dishId);
-
-            if (selectedDish == null)
-            {
-                return RedirectToAction("Index");
-            }
-            return View("Edit", selectedDish);
+            List<Dish> dishes = db.Dishes.Include(dish => dish.Creator).ToList();
+            return View("Dishes", dishes);
         }
 
-        [HttpPost("{dishId}/update")]
-        public IActionResult Update(Dish editedDish, int dishId)
+        [HttpGet("dishes/new")]
+        public IActionResult NewDish()
         {
+            List<Chef> chefs = db.Chefs.ToList();
+            ViewBag.Chefs = chefs;
+            return View("NewDish");
+        }
 
-            // validations check:
+        [HttpPost("create_dish")]
+        public IActionResult CreateDish(Dish newDish)
+        {
             if (ModelState.IsValid == false)
             {
-                return View("Edit", editedDish);
+                return View("NewDish");
             }
 
-            Dish selectedDish = db.Dishes.FirstOrDefault(d => d.DishId == dishId);
-
-            if (selectedDish == null)
-            {
-                return RedirectToAction("Index");
-            }
-
-            // selectedDish.Chef = editedDish.Chef;
-            // selectedDish.Name = editedDish.Name;
-            // selectedDish.Calories = editedDish.Calories;
-            // selectedDish.Tastiness = editedDish.Tastiness;
-            // selectedDish.Description = editedDish.Description;
-            // selectedDish.UpdatedAt = DateTime.Now;
-
-            // db.Dishes.Update(selectedDish);
-            // db.SaveChanges();
-
-            return RedirectToAction("Details", new {dishId = dishId});
+            db.Add(newDish);
+            db.SaveChanges();
+            return RedirectToAction("Dishes");
         }
     }
 }

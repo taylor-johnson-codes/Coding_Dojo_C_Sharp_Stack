@@ -31,6 +31,8 @@ namespace Chefs_and_Dishes.Models
         public DateTime CreatedAt {get;set;} = DateTime.Now;
         public DateTime UpdatedAt {get;set;} = DateTime.Now;
 
+        [Required(ErrorMessage = "is required")]
+        [Display(Name = "Chef")]
         public int ChefId {get;set;}
 
         public Chef Creator {get;set;}
