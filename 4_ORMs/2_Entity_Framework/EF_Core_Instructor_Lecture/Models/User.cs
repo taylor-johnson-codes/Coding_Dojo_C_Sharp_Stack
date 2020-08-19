@@ -42,14 +42,21 @@ namespace EF_Core_Instructor_Lecture.Models
 
         // ONE TO MANY RELATIONSHIP
         // Foreign Key(s):
-        // Not needed here; foreign key is in Post model
+        // Not needed here; foreign key is in Post model for One to Many; FKs in Vote model for Mant to Many
 
         // Navigation Properties (not added to DB):
         // does the joining of the tables
         // not added to DB by default, so don't need [NotMapped]
         public List<Post> Posts { get; set; }  // will get all posts that match the UserId
         
-        
+
+        // MANY TO MANY RELATIONSHIP:
+        // created 3rd class for this relationship called Vote
+        public List<Vote> Votes { get; set; }
+
+
+
+
         // when a user is made/instantiated, we can call this method on it:
         public string FullName()
         {

@@ -1,3 +1,6 @@
+// This is what the ORM uses to create the DB tables for us
+// No relationships are defined here
+
 using Microsoft.EntityFrameworkCore;
 
 namespace EF_Core_Instructor_Lecture.Models
@@ -6,12 +9,10 @@ namespace EF_Core_Instructor_Lecture.Models
     {
         public MyContext(DbContextOptions options) : base(options) { }
 
-        public DbSet<User> Users { get; set; }  // Users is the table name that's going to be created
+        public DbSet<User> Users { get; set; }  // Users is the table name that's going to be created in the DB
 
         public DbSet<Post> Posts { get; set; }
 
-        // NEED TO ADD OTHER CLASSES HERE BEFORE MIGRATING!
-        // public DbSet<Widget> Widgets { get; set; }
-        // public DbSet<Item> Items { get; set; }
+        public DbSet<Vote> Votes { get; set; }
     }
 }

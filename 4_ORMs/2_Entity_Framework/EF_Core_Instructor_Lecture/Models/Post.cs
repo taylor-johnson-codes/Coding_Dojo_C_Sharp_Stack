@@ -1,6 +1,7 @@
 // this model represents a user making a post on a forum
 
 using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 namespace EF_Core_Instructor_Lecture.Models
@@ -33,6 +34,11 @@ namespace EF_Core_Instructor_Lecture.Models
         // does the joining of the tables
         // not added to DB by default, so don't need [NotMapped]
         public User Author { get; set; }  // need .Include() in query to get this
+
+
+        // MANY TO MANY RELATIONSHIP:
+        // created 3rd class for this relationship called Vote; foreign keys are located there
+        public List<Vote> Votes { get; set; }
     }
 }
 
