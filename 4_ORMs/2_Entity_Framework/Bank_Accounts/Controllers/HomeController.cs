@@ -47,7 +47,7 @@ namespace Bank_Accounts.Controllers
             db.Users.Add(newUser);
             db.SaveChanges();
             
-            HttpContext.Session.SetInt32("UserId", newUser.UserId);
+            HttpContext.Session.SetInt32("user_id", newUser.UserId);
             HttpContext.Session.SetString("UserName", newUser.FirstName);
             return RedirectToAction("Account_Page");
         }
@@ -79,23 +79,24 @@ namespace Bank_Accounts.Controllers
                 return View("Index");
             }
 
-            HttpContext.Session.SetInt32("UserId", dbUser.UserId);
+            HttpContext.Session.SetInt32("user_id", dbUser.UserId);
             HttpContext.Session.SetString("UserName", dbUser.FirstName);
             return RedirectToAction("Account_Page");
         }
 
-        [HttpGet("account/{user_id}")]
-        public IActionResult Account_Page(int user_id)
+        [HttpGet("account")]
+        public IActionResult Account_Page()
         {
             // if user not logged in, returns user to login/reg page:
-            if(HttpContext.Session.GetInt32("UserId") == null)
-            {
-                return RedirectToAction("Index");
-            }
+            // if(HttpContext.Session.GetInt32("user_id") == null)
+            // {
+            //     return RedirectToAction("Index");
+            // }
 
-            User currentUser = db.Users.FirstOrDefault(user => user.UserId == (int)user_id);
+            int? user_id = HttpContext.Session.GetInt32("user_id");
+            User dbUser = db.Users.FirstOrDefault(user => user.UserId == (int)user_id);
             HttpContext.Session.SetString("FirstName", dbUser.FirstName);
-            
+            HttpContext.Session.SetString("LastName", dbUser.LastName);
 
             List<Transaction> transactions = db.Transactions
                 .Where(t => t.UserId == (int)user_id)
@@ -110,7 +111,28 @@ namespace Bank_Accounts.Controllers
                 total = 0;
             }
             ViewBag.Total = (decimal)total;
-            return View("Account", transactions);
+            ViewBag.Transaction_List = transactions;
+            return View("Account_Page");
+        }
+
+        [HttpPost("transaction")]
+        public IActionResult User_Transaction(Transaction trans)
+        {
+            // if (trans.Amount > ViewBag.Total)
+            // {
+            //     ModelState.AddModelError("low_bal", "can't withdraw more than your total account balance");
+            // }
+
+            if (ModelState.IsValid == false)
+            {
+                return View("Account");
+            }
+
+            int? user_id = HttpContext.Session.GetInt32("user_id");
+            trans.UserId = (int)user_id;
+            db.Add(trans);
+            db.SaveChanges();
+            return RedirectToAction("Account_Page");
         }
 
         [HttpPost("logout")]
