@@ -158,6 +158,45 @@ namespace EF_Core_Instructor_Lecture.Controllers
             return RedirectToAction("Details", new { post_id = post_id });
         }
 
+        // more Vote functionality than simple Vote below
+        // has this voter already voted
+        [HttpPost("posts/{postid}/{isUpVote}")]
+        public IActionResult Vote(Vote newVote)
+        {
+            newVote.UserId = (int)user_id;
+
+            Vote existingVote = db.Votes.FirstOrDefault(vote => vote.PostId == newVote.PostId && vote.UserId == newVote.UserId);
+            
+            if(existingVote == null)  // if no existing vote, add it to the DB
+            {
+                db.Votes.Add(newVote);
+            }
+            else  // if they've already voted, are they changing their vote?
+            {
+                // voting the same way means they are trying to remove their vote
+                if(existingVote.IsUpVote == newVote.IsUpVote)
+                {
+                    db.Votes.Remove(existingVote);
+                }
+                // changing their vote
+                else
+                {
+                    existingVote.IsUpVote = newVote.IsUpVote;
+                    existingVote.UpdatedAt = DateTime.Now;
+                    db.Votes.Update(existingVote);
+                }
+            }
+            db.SaveChanges();
+
+            return RedirectToAction("All");
+
+            // "Details" needs a parameter so we have to pass it a dict
+            // return View("Details", new { post_id = newVote.PostId });
+        }
+
+
+        /*
+        // Simple many-to-many Vote:
         [HttpPost("posts/{postid}/{isUpVote}")]
         // for (Vote newVote) to work, lettering of post_id needs to match DB so postid works because letters match PostId, and post_id wouldn't work
         public IActionResult Vote(Vote newVote)
@@ -170,7 +209,7 @@ namespace EF_Core_Instructor_Lecture.Controllers
             return View("Details", new { post_id = newVote.PostId });
         }
 
-        /* alternate of the above:
+        // alternate of the above:
 
         [HttpPost("posts/{post_id}/{isUpVote}")]
         public IActionResult Vote(int post_id, bool isUpVote)

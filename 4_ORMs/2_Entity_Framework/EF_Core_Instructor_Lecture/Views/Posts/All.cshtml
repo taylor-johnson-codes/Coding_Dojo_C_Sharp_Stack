@@ -10,6 +10,7 @@
     {
         List<Vote> UpVotes = post.Votes.Where(vote => vote.IsUpVote).ToList();
         List<Vote> DownVotes = post.Votes.Where(vote => vote.IsUpVote == false).ToList();
+        bool AlreadyVoted = post.Votes.Any(vote => vote.UserId == user_id);
 
         <div class="card shadow p-3 rounded mb-4 w-50">
             <h4><a asp-controller="Posts" asp-action="Details" asp-route-post_id="@post.PostId">@post.Topic</a></h4>
@@ -37,9 +38,10 @@
                     @* for (Vote newVote) in Controller to work, lettering of post_id needs to match DB, 
                     so postid works because letters match PostId, and post_id wouldn't work *@
 
-                    <button class="btn btn-link text-success">
+                    <button class="btn btn-link">
                         @* up-arrow code got from Goggling 'HTML arrows' *@
-                        <span class="h1">@UpVotes.Count &uarr;</span>
+                        <span class="h1 @(AlreadyVoted ? "text-secondary" : "text-success")">@UpVotes.Count</span>
+                        <span class="h1 text-success">&uarr;</span>
                     </button>
                 </form>
 
@@ -50,8 +52,9 @@
                     asp-route-isUpVote="false" 
                     method="POST"
                 >
-                    <button class="btn btn-link text-danger">
-                        <span class="h1">@DownVotes.Count &darr;</span>
+                    <button class="btn btn-link">
+                        <span class="h1 @(AlreadyVoted ? "text-secondary" : "text-danger")">@DownVotes.Count</span>
+                        <span class="h1 text-danger">&darr;</span>
                     </button>
                 </form>
             </div>
