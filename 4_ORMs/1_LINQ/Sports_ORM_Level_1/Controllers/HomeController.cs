@@ -171,7 +171,31 @@ namespace SportsORM.Controllers
         [HttpGet("level_3")]
         public IActionResult Level3()
         {
-            return View();
+            // <li>...all teams, past and present, that Samuel Evans has played with</li>
+            var SE = _context.Players
+                .FirstOrDefault(p => p.FirstName == "Samuel" && p.LastName == "Evans");
+            ViewBag.FirstName = SE.FirstName;
+            ViewBag.LastName = SE.LastName;
+
+            var SEteams = _context.PlayerTeams
+                .Where(id => id.PlayerId == SE.PlayerId)
+                .ToList();
+
+            return View("Level3", SEteams);
+
+            // <li>...all players, past and present, with the Manitoba Tiger-Cats</li>
+
+            // <li>...all players who were formerly (but aren't currently) with the Wichita Vikings</li>
+
+            // <li>...every team that Jacob Gray played for before he joined the Oregon Colts</li>
+
+            // <li>...everyone named "Joshua" who has ever played in the Atlantic Federation of Amateur Baseball Players</li>
+
+            // <li>...all teams that have had 12 or more players, past and present.</li>
+
+            // <li>...all players, sorted by the number of teams they've played for</li>
+
+            // return View();
         }
     }
 }
