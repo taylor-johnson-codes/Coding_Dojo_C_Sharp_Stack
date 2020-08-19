@@ -36,9 +36,15 @@ namespace EF_Core_Instructor_Lecture.Controllers
                 return RedirectToAction("Index", "Home");
             }
             List<Post> allPosts = db.Posts
-                .Include(post => post.Author)  // does a SQL join; SELECT * FROM users JOIN posts ON users.UserId = posts.UserId
+                .Include(post => post.Author)
+                .Include(post => post.Votes)  // would need to use .ThenInclude() if I wanted to get something else from the Author
+                // .ThenInclude(vote => vote.Voter)  // if I wanted to know who made the vote
                 .OrderByDescending(p => p.CreatedAt)
                 .ToList();
+                // does a SQL join:
+                // SELECT * FROM posts 
+                // JOIN users ON users.UserId = posts.UserId  (one-to-many)
+                // JOIN votes ON posts.UserId = Votes.PostId (many-to-many)
 
             return View("All", allPosts);  
             // sending over allPosts as a model instead of thru ViewBag
@@ -73,8 +79,8 @@ namespace EF_Core_Instructor_Lecture.Controllers
             return RedirectToAction("All");
         }
 
-        [HttpGet("/posts/{postId}")]  // postId is string in URL
-        public IActionResult Details(int postId)  // now it's an int
+        [HttpGet("/posts/{post_id}")]  // post_id is string in URL
+        public IActionResult Details(int post_id)  // now it's an int
         {
             // if user not logged in, returns user to login/reg page:
             if(!isLoggedIn)  // LONGHAND, w/o code above db code: if(HttpContext.Session.GetInt32("UserId") == null)
@@ -84,7 +90,7 @@ namespace EF_Core_Instructor_Lecture.Controllers
 
             Post selectedPost = db.Posts
             .Include(post => post.Author)  // does a SQL join; SELECT * FROM users JOIN posts ON users.UserId = posts.UserI
-            .FirstOrDefault(p => p.PostId == postId);
+            .FirstOrDefault(p => p.PostId == post_id);
 
             if (selectedPost == null)
             {
@@ -94,12 +100,12 @@ namespace EF_Core_Instructor_Lecture.Controllers
             // sending over selectedPost as a model instead of thru ViewBag
         }
 
-        [HttpPost("/posts/{postId}/delete")]
-        // "postId" coming from "asp-route-postId" in HTML
+        [HttpPost("/posts/{post_id}/delete")]
+        // "post_id" coming from "asp-route-post_id" in HTML
         // if using a-tag instead of form & button in HTML, this will need to be HttpGet
-        public IActionResult Delete(int postId)
+        public IActionResult Delete(int post_id)
         {
-            Post selectedPost = db.Posts.FirstOrDefault(p => p.PostId == postId);
+            Post selectedPost = db.Posts.FirstOrDefault(p => p.PostId == post_id);
 
             if (selectedPost != null || selectedPost.UserId != user_id)
             {
@@ -109,10 +115,10 @@ namespace EF_Core_Instructor_Lecture.Controllers
             return RedirectToAction("All");
         }
 
-        [HttpGet("/posts/{postId}/edit")]
-        public IActionResult Edit(int postId)
+        [HttpGet("/posts/{post_id}/edit")]
+        public IActionResult Edit(int post_id)
         {
-            Post selectedPost = db.Posts.FirstOrDefault(p => p.PostId == postId);
+            Post selectedPost = db.Posts.FirstOrDefault(p => p.PostId == post_id);
 
             if (selectedPost == null || selectedPost.UserId != user_id)
             {
@@ -122,8 +128,8 @@ namespace EF_Core_Instructor_Lecture.Controllers
             // sending over selectedPost as a model instead of thru ViewBag
         }
 
-        [HttpPost("/posts/{postId}/update")]
-        public IActionResult Update(Post editedPost, int postId)
+        [HttpPost("/posts/{post_id}/update")]
+        public IActionResult Update(Post editedPost, int post_id)
         {
 
             // validations check:
@@ -132,7 +138,7 @@ namespace EF_Core_Instructor_Lecture.Controllers
                 return View("Edit", editedPost);
             }
 
-            Post selectedPost = db.Posts.FirstOrDefault(p => p.PostId == postId);
+            Post selectedPost = db.Posts.FirstOrDefault(p => p.PostId == post_id);
 
             if (selectedPost == null)
             {
@@ -148,7 +154,41 @@ namespace EF_Core_Instructor_Lecture.Controllers
             db.Posts.Update(selectedPost);
             db.SaveChanges();
 
-            return RedirectToAction("Details", new {postId = postId});
+            // "Details" needs a parameter so we have to pass it a dict
+            return RedirectToAction("Details", new { post_id = post_id });
         }
+
+        [HttpPost("posts/{postid}/{isUpVote}")]
+        // for (Vote newVote) to work, lettering of post_id needs to match DB so postid works because letters match PostId, and post_id wouldn't work
+        public IActionResult Vote(Vote newVote)
+        {
+            newVote.UserId = (int)user_id;
+            db.Votes.Add(newVote);
+            db.SaveChanges();
+
+            // "Details" needs a parameter so we have to pass it a dict
+            return View("Details", new { post_id = newVote.PostId });
+        }
+
+        /* alternate of the above:
+
+        [HttpPost("posts/{post_id}/{isUpVote}")]
+        public IActionResult Vote(int post_id, bool isUpVote)
+        {
+            Vote newVote = new Vote()
+            {
+                PostId = post_id,
+                IsUpVote = isUpVote
+            };
+
+            newVote.UserId = (int)user_id;
+            db.Votes.Add(newVote);
+            db.SaveChanges();
+
+            // "Details" needs a parameter so we have to pass it a dict
+            return View("Details", post_id);
+            // return View("Details", new { post_id = newVote.PostId });
+        }
+        */
     }
 }

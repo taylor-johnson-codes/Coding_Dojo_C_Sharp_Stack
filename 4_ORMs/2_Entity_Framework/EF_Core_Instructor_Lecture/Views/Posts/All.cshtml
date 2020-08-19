@@ -2,23 +2,59 @@
 
 @model List<Post>
 
-@{
-    int? user_id = Context.Session.GetInt32("UserId");
-}
+@{ int? user_id = Context.Session.GetInt32("UserId"); }
 
 <div class="container">
     <h2>All Posts</h2>
     @foreach (Post post in Model)
     {
+        List<Vote> UpVotes = post.Votes.Where(vote => vote.IsUpVote).ToList();
+        List<Vote> DownVotes = post.Votes.Where(vote => vote.IsUpVote == false).ToList();
+
         <div class="card shadow p-3 rounded mb-4 w-50">
-            <h4><a asp-controller="Posts" asp-action="Details" asp-route-PostID="@post.PostId">@post.Topic</a></h4>
+            <h4><a asp-controller="Posts" asp-action="Details" asp-route-post_id="@post.PostId">@post.Topic</a></h4>
             <p>@post.Body</p>
-            <img src="@post.ImgURL" alt="post">
             <small class="text-muted">Submitted by: 
-                <a asp-controller="Home" asp-action="AuthorPage"asp-route-userId="@post.Author.UserId">
+                <a asp-controller="Home" asp-action="AuthorPage" asp-route-user_id="@post.Author.UserId">
                     @post.Author.FullName()</a> 
                 on @post.CreatedAt
             </small>
+            <img src="@post.ImgURL" alt="post">
+            <div class="card-footer row justify-content-center">
+            @* alternate: "card-footer text-center" and then "d-linline-block" on form tags *@
+            @* since the form doesn't have any input tags that would create a data-binding situation, we don't need the 
+            Model loaded at the top of the page (which we couldn't do b/c there's already a Model up there; would need 
+            to do something like _PartialView to fix that issue.) *@
+                <form 
+                    asp-controller="Posts" 
+                    asp-action="Vote" 
+                    asp-route-postid="@post.PostId" 
+                    asp-route-isUpVote="true" 
+                    method="POST"
+                >
+                    @* can have as many route params as you want *@
+                    @* route params could also be done as hidden inputs *@
+                    @* for (Vote newVote) in Controller to work, lettering of post_id needs to match DB, 
+                    so postid works because letters match PostId, and post_id wouldn't work *@
+
+                    <button class="btn btn-link text-success">
+                        @* up-arrow code got from Goggling 'HTML arrows' *@
+                        <span class="h1">@UpVotes.Count &uarr;</span>
+                    </button>
+                </form>
+
+                <form 
+                    asp-controller="Posts" 
+                    asp-action="Vote" 
+                    asp-route-postid="@post.PostId" 
+                    asp-route-isUpVote="false" 
+                    method="POST"
+                >
+                    <button class="btn btn-link text-danger">
+                        <span class="h1">@DownVotes.Count &darr;</span>
+                    </button>
+                </form>
+            </div>
         </div>
     }
 </div>

@@ -8,7 +8,7 @@
     @foreach (Post post in Model.Posts)
     {
         <div class="card shadow p-3 rounded mb-4 w-50">
-            <h4><a asp-controller="Posts" asp-action="Details" asp-route-PostID="@post.PostId">@post.Topic</a></h4>
+            <h4><a asp-controller="Posts" asp-action="Details" asp-route-post_id="@post.PostId">@post.Topic</a></h4>
             <p>@post.Body</p>
             <img src="@post.ImgURL" alt="post">
             <small class="text-muted">Submitted on @post.CreatedAt</small>

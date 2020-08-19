@@ -114,15 +114,15 @@ namespace EF_Core_Instructor_Lecture.Controllers
         Don't want that feature to log the user out automatically.
         */
 
-        [HttpGet("users/{userId}")]
-        public IActionResult AuthorPage(int userId)
+        [HttpGet("users/{user_id}")]
+        public IActionResult AuthorPage(int user_id)
         {
             // if user not logged in, returns user to login/reg page:
-            if(!isLoggedIn)  // LONGHAND, w/o code above db code: if(HttpContext.Session.GetInt32("UserId") == null)
+            if(!isLoggedIn)  // LONGHAND, w/o code above db code: if(HttpContext.Session.GetInt32("user_id") == null)
             {
                 return RedirectToAction("Index", "Home");
             }
-            User user = db.Users.Include(u => u.Posts).FirstOrDefault(u => u.UserId == userId);
+            User user = db.Users.Include(u => u.Posts).FirstOrDefault(u => u.UserId == user_id);
 
             if(user == null)
             {
