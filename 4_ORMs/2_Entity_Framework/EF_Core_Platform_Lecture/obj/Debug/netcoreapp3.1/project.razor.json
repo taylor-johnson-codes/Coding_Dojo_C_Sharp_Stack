@@ -14201,6 +14201,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\taylo\\OneDrive\\Desktop\\Coding_Dojo\\c_sharp_stack\\4_ORMs\\2_Entity_Framework\\EF_Core_Platform_Lecture\\Views\\Home\\personWithSubsAndMags.cshtml",
+      "TargetPath": "Views\\Home\\personWithSubsAndMags.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\taylo\\OneDrive\\Desktop\\Coding_Dojo\\c_sharp_stack\\4_ORMs\\2_Entity_Framework\\EF_Core_Platform_Lecture\\Views\\Home\\Index.cshtml",
       "TargetPath": "Views\\Home\\Index.cshtml",
       "FileKind": "mvc"

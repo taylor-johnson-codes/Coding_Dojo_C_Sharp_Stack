@@ -227,5 +227,17 @@ namespace EF_Core_Platform_Lecture.Controllers
             return View();
         }
 
+
+        // MANY TO MANY:
+        [HttpGet("{personId}")]
+        public IActionResult Show(int personId)
+        {
+            var personWithSubsAndMags = db.M2M_Persons
+                .Include(person => person.M2M_Subscriptions)
+                .ThenInclude(sub => sub.M2M_Magazine)
+                .FirstOrDefault(person => person.M2M_PersonId == personId);
+            
+            return View(personWithSubsAndMags);
+        }
     }
 }

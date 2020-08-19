@@ -1,0 +1,9 @@
+@model M2M_Person
+
+<div class="container">
+    <h1>Subscriptions for @Model.M2M_Name</h1>
+    @foreach(var sub in Model.M2M_Subscriptions)
+    {
+        <p>@sub.M2M_Magazine.M2M_Title</p>
+    }
+</div>
