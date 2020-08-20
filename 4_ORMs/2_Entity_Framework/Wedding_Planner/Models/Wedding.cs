@@ -24,6 +24,7 @@ namespace Wedding_Planner.Models
         public DateTime Date { get; set; }
 
         [Required]
+        [Display(Name="Wedding Address")]
         public string Address { get; set; }
 
         public DateTime CreatedAt { get; set; } = DateTime.Now;

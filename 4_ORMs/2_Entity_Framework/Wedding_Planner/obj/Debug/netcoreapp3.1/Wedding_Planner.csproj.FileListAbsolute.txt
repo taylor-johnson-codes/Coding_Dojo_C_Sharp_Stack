@@ -57,3 +57,8 @@ C:\Users\taylo\OneDrive\Desktop\Coding_Dojo\c_sharp_stack\4_ORMs\2_Entity_Framew
 C:\Users\taylo\OneDrive\Desktop\Coding_Dojo\c_sharp_stack\4_ORMs\2_Entity_Framework\Wedding_Planner\obj\Debug\netcoreapp3.1\Wedding_Planner.dll
 C:\Users\taylo\OneDrive\Desktop\Coding_Dojo\c_sharp_stack\4_ORMs\2_Entity_Framework\Wedding_Planner\obj\Debug\netcoreapp3.1\Wedding_Planner.pdb
 C:\Users\taylo\OneDrive\Desktop\Coding_Dojo\c_sharp_stack\4_ORMs\2_Entity_Framework\Wedding_Planner\obj\Debug\netcoreapp3.1\Wedding_Planner.genruntimeconfig.cache
+C:\Users\taylo\OneDrive\Desktop\Coding_Dojo\c_sharp_stack\4_ORMs\2_Entity_Framework\Wedding_Planner\obj\Debug\netcoreapp3.1\Razor\Views\Home\Dashboard.cshtml.g.cs
+C:\Users\taylo\OneDrive\Desktop\Coding_Dojo\c_sharp_stack\4_ORMs\2_Entity_Framework\Wedding_Planner\obj\Debug\netcoreapp3.1\Razor\Views\Home\NewWedding.cshtml.g.cs
+C:\Users\taylo\OneDrive\Desktop\Coding_Dojo\c_sharp_stack\4_ORMs\2_Entity_Framework\Wedding_Planner\obj\Debug\netcoreapp3.1\Razor\Views\Home\Wedding.cshtml.g.cs
+C:\Users\taylo\OneDrive\Desktop\Coding_Dojo\c_sharp_stack\4_ORMs\2_Entity_Framework\Wedding_Planner\obj\Debug\netcoreapp3.1\Razor\Views\Home\_Login.cshtml.g.cs
+C:\Users\taylo\OneDrive\Desktop\Coding_Dojo\c_sharp_stack\4_ORMs\2_Entity_Framework\Wedding_Planner\obj\Debug\netcoreapp3.1\Razor\Views\Home\_Register.cshtml.g.cs

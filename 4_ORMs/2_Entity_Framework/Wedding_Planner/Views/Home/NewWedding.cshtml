@@ -1,0 +1,62 @@
+@model Wedding
+
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <h1>Plan Your Wedding</h1>
+        </div>
+        <div class="col">
+            <a asp-controller="Home" asp-action="Dashboard">Dashboard</a>
+        </div>
+        <div class="col">
+            <a asp-controller="Home" asp-action="Logout">Log Out</a>
+        </div>
+    </div>
+
+    <div class="row form-group">
+        <form asp-controller="Home" asp-action="CreateWedding" method="POST">
+            <table>
+                <tr>
+                    <td>
+                        <label asp-for="WedderOne"></label>
+                        <span class="text-danger font-weight-bold" asp-validation-for="WedderOne"></span>
+                    </td>
+                    <td>
+                        <input class="form-control" asp-for="WedderOne">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <label asp-for="WedderTwo"></label>
+                        <span class="text-danger font-weight-bold" asp-validation-for="WedderTwo"></span>
+                    </td>
+                    <td>
+                        <input class="form-control" asp-for="WedderTwo">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <label asp-for="Date"></label>
+                        <span class="text-danger font-weight-bold" asp-validation-for="Date"></span>
+                    </td>
+                    <td>
+                        <input class="form-control" asp-for="Date">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <label asp-for="Address"></label>
+                        <span class="text-danger font-weight-bold" asp-validation-for="Address"></span>
+                    </td>
+                    <td>
+                        <input class="form-control" asp-for="Address">
+                    </td>
+                </tr>
+            </table>
+            <button class="btn btn-info">Create</button>
+        </form>
+    </div>
+</div>
