@@ -23,5 +23,6 @@ namespace Products_and_Categories.Models
         public DateTime UpdatedAt { get; set; } = DateTime.Now;
 
         public List<Association> Categories { get; set; }
+        // public List<Association> ProductCategories { get; set; }  <-- better naming for future
     }
 }

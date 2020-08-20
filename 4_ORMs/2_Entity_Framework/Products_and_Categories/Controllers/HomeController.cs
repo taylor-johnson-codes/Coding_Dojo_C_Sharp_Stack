@@ -27,8 +27,7 @@ namespace Products_and_Categories.Controllers
         [HttpGet("products")]
         public IActionResult Products()
         {
-            List<Product> products = db.Products.ToList();
-            ViewBag.Products1 = products;
+            ViewBag.Products1 = db.Products.ToList();
             return View("Products");
         }
 
