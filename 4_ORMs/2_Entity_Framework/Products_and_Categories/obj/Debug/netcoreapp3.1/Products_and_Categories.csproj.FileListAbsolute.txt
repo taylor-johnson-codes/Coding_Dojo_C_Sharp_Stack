@@ -57,3 +57,7 @@ C:\Users\taylo\OneDrive\Desktop\Coding_Dojo\c_sharp_stack\4_ORMs\2_Entity_Framew
 C:\Users\taylo\OneDrive\Desktop\Coding_Dojo\c_sharp_stack\4_ORMs\2_Entity_Framework\Products_and_Categories\obj\Debug\netcoreapp3.1\Products_and_Categories.dll
 C:\Users\taylo\OneDrive\Desktop\Coding_Dojo\c_sharp_stack\4_ORMs\2_Entity_Framework\Products_and_Categories\obj\Debug\netcoreapp3.1\Products_and_Categories.pdb
 C:\Users\taylo\OneDrive\Desktop\Coding_Dojo\c_sharp_stack\4_ORMs\2_Entity_Framework\Products_and_Categories\obj\Debug\netcoreapp3.1\Products_and_Categories.genruntimeconfig.cache
+C:\Users\taylo\OneDrive\Desktop\Coding_Dojo\c_sharp_stack\4_ORMs\2_Entity_Framework\Products_and_Categories\obj\Debug\netcoreapp3.1\Razor\Views\Home\Categories.cshtml.g.cs
+C:\Users\taylo\OneDrive\Desktop\Coding_Dojo\c_sharp_stack\4_ORMs\2_Entity_Framework\Products_and_Categories\obj\Debug\netcoreapp3.1\Razor\Views\Home\Category.cshtml.g.cs
+C:\Users\taylo\OneDrive\Desktop\Coding_Dojo\c_sharp_stack\4_ORMs\2_Entity_Framework\Products_and_Categories\obj\Debug\netcoreapp3.1\Razor\Views\Home\Product.cshtml.g.cs
+C:\Users\taylo\OneDrive\Desktop\Coding_Dojo\c_sharp_stack\4_ORMs\2_Entity_Framework\Products_and_Categories\obj\Debug\netcoreapp3.1\Razor\Views\Home\Products.cshtml.g.cs

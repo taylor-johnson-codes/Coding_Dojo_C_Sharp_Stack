@@ -1,0 +1,31 @@
+@model Product
+
+<div class="container">
+    <h1 class="text-center mb-3">@Model.Name</h1>
+
+    <div class="row">
+        <div class="col">
+            <h5>Categories:</h5>
+            @foreach (var item in Model.Categories)
+            {
+                <li>@item.CategoryOfProduct.Name</li>
+            }
+        </div>
+
+        <div class="col">
+            <h5>Add Category:</h5>
+            <form asp-controller="Home" asp-action="AddCategoryToProduct" asp-route-productId="@Model.ProductId" method="POST">
+                <select class="custom-select" name="categoryId">
+                    @if (ViewBag.Categories1 != null)
+                    {
+                        @foreach (var item in @ViewBag.Categories1)
+                        {
+                            <option value="@item.CategoryId">@item.Name</option>
+                        }
+                    }
+                </select>
+                <button class="btn btn-success mt-3">Add</button>
+            </form>
+        </div>
+    </div>
+</div>
