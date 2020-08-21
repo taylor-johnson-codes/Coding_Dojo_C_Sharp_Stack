@@ -1,4 +1,4 @@
-@* @model *@
+@model List<Wedding>
 
 <div class="container">
     <div class="row">
@@ -11,12 +11,77 @@
     </div>
 
     <div class="row">
-        <table>
-
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Wedding</th>
+                    <th>Date</th>
+                    <th>Guests</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (Wedding wedding in Model)
+                {
+                    <tr>
+                        <td>
+                            <a 
+                                asp-controller="Home"
+                                asp-action="Wedding" 
+                                asp-route-weddingId="@wedding.WeddingId"
+                            >
+                                @wedding.WedderOne & @wedding.WedderTwo
+                            </a>
+                        </td>
+                        <td>@wedding.Date</td>
+                        <td>@wedding.Attendees.Count</td>
+                        @if (wedding.UserId == Context.Session.GetInt32("userId"))
+                        {
+                            <td>
+                                <a 
+                                    asp-controller="Home"
+                                    asp-action="DeleteWedding"
+                                    asp-route-weddingId="@wedding.WeddingId"
+                                >
+                                    Delete  
+                                </a>
+                            </td>
+                        }
+                        else if (wedding.Attendees.Any(a => a.UserId == Context.Session.GetInt32("userId")) == false)
+                        {
+                            <td>
+                                <a
+                                    asp-controller="Home"
+                                    asp-action="RSVP"
+                                    asp-route-weddingId="@wedding.WeddingId"
+                                >
+                                    RSVP
+                                </a>
+                            </td>
+                        }
+                        else if (wedding.Attendees.Any(a => a.UserId == Context.Session.GetInt32("userId")))
+                        {
+                            <td>
+                                <a 
+                                    asp-controller="Home"
+                                    asp-action="unRsvp"
+                                    asp-route-weddingId="@wedding.WeddingId"
+                                >
+                                    Un-RSVP
+                                </a>
+                            </td>
+                        }
+                    </tr>
+                }
+            </tbody>
         </table>
     </div>
 
     <div class="row">
-        <a class="btn btn-link-info" asp-controller="Home" asp-action="NewWedding">New Wedding</a>
+        <a class="btn btn-info" asp-controller="Home" asp-action="NewWedding">New Wedding</a>
     </div>
 </div>
+
+@* last else if *@
+@* asp-route-userId="@Context.Session.GetInt32("userId")" *@
+@* asp-route-attendId="@wedding.Attendees.FirstOrDefault(att => att.WeddingId == wedding.WeddingId && att.UserId == ViewBag.UserId).AttendId" *@

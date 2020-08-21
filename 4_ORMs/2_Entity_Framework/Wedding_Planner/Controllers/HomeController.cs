@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 using Wedding_Planner.Models;
 
@@ -48,7 +49,7 @@ namespace Wedding_Planner.Controllers
             db.SaveChanges();
             
             HttpContext.Session.SetInt32("userId", newUser.UserId);
-            // HttpContext.Session.SetString("UserName", newUser.FirstName);
+            // HttpContext.Session.SetString("userName", newUser.FirstName);
             return RedirectToAction("Dashboard");
         }
 
@@ -79,8 +80,8 @@ namespace Wedding_Planner.Controllers
                 return View("Index");
             }
 
-            HttpContext.Session.SetInt32("user_id", dbUser.UserId);
-            HttpContext.Session.SetString("UserName", dbUser.FirstName);
+            HttpContext.Session.SetInt32("userId", dbUser.UserId);
+            // HttpContext.Session.SetString("userName", dbUser.FirstName);
             return RedirectToAction("Account_Page");
         }
 
@@ -91,29 +92,116 @@ namespace Wedding_Planner.Controllers
             return RedirectToAction("Index");
         }
 
+        // gets userId
+        private int? userId { get {return HttpContext.Session.GetInt32("userId");} }
+
+        // gets boolean if user is logged in or not
+        private bool isLoggedIn { get {return userId != null;} }
+
         [HttpGet("dashboard")]
         public IActionResult Dashboard()
         {
-            return View("Dashboard");
+            if (!isLoggedIn)
+            {
+                return RedirectToAction("Index");
+            }
+
+            List<Wedding> weddings = db.Weddings
+                .Include(w => w.Attendees)
+                .ThenInclude(a => a.Attendee)
+                .ToList();
+            return View("Dashboard", weddings);
         }
 
         [HttpGet("new_wedding")]
         public IActionResult NewWedding()
         {
+            if (!isLoggedIn)
+            {
+                return RedirectToAction("Index");
+            }
+
             return View("NewWedding");
         }
 
-        [HttpGet("new_wedding/create")]
-        public IActionResult CreateWedding()
+        [HttpPost("new_wedding/create")]
+        public IActionResult CreateWedding(Wedding newWedding)
         {
-            return RedirectToAction("Wedding");
-            // need to send weddingId
+            if (ModelState.IsValid == false)
+            {
+                return View("NewWedding");
+            }
+
+            if (newWedding.Date.Date <= DateTime.Now.Date)
+            {
+                ModelState.AddModelError("Date", "must be a future date");
+                return View("NewWedding");
+            }
+
+            newWedding.UserId = (int)userId;
+            db.Weddings.Add(newWedding);
+            db.SaveChanges();
+
+            List<Wedding> weddings = db.Weddings
+                .Include(w => w.Attendees)
+                .ToList();
+
+            return RedirectToAction("Dashboard", weddings);
         }
 
         [HttpGet("wedding/{weddingId}")]
         public IActionResult Wedding(int weddingId)
         {
+            if (!isLoggedIn)
+            {
+                return RedirectToAction("Index");
+            }
+            // need to grab wedding and send to view??
+
             return View("Wedding");
+        }
+
+        [HttpGet("wedding/delete/{weddingId}")]
+        public IActionResult DeleteWedding(int weddingId)
+        {
+            if (!isLoggedIn)
+            {
+                return RedirectToAction("Index");
+            }
+
+
+
+            // delete func
+            return View("Dashboard");
+        }
+
+        [HttpGet("wedding/rsvp/{weddingId}")]
+        public IActionResult Rsvp(int weddingId)
+        {
+            if (!isLoggedIn)
+            {
+                return RedirectToAction("Index");
+            }
+
+
+
+
+            // rsvp func
+            return View("Dashboard");
+        }
+
+        [HttpGet("wedding/un-rsvp/{weddingId}")]
+        public IActionResult unRsvp(int weddingId)
+        {
+            if (!isLoggedIn)
+            {
+                return RedirectToAction("Index");
+            }
+
+
+
+            // un-rsvp func; USE SESSION OF USER ID
+            return View("Dashboard");
         }
     }
 }
