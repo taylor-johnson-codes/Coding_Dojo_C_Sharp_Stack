@@ -93,10 +93,10 @@ namespace Wedding_Planner.Controllers
         }
 
         // gets userId
-        private int? userId { get {return HttpContext.Session.GetInt32("userId");} }
+        private int? userId { get { return HttpContext.Session.GetInt32("userId"); } }
 
         // gets boolean if user is logged in or not
-        private bool isLoggedIn { get {return userId != null;} }
+        private bool isLoggedIn { get { return userId != null; } }
 
         [HttpGet("dashboard")]
         public IActionResult Dashboard()
@@ -156,6 +156,7 @@ namespace Wedding_Planner.Controllers
             {
                 return RedirectToAction("Index");
             }
+
             Wedding wedding = db.Weddings
                 .Include(w => w.Attendees)
                 .ThenInclude(w => w.Attendee)

@@ -2,10 +2,10 @@
 
 <div class="container">
     <div class="row">
-        <div class="col">
+        <div class="col-11 mb-5 p-0">
             <h1>Welcome to the Wedding Planner!</h1>
         </div>
-        <div class="col">
+        <div class="col-1">
             <a asp-controller="Home" asp-action="Logout">Log Out</a>
         </div>
     </div>
@@ -33,7 +33,7 @@
                                 @wedding.WedderOne & @wedding.WedderTwo
                             </a>
                         </td>
-                        <td>@wedding.Date</td>
+                        <td>@wedding.Date.ToString("MMM dd, yyyy")</td>
                         <td>@wedding.Attendees.Count</td>
                         @if (wedding.UserId == Context.Session.GetInt32("userId"))
                         {
@@ -77,11 +77,9 @@
         </table>
     </div>
 
-    <div class="row">
+    @* "col align-self-end" might do the same thing if I had a col within the row *@
+    @* class="row justify-content-end" is to get the button on the right side of the screen *@
+    <div class="row justify-content-end">
         <a class="btn btn-info" asp-controller="Home" asp-action="NewWedding">New Wedding</a>
     </div>
 </div>
-
-@* last else if *@
-@* asp-route-userId="@Context.Session.GetInt32("userId")" *@
-@* asp-route-attendId="@wedding.Attendees.FirstOrDefault(att => att.WeddingId == wedding.WeddingId && att.UserId == ViewBag.UserId).AttendId" *@
