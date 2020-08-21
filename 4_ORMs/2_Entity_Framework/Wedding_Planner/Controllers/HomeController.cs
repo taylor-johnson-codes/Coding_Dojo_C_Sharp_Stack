@@ -82,10 +82,10 @@ namespace Wedding_Planner.Controllers
 
             HttpContext.Session.SetInt32("userId", dbUser.UserId);
             // HttpContext.Session.SetString("userName", dbUser.FirstName);
-            return RedirectToAction("Account_Page");
+            return RedirectToAction("Dashboard");
         }
 
-        [HttpPost("logout")]
+        [HttpGet("logout")]
         public IActionResult Logout()
         {
             HttpContext.Session.Clear();
@@ -101,7 +101,7 @@ namespace Wedding_Planner.Controllers
         [HttpGet("dashboard")]
         public IActionResult Dashboard()
         {
-            if (!isLoggedIn)
+            if (isLoggedIn == false)
             {
                 return RedirectToAction("Index");
             }
@@ -116,7 +116,7 @@ namespace Wedding_Planner.Controllers
         [HttpGet("new_wedding")]
         public IActionResult NewWedding()
         {
-            if (!isLoggedIn)
+            if (isLoggedIn == false)
             {
                 return RedirectToAction("Index");
             }
@@ -152,56 +152,64 @@ namespace Wedding_Planner.Controllers
         [HttpGet("wedding/{weddingId}")]
         public IActionResult Wedding(int weddingId)
         {
-            if (!isLoggedIn)
+            if (isLoggedIn == false)
             {
                 return RedirectToAction("Index");
             }
-            // need to grab wedding and send to view??
+            Wedding wedding = db.Weddings
+                .Include(w => w.Attendees)
+                .ThenInclude(w => w.Attendee)
+                .FirstOrDefault(w => w.WeddingId == weddingId); 
 
-            return View("Wedding");
+            return View("Wedding", wedding);
         }
 
         [HttpGet("wedding/delete/{weddingId}")]
         public IActionResult DeleteWedding(int weddingId)
         {
-            if (!isLoggedIn)
+            if (isLoggedIn == false)
             {
                 return RedirectToAction("Index");
             }
 
+            Wedding deleteWedding = db.Weddings
+            .FirstOrDefault(w => w.WeddingId == weddingId);
 
+            db.Weddings.Remove(deleteWedding);
+            db.SaveChanges();
 
-            // delete func
-            return View("Dashboard");
+            return RedirectToAction("Dashboard");
         }
 
         [HttpGet("wedding/rsvp/{weddingId}")]
-        public IActionResult Rsvp(int weddingId)
+        public IActionResult Rsvp(int weddingId, Rsvp newRsvp)
         {
-            if (!isLoggedIn)
+            if (isLoggedIn == false)
             {
                 return RedirectToAction("Index");
             }
 
+            newRsvp.WeddingId = weddingId;
+            newRsvp.UserId = (int)userId;
+            db.Rsvps.Add(newRsvp);
+            db.SaveChanges();
 
-
-
-            // rsvp func
-            return View("Dashboard");
+            return RedirectToAction("Wedding", weddingId);
         }
 
         [HttpGet("wedding/un-rsvp/{weddingId}")]
         public IActionResult unRsvp(int weddingId)
         {
-            if (!isLoggedIn)
+            if (isLoggedIn == false)
             {
                 return RedirectToAction("Index");
             }
 
+            Rsvp removeRsvp = db.Rsvps.FirstOrDefault(r => r.UserId == userId);
+            db.Rsvps.Remove(removeRsvp);
+            db.SaveChanges();
 
-
-            // un-rsvp func; USE SESSION OF USER ID
-            return View("Dashboard");
+            return RedirectToAction("Dashboard");
         }
     }
 }
